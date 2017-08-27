@@ -3,22 +3,42 @@ html, body {
     overflow-x: hidden;
 }
 
+
 #home {
     width: 100vw;
     height: 100vh;
     background-color: black;
 }
 
+header{
+    position: relative;
+    z-index: 1;
+   
+}
+
+
+
+header>ul>li>a>figure{
+    margin-right: 0;
+
+  
+}
+
+header>ul>li>a>figure>img{
+height: 2em;
+}
 
 
 
 
 .contenedor-logo-home {
     position: relative;
-   
+       margin-top: 6.250em;
+
 }
 
 .logo-home {
+
 
    position: absolute;
     z-index: 1;
@@ -31,20 +51,26 @@ html, body {
 
 .logo-uno {
  
-   /* --width-logo: -100%;
-*/
- 
-    
 
- transform: translateX(var(--width-logo));
 	background-image: url(img/logo-uno.svg);
    
 }
 
+
+
 .logo-dos {
-  
+
 	background-image: url(img/logo-dos.svg);
 
+}
+
+
+
+.text-developer {
+	color: white;
+    text-align: right;
+    font-weight: 100;
+    font-size: 1em;
 }
 
 #particles-js {
@@ -52,4 +78,23 @@ html, body {
     width: 100vw;
     position: absolute;
     z-index: 0;
+}
+
+
+
+
+@media (max-width: 1199px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+
+@media (max-width: 575px) {
 }

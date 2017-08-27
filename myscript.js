@@ -117,11 +117,21 @@ var img = document.getElementById('.contenedor-logo-home');
 var width = img.clientWidth;
 var height = img.clientHeight;
 
+
+
 function button() {
-    $(".contenedor-logo-home").animate({left: '250px'});
+  
+    
+     $(".logo-uno").css('transform', 'translateX(0)')
+    
+    $(".logo-dos").css('transform', 'translateX(0)');
+ 
 }
 
 
-  
+
+
+
+ 
 
 
