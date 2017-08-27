@@ -12,21 +12,39 @@ html, body {
 
 
 
-.holi {
-	height: 100px;
-    width: 100px;
-    transform: translateX(-100px);
-    background-color: aqua;
-    position: relative;
-}
 
 .contenedor-logo-home {
     position: relative;
+   
 }
 
 .logo-home {
-    position: absolute;
+
+   position: absolute;
     z-index: 1;
+     background-size: contain;
+   height: 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+.logo-uno {
+ 
+   /* --width-logo: -100%;
+*/
+ 
+    
+
+ transform: translateX(var(--width-logo));
+	background-image: url(img/logo-uno.svg);
+   
+}
+
+.logo-dos {
+  
+	background-image: url(img/logo-dos.svg);
+
 }
 
 #particles-js {
