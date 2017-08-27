@@ -16,16 +16,24 @@ header{
    
 }
 
+ul{
+    text-align: right;
+}
 
+li {
+   margin-right: 3em;
+    
+    display: inline;
+}
 
 header>ul>li>a>figure{
-    margin-right: 0;
-
-  
+  margin: 0;
+    display: inline;
 }
 
 header>ul>li>a>figure>img{
 height: 2em;
+
 }
 
 
