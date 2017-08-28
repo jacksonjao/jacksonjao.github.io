@@ -10,7 +10,7 @@ particlesJS("particles-js", {
       }
     },
     "color": {
-      "value": "#4c4c4c"
+      "value": "#ffffff"
     },
     "shape": {
       "type": "circle",
@@ -49,8 +49,8 @@ particlesJS("particles-js", {
     },
     "line_linked": {
       "enable": true,
-      "distance": 250,
-      "color": "#4c4c4c",
+      "distance": 150,
+      "color": "#ffffff",
       "opacity": 0.4,
       "width": 1
     },
@@ -84,7 +84,7 @@ particlesJS("particles-js", {
     },
     "modes": {
       "grab": {
-        "distance": 250,
+        "distance": 140,
         "line_linked": {
           "opacity": 1
         }
