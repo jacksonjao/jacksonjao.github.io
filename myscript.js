@@ -86,7 +86,7 @@ particlesJS("particles-js", {
       "grab": {
         "distance": 140,
         "line_linked": {
-          "opacity": 1
+          "opacity": 0.8
         }
       },
       "bubble": {
@@ -137,7 +137,7 @@ requestAnimationFrame(update);
 
 
 
-
+/*
 var img = document.getElementById('.contenedor-logo-home'); 
 //or however you get a handle to the IMG
 var width = img.clientWidth;
@@ -153,7 +153,37 @@ function button() {
     $(".logo-dos").css('transform', 'translateX(0)');
  
 }
+*/
+  
 
+var greenColor="#97c03d";
+
+
+
+$(".learn-more").mouseover(function(){
+    $(".learn-more").css("color", "#97c03d");
+    
+     $(".home-icon-down>a>i").css("color", "#97c03d");
+                       });
+
+$(".learn-more").mouseout(function(){
+  $(".learn-more").css("color", "white");
+    
+     $(".home-icon-down>a>i").css("color", "white");
+                       });
+
+
+$(".home-icon-down>a>i").mouseover(function(){
+    $(".learn-more").css("color", "#97c03d");
+    
+     $(".home-icon-down>a>i").css("color", "#97c03d");
+                       });
+
+$(".home-icon-down>a>i").mouseout(function(){
+  $(".learn-more").css("color", "white");
+    
+     $(".home-icon-down>a>i").css("color", "white");
+                       });
 
 
 
