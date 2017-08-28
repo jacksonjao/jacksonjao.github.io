@@ -86,7 +86,7 @@ particlesJS("particles-js", {
       "grab": {
         "distance": 250,
         "line_linked": {
-          "opacity": 0.5
+          "opacity": 0.4
         }
       },
       "bubble": {
