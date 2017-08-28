@@ -28,7 +28,7 @@ particlesJS("particles-js", {
       }
     },
     "opacity": {
-      "value": 0.3,
+      "value": 0.2,
       "random": false,
       "anim": {
         "enable": false,
@@ -51,7 +51,7 @@ particlesJS("particles-js", {
       "enable": true,
       "distance": 250,
       "color": "#ffffff",
-      "opacity": 0,
+      "opacity": 0.2,
       "width": 1
     },
     "move": {
@@ -86,7 +86,7 @@ particlesJS("particles-js", {
       "grab": {
         "distance": 250,
         "line_linked": {
-          "opacity": 0.4
+          "opacity": 0.3
         }
       },
       "bubble": {
