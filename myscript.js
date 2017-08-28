@@ -10,7 +10,7 @@ particlesJS("particles-js", {
       }
     },
     "color": {
-      "value": "#999999"
+      "value": "#4c4c4c"
     },
     "shape": {
       "type": "circle",
@@ -28,7 +28,7 @@ particlesJS("particles-js", {
       }
     },
     "opacity": {
-      "value": 0.4,
+      "value": 0.5,
       "random": false,
       "anim": {
         "enable": false,
@@ -50,15 +50,15 @@ particlesJS("particles-js", {
     "line_linked": {
       "enable": true,
       "distance": 250,
-      "color": "#999999",
-      "opacity": 0.3,
+      "color": "#4c4c4c",
+      "opacity": 0.4,
       "width": 1
     },
     "move": {
       "enable": true,
       "speed": 2,
       "direction": "none",
-      "random": true,
+      "random": false,
       "straight": false,
       "out_mode": "out",
       "bounce": false,
@@ -86,7 +86,7 @@ particlesJS("particles-js", {
       "grab": {
         "distance": 250,
         "line_linked": {
-          "opacity": 0.5
+          "opacity": 1
         }
       },
       "bubble": {
@@ -104,12 +104,38 @@ particlesJS("particles-js", {
         "particles_nb": 4
       },
       "remove": {
-        "particles_nb": 2
+        "particles_nb":100
       }
     }
   },
   "retina_detect": true
 });
+
+
+/* ---- stats.js config ---- 
+
+var count_particles, stats, update;
+stats = new Stats;
+stats.setMode(0);
+stats.domElement.style.position = 'absolute';
+stats.domElement.style.left = '0px';
+stats.domElement.style.top = '0px';
+document.body.appendChild(stats.domElement);
+count_particles = document.querySelector('.js-count-particles');
+update = function() {
+  stats.begin();
+  stats.end();
+  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+  }
+  requestAnimationFrame(update);
+};
+requestAnimationFrame(update);
+
+*/
+
+
+
 
 
 var img = document.getElementById('.contenedor-logo-home'); 
