@@ -1,19 +1,23 @@
 html, body {
-    max-width: 100%;
+   min-height: 100vh;
     overflow-x: hidden;
+  
 }
 
 
 #home {
-    width: 100vw;
-    height: 100vh;
+    position: relative;
+
     background-color: black;
+      margin: 0;
+  padding-bottom: 8rem;
+  min-height: 100%;
    
 }
 
 #particles-js {
     
-    width: 100vw;
+    width: 100%;
     position: absolute;
     z-index: 1;
 }
@@ -46,30 +50,39 @@ height: 1.5em;
 
 }
 
+
+
 .home-contenedor-presentacion {
-position: absolute;
-  top: 0;
- bottom: 0;
+	
+position: relative;
+  
+    margin-top: 5%;
+ 
+
 }
+
 
 
 
 .contenedor-logo-home {
     position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
+
+
 .logo-home {
-   position: absolute;
+    position: relative;
     z-index: 1;
+width: 10px;
      background-size: contain;
    height: 100%;
     background-repeat: no-repeat;
 }
 .logo-uno {
+    position: absolute;
 	background-image: url(img/logo-uno.svg);
 }
 .logo-dos {
+    position: absolute;
 	background-image: url(img/logo-dos.svg);
 }
 .text-developer {
@@ -83,75 +96,80 @@ position: absolute;
 
 
 
-
 .introduccion{
-    position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+   
+  position: absolute;
+    bottom: 0;
+   transform: translateY(-100%);
 color: white;
     font-weight: 300;
     letter-spacing: 0.3em;
    z-index: 1;
     font-size: 1.1em;
- 
+     
 }
 
 
 .home-contenedor-learn-more {
-	position: absolute;
-    bottom: 1em;
- left: 50%;
-    
+position: absolute;
+text-align: center;
+    bottom: 0;
     z-index: 10;
-}
 
+}
 
 
 
 .learn-more {
-    text-align: center;
+ 
 	color: white;
-   position: relative;
-    left: -50%;
+   
     font-weight: 100;
     letter-spacing: 0.3em;
     font-size: 0.9em;
-    transition: 0.5s
+    transition: 0.5s;
 }
 
 
 
-
-
-
-.home-icon-down {
-    position: relative;
-  left: -50%;
-       text-align: center;
-  color: white;
-    bottom: 0;
-     bottom: 1em;
-}
 
 
 .home-icon-down>a>i{
     color: white;
     font-size: 3em;
-    transition: 0.5s
+    transition: 0.5s;
+    margin-bottom: 0.6em;
 }
 
 
 
+/*-------about me----------*/
+
+
+#about-me {
+
+    background-color: aqua;
+}
 
 
 
+@media (min-width: 1199px) {
+.home-contenedor-presentacion {
+	
+position: absolute;
+  
+    bottom: 0;
+    transform: translateY(-60%);
+ 
 
+}
+}
 
 @media (max-width: 1199px) {
 
 }
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
 
 }
 
@@ -163,20 +181,12 @@ color: white;
  
 }
 
+   }
 
 @media (max-width: 575px) {
  
-    .home-contenedor-presentacion{
-        position: relative;
-         margin-top: 2.5em;
-    }
-    
-    .contenedor-logo-home {
-    position: relative;
 
-  transform: translateY(0);
-}
-    
+
     
     .learn-more {
 	font-size: 0.85em;
@@ -188,4 +198,12 @@ color: white;
         margin-top: 2.5em;
  
 }
+
 }
+    
+
+    
+    
+   
+    
+
