@@ -70,7 +70,7 @@ header>ul>li>a>figure {
 .home-contenedor-presentacion {
     position: absolute;
   bottom: 0;
-    transform: translateY(-80%);
+    transform: translateY(-50%);
 }
 
 .contenedor-logo-home {
@@ -126,7 +126,6 @@ header>ul>li>a>figure {
     color: white;
     font-size: 3em;
     transition: 0.5s;
-    margin-bottom: 0.6em;
 }
 
 
