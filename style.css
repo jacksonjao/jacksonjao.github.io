@@ -42,7 +42,7 @@ header>ul>li>a>figure>img {
    transition: 1s;
       height: 3.5em;
     
-    border: 0.2em;
+    border: 0.1em;
 
    
 
@@ -52,7 +52,7 @@ header>ul>li>a>figure>img {
 
 header>ul>li>a>figure>img:hover{
 
-    border-bottom: 0.2em;
+    
    border-radius: 2em;;
    
 filter: brightness(100);
@@ -69,7 +69,7 @@ header>ul>li>a>figure {
 
 .home-contenedor-presentacion {
     position: relative;
-    margin-top: 5%;
+  
 }
 
 .contenedor-logo-home {
