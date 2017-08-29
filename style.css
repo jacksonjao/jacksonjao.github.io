@@ -22,18 +22,18 @@ body {
 header {
     position: relative;
     z-index: 1;
-  
-  
+
 }
 
 header>ul {
     margin-top: 2em;
     text-align: right;
     padding-right: 2em;
+    
 }
 
 header>ul>li{
-    margin-right: 0.6em;
+    margin-right: 0;
     display: inline;
 
 }
@@ -56,8 +56,6 @@ header>ul>li>a>figure>img:hover{
 
     
    border-radius: 2em;;
-   
-
     border-style: solid;
     border-color: white;
      
@@ -70,14 +68,16 @@ header>ul>li>a>figure {
 
 
 
-.contenedor-logo-home {
+
+.home-contenedor-logo {
     position: relative;
 }
+
+
 
 .logo-home {
     position: relative;
     z-index: 1;
-    width: 10px;
     background-size: contain;
     height: 100%;
     background-repeat: no-repeat;
@@ -94,7 +94,7 @@ header>ul>li>a>figure {
 }
 
 .introduccion {
-    
+    position: relative;
     color: white;
     font-weight: 300;
     letter-spacing: 0.3em;
@@ -107,6 +107,8 @@ header>ul>li>a>figure {
     text-align: center;
     bottom: 0;
     z-index: 10;
+
+  
 }
 
 .learn-more {
@@ -123,6 +125,12 @@ header>ul>li>a>figure {
     transition: 0.5s;
 }
 
+
+.home-presentacion{
+position: absolute;
+    bottom: 0;
+    top: 0;
+}
 
 /*-------about me----------*/
 
@@ -147,18 +155,34 @@ header>ul>li>a>figure {
 
 @media (max-width: 768px) {
    
+     .introduccion {
+        font-size: 0.9em;
+    }
     
-    
-    
+ 
 }
 
 @media (max-width: 575px) {
    
     .introduccion {
-        position: relative;
-        transform: translateY(0);
         font-size: 0.9em;
         margin-top: 2.5em;
     }
-  
+   
+      .home-presentacion{
+position: relative;
+
+}
+    
+    .valign-wrapper {
+        display: inherit !important;
+    }
+}
+
+
+@media (max-height: 480px) {
+        .home-presentacion{
+position: relative;
+
+}
 }
