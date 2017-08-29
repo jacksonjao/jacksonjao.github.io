@@ -22,6 +22,8 @@ body {
 header {
     position: relative;
     z-index: 1;
+  
+  
 }
 
 header>ul {
@@ -67,11 +69,6 @@ header>ul>li>a>figure {
 }
 
 
-.home-contenedor-presentacion {
-    position: absolute;
-  bottom: 0;
-    transform: translateY(-50%);
-}
 
 .contenedor-logo-home {
     position: relative;
@@ -97,9 +94,7 @@ header>ul>li>a>figure {
 }
 
 .introduccion {
-    position: absolute;
-    bottom: 0;
-    transform: translateY(-100%);
+    
     color: white;
     font-weight: 300;
     letter-spacing: 0.3em;
@@ -138,42 +133,32 @@ header>ul>li>a>figure {
 @media (min-width: 1199px) {}
 
 @media (max-width: 1199px) {
-      
+  
+
     
 }
 
 @media (max-width: 992px) {
  
+    
+     
+
 }
 
 @media (max-width: 768px) {
-    .home-contenedor-presentacion {
-        position: relative;
-        transform: translateY(0);
-    }
-    .introduccion {
-        font-size: 0.95em;
-        position: relative;
-        ;
-        transform: translateY(0);
-        font-size: 0.9em;
-        margin-top: 2.5em;
-    }
+   
+    
+    
+    
 }
 
 @media (max-width: 575px) {
-    .learn-more {
-        font-size: 0.85em;
-    }
+   
     .introduccion {
         position: relative;
-        ;
         transform: translateY(0);
         font-size: 0.9em;
         margin-top: 2.5em;
     }
-    .home-contenedor-presentacion {
-        position: relative;
-        transform: translateY(0);
-    }
+  
 }
