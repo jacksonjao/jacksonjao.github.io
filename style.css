@@ -68,8 +68,9 @@ header>ul>li>a>figure {
 
 
 .home-contenedor-presentacion {
-    position: relative;
-  
+    position: absolute;
+  bottom: 0;
+    transform: translateY(-80%);
 }
 
 .contenedor-logo-home {
@@ -137,9 +138,14 @@ header>ul>li>a>figure {
 
 @media (min-width: 1199px) {}
 
-@media (max-width: 1199px) {}
+@media (max-width: 1199px) {
+      
+    
+}
 
-@media (max-width: 992px) {}
+@media (max-width: 992px) {
+ 
+}
 
 @media (max-width: 768px) {
     .home-contenedor-presentacion {
