@@ -1,140 +1,127 @@
-html, body {
-   min-height: 100vh;
+html,
+body {
+    min-height: 100vh;
     overflow-x: hidden;
-  
+    background-color: black;
 }
-
 
 #home {
     position: relative;
-
     background-color: black;
-      margin: 0;
-  padding-bottom: 8rem;
-  min-height: 100%;
-   
+    margin: 0;
+    padding-bottom: 8rem;
+    min-height: 100%;
 }
 
 #particles-js {
-    
     width: 100%;
     position: absolute;
     z-index: 1;
 }
 
-header{
+header {
     position: relative;
     z-index: 1;
-   
 }
 
-ul{
+header>ul {
     margin-top: 2em;
     text-align: right;
+    padding-right: 2em;
 }
 
-li {
-   margin-right: 2em;
+header>ul>li{
+    margin-right: 0.6em;
     display: inline;
+
 }
 
 
-header>ul>li>a>figure{
-  margin: 0;
-    display: inline;
-}
 
-header>ul>li>a>figure>img{
-height: 1.5em;
+header>ul>li>a>figure>img {
+   transition: 1s;
+      height: 3.5em;
     
+    border: 0.2em;
 
+   
+
+    border-style: solid;
+    border-color: transparent;
 }
 
+header>ul>li>a>figure>img:hover{
+
+    border-bottom: 0.2em;
+   border-radius: 2em;;
+   
+filter: brightness(100);
+    border-style: solid;
+    border-color: #97c03d;
+     
+}
+
+header>ul>li>a>figure {
+    margin: 0;
+    display: inline;
+}
 
 
 .home-contenedor-presentacion {
-	
-position: relative;
-  
+    position: relative;
     margin-top: 5%;
- 
-
 }
-
-
-
 
 .contenedor-logo-home {
     position: relative;
 }
 
-
 .logo-home {
     position: relative;
     z-index: 1;
-width: 10px;
-     background-size: contain;
-   height: 100%;
+    width: 10px;
+    background-size: contain;
+    height: 100%;
     background-repeat: no-repeat;
 }
+
 .logo-uno {
     position: absolute;
-	background-image: url(img/logo-uno.svg);
+    background-image: url(img/logo-uno.svg);
 }
+
 .logo-dos {
     position: absolute;
-	background-image: url(img/logo-dos.svg);
-}
-.text-developer {
-	color: white;
-    text-align: right;
-    font-weight: 100;
-    font-size: 1em;
-     letter-spacing: 0.5em;
-    z-index: 1;
+    background-image: url(img/logo-dos.svg);
 }
 
-
-
-.introduccion{
-   
-  position: absolute;
+.introduccion {
+    position: absolute;
     bottom: 0;
-   transform: translateY(-100%);
-color: white;
+    transform: translateY(-100%);
+    color: white;
     font-weight: 300;
     letter-spacing: 0.3em;
-   z-index: 1;
+    z-index: 1;
     font-size: 1.1em;
-     
 }
-
 
 .home-contenedor-learn-more {
-position: absolute;
-text-align: center;
+    position: absolute;
+    text-align: center;
     bottom: 0;
     z-index: 10;
-
 }
 
-
-
 .learn-more {
- 
-	color: white;
-   
+    color: white;
     font-weight: 100;
     letter-spacing: 0.3em;
     font-size: 0.9em;
     transition: 0.5s;
 }
 
-
-
-
-
-.home-icon-down>a>i{
+.home-icon-down>a>i {
     color: white;
     font-size: 3em;
     transition: 0.5s;
@@ -142,68 +129,46 @@ text-align: center;
 }
 
 
-
 /*-------about me----------*/
 
-
 #about-me {
-
     background-color: aqua;
 }
 
+@media (min-width: 1199px) {}
 
+@media (max-width: 1199px) {}
 
-@media (min-width: 1199px) {
-.home-contenedor-presentacion {
-	
-position: absolute;
-  
-    bottom: 0;
-    transform: translateY(-60%);
- 
-
-}
-}
-
-@media (max-width: 1199px) {
-
-}
-
-@media (max-width: 992px) {
-
-}
+@media (max-width: 992px) {}
 
 @media (max-width: 768px) {
-
-.introduccion{
-
-    font-size: 0.95em;
- 
+    .home-contenedor-presentacion {
+        position: relative;
+        transform: translateY(0);
+    }
+    .introduccion {
+        font-size: 0.95em;
+        position: relative;
+        ;
+        transform: translateY(0);
+        font-size: 0.9em;
+        margin-top: 2.5em;
+    }
 }
-
-   }
 
 @media (max-width: 575px) {
- 
-
-
-    
     .learn-more {
-	font-size: 0.85em;
-}
-    .introduccion{
-    position: relative;;
-  transform: translateY(0);
-    font-size: 0.9em;
+        font-size: 0.85em;
+    }
+    .introduccion {
+        position: relative;
+        ;
+        transform: translateY(0);
+        font-size: 0.9em;
         margin-top: 2.5em;
- 
+    }
+    .home-contenedor-presentacion {
+        position: relative;
+        transform: translateY(0);
+    }
 }
-
-}
-    
-
-    
-    
-   
-    
-
