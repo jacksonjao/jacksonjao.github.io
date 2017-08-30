@@ -58,7 +58,7 @@ header>ul>li>a>figure>img:hover{
    border-radius: 2em;;
     border-style: solid;
     border-color: white;
-     
+     cursor: pointer;
 }
 
 header>ul>li>a>figure {
@@ -173,6 +173,7 @@ position: absolute;
 position: relative;
 
 }
+    
     
     .valign-wrapper {
         display: inherit !important;
