@@ -61,7 +61,7 @@ header>ul>li>a>figure {
 
 .home-contenedor-logo {
     position: relative;
-    margin-top: -30px;
+    margin-top: -5em;
 }
 
 .logo-home {
@@ -90,8 +90,8 @@ header>ul>li>a>figure {
 .logo-tres {
     position: absolute;
     background-image: url(img/logo-tres.svg);
-    transition: 1s;
-    transform: translateX(-10px)rotate(180deg);
+    
+    transform: translateY(0.3em)rotate(180deg);
     background-position: right;
 }
 
@@ -164,6 +164,11 @@ transition: 1s;
     .introduccion {
         font-size: 0.9em;
     }
+    
+    .home-contenedor-logo {
+    
+    margin-top: 0;
+}
 }
 
 @media (max-width: 575px) {

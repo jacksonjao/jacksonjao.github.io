@@ -160,13 +160,22 @@ function button() {
 $("#home").animate({
     opacity:1,
 },1000,function(){
-
+    
 setTimeout(
   function() 
   {
-         $(".logo-tres").css({'transform':'translateX(0) rotate(-0deg)','background-position':'left'});
+      
+         $(".logo-tres").css({'transition':'0.5s','transform':'translateX(-1em) rotate(180deg)'});
 
-  }, 0);
+  }, 200);
+    
+    
+setTimeout(
+  function() 
+  {
+         $(".logo-tres").css({'transition':'1s','transform':'translateX(0) rotate(-0deg)','background-position':'left'});
+
+  }, 1000);
 
 
 setTimeout(
@@ -174,13 +183,13 @@ setTimeout(
   {
          $(".logo-dos").css({'transform':'translateX(0)','opacity':'1'});
 
-  }, 1000);
+  }, 2000);
 
  setTimeout(
   function() 
   {
          $(".logo-cuatro").css({'transform':'translateX(0)','opacity':'1'});
-  }, 2000);
+  }, 3000);
     
      setTimeout(
   function() 
