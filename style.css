@@ -3,7 +3,10 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     background-color: black;
+    
 }
+
+
 
 #home {
     position: relative;
@@ -11,6 +14,7 @@ body {
     margin: 0;
     padding-bottom: 8rem;
     min-height: 100%;
+      opacity: 0;
 }
 
 #particles-js {
@@ -22,43 +26,33 @@ body {
 header {
     position: relative;
     z-index: 1;
-
 }
 
 header>ul {
     margin-top: 2em;
     text-align: right;
     padding-right: 2em;
-    
 }
 
-header>ul>li{
+header>ul>li {
     margin-right: 0;
     display: inline;
-
 }
 
-
-
 header>ul>li>a>figure>img {
-   transition: 1s;
-      height: 3.5em;
-    
+    transition: 1s;
+    height: 3.5em;
     border: 0.1em;
-
-   
-
     border-style: solid;
     border-color: transparent;
 }
 
-header>ul>li>a>figure>img:hover{
-
-    
-   border-radius: 2em;;
+header>ul>li>a>figure>img:hover {
+    border-radius: 2em;
+    ;
     border-style: solid;
     border-color: white;
-     cursor: pointer;
+    cursor: pointer;
 }
 
 header>ul>li>a>figure {
@@ -66,14 +60,10 @@ header>ul>li>a>figure {
     display: inline;
 }
 
-
-
-
 .home-contenedor-logo {
     position: relative;
+    margin-top: -30px;
 }
-
-
 
 .logo-home {
     position: relative;
@@ -91,6 +81,31 @@ header>ul>li>a>figure {
 .logo-dos {
     position: absolute;
     background-image: url(img/logo-dos.svg);
+    transition: 1s;
+    transform-origin: 0% 100%;
+    transform: translateX(-200px);
+    opacity: 0;
+}
+
+.logo-tres {
+    position: absolute;
+    background-image: url(img/logo-tres.svg);
+    transition: 1s;
+    transform: translateX(-10px)rotate(180deg);
+    background-position: right;
+}
+
+.logo-cuatro {
+    position: absolute;
+   
+    background-image: url(img/logo-cuatro.svg);
+
+transition: 1s;
+    transform-origin: 0% 100%;
+    transform: translateX(-200px);
+    opacity: 0;
+    
+
 }
 
 .introduccion {
@@ -107,8 +122,6 @@ header>ul>li>a>figure {
     text-align: center;
     bottom: 0;
     z-index: 10;
-
-  
 }
 
 .learn-more {
@@ -125,12 +138,12 @@ header>ul>li>a>figure {
     transition: 0.5s;
 }
 
-
-.home-presentacion{
-position: absolute;
+.home-presentacion {
+    position: absolute;
     bottom: 0;
     top: 0;
 }
+
 
 /*-------about me----------*/
 
@@ -140,50 +153,32 @@ position: absolute;
 
 @media (min-width: 1199px) {}
 
-@media (max-width: 1199px) {
-  
+@media (max-width: 1199px) {}
 
-    
-}
-
-@media (max-width: 992px) {
- 
-    
-     
-
-}
+@media (max-width: 992px) {}
 
 @media (max-width: 768px) {
-   
-     .introduccion {
+    margin-top: 0px;
+    .introduccion {
         font-size: 0.9em;
     }
-    
- 
 }
 
 @media (max-width: 575px) {
-   
     .introduccion {
         font-size: 0.9em;
         margin-top: 2.5em;
     }
-   
-      .home-presentacion{
-position: relative;
-
-}
-    
-    
+    .home-presentacion {
+        position: relative;
+    }
     .valign-wrapper {
         display: inherit !important;
     }
 }
 
-
 @media (max-height: 500px) {
-        .home-presentacion{
-position: relative;
-
-}
+    .home-presentacion {
+        position: relative;
+    }
 }

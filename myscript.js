@@ -2,6 +2,7 @@
 
 /* ---- particles.js config ---- */
 
+
 particlesJS("particles-js", {
     "particles": {
         "number": {
@@ -156,6 +157,55 @@ function button() {
  
 }
 */
+$("#home").animate({
+    opacity:1,
+},1000,function(){
+
+setTimeout(
+  function() 
+  {
+         $(".logo-tres").css({'transform':'translateX(0) rotate(-0deg)','background-position':'left'});
+
+  }, 0);
+
+
+setTimeout(
+  function() 
+  {
+         $(".logo-dos").css({'transform':'translateX(0)','opacity':'1'});
+
+  }, 1000);
+
+ setTimeout(
+  function() 
+  {
+         $(".logo-cuatro").css({'transform':'translateX(0)','opacity':'1'});
+  }, 2000);
+    
+     setTimeout(
+  function() 
+  {
+  
+      showText(".introduccion",intro,0,100);
+  }, 4000);
+    
+    
+});
+
+
+//metodo de texto letra por letra
+var intro = "/*Hi, \n I’m Jhon Osorio \n Interactive Media Designer*/";
+var showText = function (target, message, index, interval) {   
+  if (index < message.length) {
+      if(message[index]==('\n')){
+         $(target).append('<br>');
+         }
+      $(target).append(message[index++]);
+    setTimeout(function () { showText(target, message, index, interval); }, interval);
+  }
+}
+
+
 
 
 var greenColor = "#97c03d";
