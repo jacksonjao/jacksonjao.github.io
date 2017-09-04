@@ -42,16 +42,14 @@ header>ul>li {
 header>ul>li>a>figure>img {
     transition: 1s;
     height: 3.5em;
-    border: 0.1em;
     border-style: solid;
     border-color: transparent;
 }
 
 header>ul>li>a>figure>img:hover {
     border-radius: 2em;
-    ;
-    border-style: solid;
     border-color: white;
+    background-color: white;
     cursor: pointer;
 }
 
@@ -148,6 +146,7 @@ transition: 1s;
 /*-------about me----------*/
 
 #about-me {
+    
     background-color: dimgray;
    
 }
