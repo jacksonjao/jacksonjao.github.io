@@ -165,7 +165,7 @@ setTimeout(
   function() 
   {
       
-         $(".logo-tres").css({'transition':'0.5s','transform':'translateX(-1em) rotate(180deg)'});
+         $(".logo-tres").css({'transition':'0.5s','transform':'translate(-1em,-0.5em) rotate(180deg)'});
 
   }, 200);
     
