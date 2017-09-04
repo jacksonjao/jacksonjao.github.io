@@ -91,7 +91,7 @@ header>ul>li>a>figure {
     position: absolute;
     background-image: url(img/logo-tres.svg);
     
-    transform: translateY(0.3em)rotate(180deg);
+    transform: translate(-0.5em)rotate(180deg);
     background-position: right;
 }
 
