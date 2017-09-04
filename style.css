@@ -102,7 +102,7 @@ header>ul>li>a>figure {
 
 transition: 1s;
     transform-origin: 0% 100%;
-    transform: translateX(-200px);
+    transform: translateX(-12.500em);
     opacity: 0;
     
 

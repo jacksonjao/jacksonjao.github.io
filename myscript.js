@@ -140,26 +140,9 @@ requestAnimationFrame(update);
 
 
 
-/*
-var img = document.getElementById('.contenedor-logo-home'); 
-//or however you get a handle to the IMG
-var width = img.clientWidth;
-var height = img.clientHeight;
-
-
-
-function button() {
-  
-    
-     $(".logo-uno").css('transform', 'translateX(0)')
-    
-    $(".logo-dos").css('transform', 'translateX(0)');
- 
-}
-*/
 $("#home").animate({
     opacity:1,
-},1000,function(){
+},1500,function(){
     
 setTimeout(
   function() 
@@ -167,7 +150,7 @@ setTimeout(
       
          $(".logo-tres").css({'transition':'0.5s','transform':'translate(-1em,-0.5em) rotate(180deg)'});
 
-  }, 200);
+  }, 100);
     
     
 setTimeout(
