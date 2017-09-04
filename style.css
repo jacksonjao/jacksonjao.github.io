@@ -148,7 +148,8 @@ transition: 1s;
 /*-------about me----------*/
 
 #about-me {
-    background-color: aqua;
+    background-color: dimgray;
+   
 }
 
 @media (min-width: 1199px) {}
