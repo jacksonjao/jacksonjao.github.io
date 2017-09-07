@@ -142,9 +142,12 @@ requestAnimationFrame(update);
 
 $("#home").animate({
     opacity:1,
+    
 },1500,function(){
     
 
+    
+    
     
     
 setTimeout(
