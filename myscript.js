@@ -153,7 +153,7 @@ $("#home").animate({
 setTimeout(
   function() 
   {
-         $(".logo-tres").css({'transition':'1s','transform':'translate(-0.5em,0.5em) rotate(-0deg)','background-position':'left'});
+         $(".logo-tres").css({'transition':'1s','transform':'translate(0em,0em) rotate(-0deg)','background-position':'left'});
 
   }, 1000);
 
