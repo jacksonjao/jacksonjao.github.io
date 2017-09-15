@@ -1,21 +1,54 @@
+:root {
+  --color-verde: #97c03d;
+}
+ 
+
 html,
 body {
     min-height: 100vh;
     overflow-x: hidden;
     background-color: black;
     
+    
 }
+
+
+#botones {
+	position: fixed;
+    z-index: 100;
+    top:50%;
+    transform: translateY(-50%);
+    margin-left: 2rem;
+    
+}
+.boton{
+    width: 1em;
+    height: 1em;
+   border: 0.1rem solid white;
+    border-radius: 5em;
+    z-index: 100;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    transition: 0.5s;
+}
+
+
 
 
 
 #home {
     position: relative;
+    
+    
+    width: 100vw;
     background-color: black;
     margin: 0;
     padding-bottom: 8rem;
     min-height: 100vh;
       opacity: 0;
-    
+
+
+ 
 }
 
 #particles-js {
@@ -48,8 +81,8 @@ header>ul>li>a>figure>img {
 }
 
 header>ul>li>a>figure>img:hover {
+    
     border-radius: 2em;
-    border-color: white;
     background-color: white;
     cursor: pointer;
 }
@@ -150,6 +183,8 @@ transition: 1s;
 #about-me {
     
     background-color: dimgray;
+    
+    height: 100vh;
    
 }
 
