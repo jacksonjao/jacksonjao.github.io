@@ -30,8 +30,14 @@ body {
     margin-top: 0.8em;
     margin-bottom: 0.8em;
     transition: 0.5s;
+ 
 }
 
+
+.boton:hover {
+     background-color:white;
+       border-color:white;
+}
 
 
 

@@ -142,47 +142,65 @@ particlesJS("particles-js", {
     "retina_detect": true
 });
 
-var colorVerde= '#97c03d';
 
 
 
 
-for(var i=1;i<5;i++){ 
+
+for(var i=1;i<5;i++){
     
+$("#b"+i).click(function(){  
+
+    for(var j=1;j<5;j++){
+       
+    if(this.id.split("b")[1]!=j){
+      
+     $("#b"+j).css({
+    'background-color':'transparent',
+       'border-color':'white'
+   });
     
+    $("#b"+j).mouseout(function(){
+        $(this).css({
+    'background-color':'transparent',
+       'border-color':'white'
+   });
+    });
     
-$("#b"+i).mouseover(function(){
-     $(this).css({
+
+
+      $("#b"+j).mouseover(function(){
+        $(this).css({
     'background-color':'white',
        'border-color':'white'
    });
-});
-    
-$("#b"+i).mouseout(function(){
-     $(this).css({
-    'background-color':'transparent',
-       'border-color':'white'
+    });
+    }}
+  
+          $(this).mouseout(function(){
+        $(this).css({
+    'background-color':'#97c03d',
+       'border-color':'#97c03d'
    });
-});
+    });
     
+
+
+      $(this).mouseover(function(){
+        $(this).css({
+    'background-color':'#97c03d',
+       'border-color':'#97c03d'
+   });
+    });
     
-$("#b"+i).click(function(){
-       $(".boton").css({
-    'background-color':'transparent',
-       'border-color':'white'
-   });  
     
    $(this).css({
     'background-color':'#97c03d',
        'border-color':'#97c03d'
    });
-    
-  
 
 });
-    
-}
-
+    }
 
 
 
