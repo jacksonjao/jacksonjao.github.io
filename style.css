@@ -370,16 +370,8 @@ margin: 0;
         display: inherit !important;
     }
     
-    #about-me {
-	padding-top: 2em;
-}
-       .contenido-aboutme>article {
-        top: 0;
-    transform: translateY(0);
-	position: relative;
-margin-top: 9em;
-   
-}
+ 
+ 
  
     
     
@@ -392,6 +384,7 @@ margin-top: 9em;
     .foto{
   width: 7em;
         height: 7em;
+        transform: scale(0);
        border-radius: 5em; 
         position: absolute;
       margin-left: auto;
