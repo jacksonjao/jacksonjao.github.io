@@ -329,15 +329,17 @@ margin: 0;
 	color: var(--color-verde);
     margin-top: 0;
         font-family: Bebas;
-    font-size: 6em;
+    font-size: 4.5em;
     text-align: center;
+        margin: 0;
 }
 
 .contenido-aboutme>article>p {
 	color: #000;
-     font-size:1em;
+     font-size:0.95em;
     text-align: justify;
     word-spacing:-2px;
+    
 
 }
 
@@ -381,18 +383,7 @@ margin-top: 9em;
  
     
     
-      .contenido-aboutme>article>h1 {
-    font-size: 5em;
-          margin: 0;
-}
 
-.contenido-aboutme>article>p {
-	color: #000;
-     font-size:1em;
-    text-align: justify;
-    word-spacing:-2px;
-
-}
   
     
     
