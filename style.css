@@ -329,14 +329,14 @@ margin: 0;
 	color: var(--color-verde);
     margin-top: 0;
         font-family: Bebas;
-    font-size: 4em;
+    font-size: 4.5em;
     text-align: center;
         margin: 0;
 }
 
 .contenido-aboutme>article>p {
 	color: #000;
-     font-size:0.8em;
+     font-size:0.9em;
     text-align: justify;
     word-spacing:-2px;
     
@@ -361,13 +361,13 @@ margin: 0;
     
 }
 
-@media (max-width: 600px) {
+@media (max-width: 575px) {
 
  
     
     .introduccion {
         font-size: 0.9em;
-        margin-top: 2.5em;
+       
     }
     .home-presentacion {
         position: relative;
