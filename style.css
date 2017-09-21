@@ -344,19 +344,25 @@ margin: 0;
 }
 
     
-    
-    
-}
 
-@media (max-width: 575px) {
     
-    #botones {
+    
+    
+        #botones {
 
     margin-left: 1rem;
     
 }
     
     
+ 
+
+    
+    
+}
+
+@media (max-width: 575px) {
+
  
     
     .introduccion {
@@ -370,18 +376,9 @@ margin: 0;
         display: inherit !important;
     }
     
- 
- 
- 
     
     
-
-  
-    
-    
-    
-    
-    .foto{
+           .foto{
   width: 7em;
         height: 7em;
         transform: scale(0);
@@ -390,15 +387,8 @@ margin: 0;
       margin-left: auto;
         margin-right: auto;
         right: 0;
-        left: 0; 
-      
-        
+        left: 0;    
 }
-    
-  
-  
-    
- 
     
 }
 
@@ -406,6 +396,7 @@ margin: 0;
     .home-presentacion {
         position: relative;
     }
+    
     
     
 #about-me {
