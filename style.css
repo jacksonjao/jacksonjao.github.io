@@ -1,7 +1,22 @@
 :root {
   --color-verde: #97c03d;
+  /*  font-family: 'Josefin Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    */
 }
- 
+@font-face {
+    font-family: Bebas;
+    src: url(font/BebasNeue.otf);
+}
+
+
+
+p{
+    font-weight: 100;
+        letter-spacing: 0.2em;
+
+}
 
 html,
 body {
@@ -44,17 +59,13 @@ body {
 
 #home {
     position: relative;
-    
-    
     width: 100vw;
     background-color: black;
     margin: 0;
     padding-bottom: 8rem;
-    min-height: 100vh;
+    height: 100vh;
+      min-height: 500px;
       opacity: 0;
-
-
- 
 }
 
 #particles-js {
@@ -75,21 +86,19 @@ header>ul {
 }
 
 header>ul>li {
-    margin-right: 0;
+    margin-left: 20;
     display: inline;
 }
 
-header>ul>li>a>figure>img {
-    transition: 1s;
-    height: 3.5em;
-    border-style: solid;
-    border-color: transparent;
+header>ul>li>a>i {
+    transition: 0.5s;
+    font-size: 1.5em !important;
+   
+    color: var(--color-verde);
 }
 
-header>ul>li>a>figure>img:hover {
-    
-    border-radius: 2em;
-    background-color: white;
+header>ul>li>a>i:hover {
+    color: white;
     cursor: pointer;
 }
 
@@ -104,10 +113,12 @@ header>ul>li>a>figure {
 }
 
 .logo-home {
+    
     position: relative;
     z-index: 1;
     background-size: contain;
     height: 100%;
+    max-height: 322px;
     background-repeat: no-repeat;
     
 }
@@ -130,7 +141,7 @@ header>ul>li>a>figure {
     position: absolute;
     background-image: url(img/logo-tres.svg);
     
-    transform: translate(-0.5em)rotate(180deg);
+    transform: translate(-0.5em)rotate(-180deg);
     background-position: right;
 }
 
@@ -150,8 +161,6 @@ transition: 1s;
 .introduccion {
     position: relative;
     color: white;
-    font-weight: 300;
-    letter-spacing: 0.3em;
     z-index: 1;
     font-size: 1.1em;
 }
@@ -161,20 +170,29 @@ transition: 1s;
     text-align: center;
     bottom: 0;
     z-index: 10;
+  
 }
 
-.learn-more {
+.learn-more>a {
+  display:inline-block;
+}
+
+.learn-more>a>p {
     color: white;
-    font-weight: 100;
-    letter-spacing: 0.3em;
     font-size: 0.9em;
     transition: 0.5s;
+   position: relative;
+     display:inline-block;
+margin: 0;
 }
+
+
 
 .home-icon-down>a>i {
     color: white;
     font-size: 3em;
     transition: 0.5s;
+    
 }
 
 .home-presentacion {
@@ -187,10 +205,104 @@ transition: 1s;
 /*-------about me----------*/
 
 #about-me {
+    position: relative;
+   /* background-color:#eee;*/
+    background-image: url(img/pattern.png);
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    min-height: 500px;
+}
+
+.foto{
+   height: 100%;
+    background-image: url(img/foto.jpg);
+    background-size: cover;
+    margin: 0;
+}
+
+.section-aboutme {
+	margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+
+.contenido-aboutme {
+	position: relative;
+     height: 100%;
     
-    background-color: dimgray;
     
-    height: 100vh;
+}
+
+.contenido-aboutme>article {
+        top: 50%;
+    transform: translateY(-50%);
+	position: absolute;
+
+   
+}
+
+.contenido-aboutme>article>h1 {
+	color: var(--color-verde);
+    margin-top: 0;
+        font-family: Bebas;
+    font-size: 8em;
+    text-align: center;
+}
+
+.contenido-aboutme>article>p {
+	color: #000;
+     font-size: 1.1em;
+    text-align: justify;
+    word-spacing:-2px;
+
+}
+
+
+
+
+
+
+
+/*-------skills----------*/
+
+#skills {
+    position: relative;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+      height: 100vh; 
+    min-height: 500px;
+   
+}
+
+
+
+
+/*-------my Work----------*/
+
+#my-work {
+    position: relative;
+    background-color: var(--color-verde);
+    margin: 0;
+    padding: 0;
+      height: 100vh; 
+    min-height: 500px;
+   
+}
+
+
+
+/*-------contact me----------*/
+
+#contact-me {
+    position: relative;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+      height: 100vh; 
+    min-height: 500px;
    
 }
 
@@ -207,9 +319,31 @@ transition: 1s;
     }
     
     .home-contenedor-logo {
-    
     margin-top: 0;
 }
+    
+    
+    
+    
+    .contenido-aboutme>article>h1 {
+	color: var(--color-verde);
+    margin-top: 0;
+        font-family: Bebas;
+    font-size: 6em;
+    text-align: center;
+}
+
+.contenido-aboutme>article>p {
+	color: #000;
+     font-size:1em;
+    text-align: justify;
+    word-spacing:-2px;
+
+}
+
+    
+    
+    
 }
 
 @media (max-width: 575px) {
@@ -229,4 +363,14 @@ transition: 1s;
     .home-presentacion {
         position: relative;
     }
+    
+    
+#about-me {
+  
+   /* height: 400vh; 
+    
+   */
+}
+    
+    
 }
