@@ -329,7 +329,7 @@ margin: 0;
 	color: var(--color-verde);
     margin-top: 0;
         font-family: Bebas;
-    font-size: 4.5em;
+    font-size: 5em;
     text-align: center;
         margin: 0;
 }
@@ -339,7 +339,7 @@ margin: 0;
      font-size:0.9em;
     text-align: justify;
     word-spacing:-2px;
-    
+    font-weight: 300;
 
 }
 
