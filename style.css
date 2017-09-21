@@ -62,9 +62,9 @@ body {
     width: 100vw;
     background-color: black;
     margin: 0;
-    padding-bottom: 8rem;
+    padding-bottom: 6rem;
     height: 100vh;
-      min-height: 500px;
+      min-height: 600px;
       opacity: 0;
 }
 
@@ -210,8 +210,8 @@ margin: 0;
     background-image: url(img/pattern.png);
     margin: 0;
     padding: 0;
-    height: 100vh; 
-    min-height: 500px;
+    height: 100vh;
+    min-height: 600px;
 }
 
 .foto{
@@ -347,6 +347,16 @@ margin: 0;
 }
 
 @media (max-width: 575px) {
+    
+    #botones {
+
+    margin-left: 1rem;
+    
+}
+    
+    
+ 
+    
     .introduccion {
         font-size: 0.9em;
         margin-top: 2.5em;
@@ -357,6 +367,55 @@ margin: 0;
     .valign-wrapper {
         display: inherit !important;
     }
+    
+    #about-me {
+	padding-top: 2em;
+}
+       .contenido-aboutme>article {
+        top: 0;
+    transform: translateY(0);
+	position: relative;
+margin-top: 9em;
+   
+}
+ 
+    
+    
+      .contenido-aboutme>article>h1 {
+    font-size: 5em;
+          margin: 0;
+}
+
+.contenido-aboutme>article>p {
+	color: #000;
+     font-size:1em;
+    text-align: justify;
+    word-spacing:-2px;
+
+}
+  
+    
+    
+    
+    
+    .foto{
+  width: 7em;
+        height: 7em;
+       border-radius: 5em; 
+        position: absolute;
+      margin-left: auto;
+        margin-right: auto;
+        right: 0;
+        left: 0; 
+      
+        
+}
+    
+  
+  
+    
+ 
+    
 }
 
 @media (max-height: 500px) {
