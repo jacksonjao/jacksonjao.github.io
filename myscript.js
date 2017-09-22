@@ -7,8 +7,8 @@ const GREENCOLOR ="#97c03d";
 const WHITECOLOR ="#fff";
 
 $("#b" + seccion).css({
-    'background-color': '#97c03d',
-    'border-color': '#97c03d'
+    'background-color': greenColor,
+    'border-color': greenColor
 });
 
 

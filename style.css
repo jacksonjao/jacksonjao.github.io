@@ -17,7 +17,7 @@ font-family: 'Poppins', sans-serif;
 p{
     font-weight: 100;
         letter-spacing: 0.2em;
-
+color: var(--color-verde);
 }
 
 
@@ -48,7 +48,7 @@ body {
 .boton{
     width: 1em;
     height: 1em;
-   border: 0.1rem solid white;
+   border: 0.1em solid white;
     border-radius: 5em;
     z-index: 100;
     margin-top: 0.8em;
@@ -187,11 +187,7 @@ transition: 1s;
 
 
 .rect-see-my-work:hover {
-    border-color: white;
-
 	color: white;
-
-    
 }
 
 .home-contenedor-learn-more {
@@ -281,7 +277,7 @@ margin: 0;
 }
 
 .contenido-aboutme>article>p {
-	color: #000;
+	color: black;
      font-size: 1.1em;
     
 
@@ -298,13 +294,30 @@ margin: 0;
 #skills {
     position: relative;
     background-color: black;
-    margin: 0;
-    padding: 0;
-      height: 100vh; 
+    height: 100vh; 
     min-height: 500px;
-   
+}
+.section-skills {
+	margin: 0 !important;
+    padding: 0 !important;
 }
 
+
+
+.skill {
+    width: 100%;
+	height: 100%;
+}
+
+.coding {
+	background-color: red;
+}
+.uxui {
+	background-color: blue;
+}
+.personal {
+	background-color: yellow;
+}
 
 
 
@@ -383,7 +396,6 @@ margin: 0;
     
     
  
-
     
     
 }
@@ -391,7 +403,24 @@ margin: 0;
 
 
 @media (max-width: 600px) {
+ .rect-see-my-work {
+    border-color: var(--color-verde);
+      font-size:0.9em;
+        padding: 0.2em 1em 0.2em 1em;
 
+	
+}
+    .skill {
+	height:calc(100%/3);
+}
+
+
+    
+    .rect-see-my-work:hover {
+    border-color: var(--color-verde);
+	
+}
+    
           .foto{
   width: 7em;
         height: 7em;
