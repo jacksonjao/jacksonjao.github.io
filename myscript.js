@@ -309,7 +309,7 @@ whiteColor= "#000"
 }
 
 
-
+//inicia con opacidad
 $("#home").animate({
     opacity: 1,
 
@@ -351,8 +351,16 @@ $("#home").animate({
     setTimeout(
         function () {
 
-            showText(".introduccion", intro, 0, 100);
+            showText(".introduccion", intro, 0, 60);
         }, 4000);
+    
+      setTimeout(
+        function () {
+$(".rect-see-my-work").css({
+    'opacity':'1'
+});
+       
+        }, 8000);
 
 
 });
@@ -371,6 +379,10 @@ var showText = function (target, message, index, interval) {
         }, interval);
     }
 }
+
+
+
+
 
 
 
