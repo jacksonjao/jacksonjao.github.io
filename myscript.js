@@ -440,3 +440,11 @@ $(".home-icon-down>a>i").mouseout(function () {
 
     $(".home-icon-down>a>i").css("color", WHITECOLOR);
 });
+
+
+
+
+
+
+
+
