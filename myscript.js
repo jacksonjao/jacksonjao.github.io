@@ -382,6 +382,31 @@ var showText = function (target, message, index, interval) {
 
 
 
+var skills=[".coding", ".uxui", ".personal"];
+
+$(".skill").each(function(i){
+    
+   $(skills[i]).mouseover(function () {
+    $(skills[i]+">h1").css({
+    "position": "relative",
+     "transform": "translateY(0)",
+       "top": "0.5em",
+        
+    "margin": "inherit",
+    "margin-bottom":"0.5em"
+    }                   
+                       )
+});
+
+$(skills[i]).mouseout(function () {
+    $(skills[i]+">h1").css({
+    "position": "absolute",
+  
+     "transform": "translateY(-50%)",
+       "top": "50%",
+    "margin": "auto"})
+});
+});
 
 
 

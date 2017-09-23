@@ -300,23 +300,62 @@ margin: 0;
 .section-skills {
 	margin: 0 !important;
     padding: 0 !important;
+    
 }
 
 
 
 .skill {
-    width: 100%;
-	height: 100%;
+   height: 100%;
+    position: relative;
+    padding: 0 !important;
 }
 
-.coding {
-	background-color: red;
+
+
+.skill>H1 {
+  
+		color: var(--color-verde);
+        font-family: Bebas;
+    font-size: 5em;
+text-align: center;
+   width: 100%;
+	position: absolute;
+     transform: translateY(-50%);
+       top: 50%;
+    margin: auto;
+    transition: 0.5s;
+
+
 }
+
+
+.skill>H1:hover {
+    display:inherit;
+    vertical-align:inherit;
+}
+
+
+
+.coding {
+background-image: url(img/background-code.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
 .uxui {
-	background-color: blue;
+background-image: url(img/background-ux.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .personal {
-	background-color: yellow;
+background-image: url(img/background-personal.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
