@@ -386,8 +386,8 @@ var skills=[".coding", ".uxui", ".personal"];
 
 $(".skill").each(function(i){
     
-   $(skills[i]).mouseover(function () {
-    $(skills[i]+">h1").css({
+    $(skills[i]).click(function(){
+        $(skills[i]+">h1").css({
     "position": "relative",
      "transform": "translateY(0)",
        "top": "0.5em",
@@ -396,16 +396,25 @@ $(".skill").each(function(i){
     "margin-bottom":"0.5em"
     }                   
                        )
-});
-
-$(skills[i]).mouseout(function () {
-    $(skills[i]+">h1").css({
+       for(var j=0;j<skills.length;j++){ 
+     if(this!=$(".skill")[j]){
+       $(skills[j]+">h1").css({
     "position": "absolute",
-  
      "transform": "translateY(-50%)",
        "top": "50%",
-    "margin": "auto"})
-});
+    "margin": "auto"});  
+     }}
+       
+        
+    }) 
+    
+
+    
+/*
+  
+
+  
+*/
 });
 
 
