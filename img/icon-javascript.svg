@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 220 220" style="enable-background:new 0 0 220 220;" xml:space="preserve">
+<style type="text/css">
+	.Arched_x0020_Green{fill:url(#SVGID_1_);stroke:#FFFFFF;stroke-width:0.25;stroke-miterlimit:1;}
+	.st0{fill:#E8A50A;}
+	.st1{fill:#F3C100;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:#F1F1F2;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="223.1935" y1="632.4445" x2="223.9006" y2="631.7374">
+	<stop  offset="0" style="stop-color:#1DA238"/>
+	<stop  offset="0.9831" style="stop-color:#24391D"/>
+</linearGradient>
+<g>
+	<polygon class="st0" points="205.4,2.1 110,2.1 110,2.1 14.6,2.1 32.5,196 110,217.9 110,217.9 110,217.9 110,217.9 110,217.9 
+		187.5,196 	"/>
+	<polygon class="st1" points="110,17.9 110,201.5 110,201.5 172.8,183.7 188,17.9 	"/>
+	<polygon class="st2" points="159.9,41.7 63.4,41.7 56.7,114.3 56.9,113.8 138.8,113.8 136.2,144.5 110,152.1 83.5,144.4 
+		81.9,125.8 57.8,125.8 61.2,163 110,176.8 158.8,163 165.5,90.1 78.5,90.1 79.6,65.8 140,65.8 140.9,79.7 165.2,79.7 	"/>
+	<g>
+		<path class="st3" d="M110,41.7H63.4l-6.7,72.6l0.1-0.5H110V90.1H81.9L83,65.8h27V41.7z M81.9,125.8H57.8l3.4,37.1l48.8,13.8v-24.7
+			l-26.6-7.7L81.9,125.8z"/>
+	</g>
+</g>
+</svg>

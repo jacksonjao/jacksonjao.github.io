@@ -42,7 +42,7 @@ body {
     z-index: 100;
     top:50%;
     transform: translateY(-50%);
-    margin-left: 2rem;
+    margin-left: 1rem;
     
 }
 .boton{
@@ -298,6 +298,7 @@ margin: 0;
     min-height: 500px;
 }
 .section-skills {
+    position: relative;
 	margin: 0 !important;
     padding: 0 !important;
     
@@ -310,11 +311,13 @@ margin: 0;
     position: relative;
     padding: 0 !important;
 }
+.skill:hover {
+
+}
 
 
 
 .skill>H1 {
-  
 		color: var(--color-verde);
         font-family: Bebas;
     font-size: 5em;
@@ -325,14 +328,14 @@ text-align: center;
        top: 50%;
     margin: auto;
     transition: 0.5s;
-
-
+z-index: 10;
 }
 
 
 .skill>H1:hover {
-    display:inherit;
-    vertical-align:inherit;
+  
+     cursor: pointer;
+    color: white;
 }
 
 
@@ -342,6 +345,7 @@ background-image: url(img/background-code.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    
 }
 
 
@@ -358,7 +362,34 @@ background-image: url(img/background-personal.jpeg);
     background-position: center;
 }
 
+.contenedor-icon-code {
+text-align: center;
+  transition: 0.5s;
+    margin-top: 3em;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
 
+.chip{
+    transition: 0.5s;
+   background-color:  #eee !important;
+    border: 1px solid var(--color-verde);
+    margin: 0.3em;
+   opacity: 0;
+    
+
+}
+
+.chip>img{
+    height: 100%;
+   background-color: #eee;
+    padding: 0.3em;
+}
+
+.chip:first-letter {
+    text-transform: uppercase;
+}
 
 /*-------my Work----------*/
 
@@ -414,6 +445,8 @@ background-image: url(img/background-personal.jpeg);
         margin: 0;
 }
 
+    
+    
 .contenido-aboutme>article>p {
 	color: #000;
      font-size:0.9em;
@@ -434,6 +467,25 @@ background-image: url(img/background-personal.jpeg);
 }
     
     
+    
+
+     .skill>h1 {
+
+    font-size: 4em;
+      transition: 0.5s;
+         padding: 0 !important;
+         margin: 0 !important;
+}
+    .chip{
+        font-size:0.8em;
+      font-size: 0.7em;
+         
+        
+    }
+     .chip>img{
+      margin-right: 0;
+
+    }
  
     
     
@@ -472,6 +524,12 @@ background-image: url(img/background-personal.jpeg);
         left: 0;    
 }
  
+        .contenedor-icon-code {
+
+    margin-top: 2.4em;
+   
+}
+   
 }
 
 
@@ -512,6 +570,11 @@ background-image: url(img/background-personal.jpeg);
         position: relative;
     }
     
+    .contenedor-icon-code {
+
+    margin-top: 0em;
+   
+}
     
     
 #about-me {

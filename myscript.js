@@ -2,9 +2,9 @@ var cantidadDeSecciones = 5;
 var seccion = 0;
 var altoPantalla = $(window).height() / cantidadDeSecciones;
 var greenColor = "#97c03d";
-var whiteColor= "#fff"
-const GREENCOLOR ="#97c03d";
-const WHITECOLOR ="#fff";
+var whiteColor = "#fff"
+const GREENCOLOR = "#97c03d";
+const WHITECOLOR = "#fff";
 
 $("#b" + seccion).css({
     'background-color': greenColor,
@@ -164,70 +164,70 @@ $(window).scroll(function (event) {
 
 
     for (var i = 0; i < cantidadDeSecciones; i++) {
-        
-       
-        
-        if (scroll >= ((altoPantalla * i)-altoPantalla/2)) {
 
-    
+
+
+        if (scroll >= ((altoPantalla * i) - altoPantalla / 2)) {
+
+
             seccion = i;
-            
 
-            
-            if(seccion%2==0){
-whiteColor= "#fff"
-            }else{
-whiteColor= "#000"
+
+
+            if (seccion % 2 == 0) {
+                whiteColor = "#fff"
+            } else {
+                whiteColor = "#000"
             }
-    
+
             $("#b" + seccion).css({
                 'background-color': greenColor,
                 'border-color': greenColor
             });
-            
-            
-            
-                  $("#b" + seccion).mouseout(function () {
-            $(this).css({
-                'background-color': greenColor,
-                'border-color': greenColor
+
+
+
+            $("#b" + seccion).mouseout(function () {
+                $(this).css({
+                    'background-color': greenColor,
+                    'border-color': greenColor
+                });
             });
-        });
 
 
 
-        $("#b" + seccion).mouseover(function () {
-            $(this).css({
-                'background-color': greenColor,
-                'border-color': greenColor
+            $("#b" + seccion).mouseover(function () {
+                $(this).css({
+                    'background-color': greenColor,
+                    'border-color': greenColor
+                });
             });
-        });
-            
-            
-            
+
+
+
 
             for (var j = 0; j < cantidadDeSecciones; j++) {
 
                 if (seccion != j) {
 
-                     $("#b" + j).css({
-                    'background-color': 'transparent',
-                    'border-color': whiteColor
-                });
-
-                $("#b" + j).mouseout(function () {
-                    $(this).css({
+                    $("#b" + j).css({
                         'background-color': 'transparent',
                         'border-color': whiteColor
                     });
-                });
 
-                $("#b" + j).mouseover(function () {
-                    $(this).css({
-                        'background-color': whiteColor,
-                        'border-color': whiteColor
+                    $("#b" + j).mouseout(function () {
+                        $(this).css({
+                            'background-color': 'transparent',
+                            'border-color': whiteColor
+                        });
                     });
-                });
+
+                    $("#b" + j).mouseover(function () {
+                        $(this).css({
+                            'background-color': whiteColor,
+                            'border-color': whiteColor
+                        });
+                    });
                 }
             }
 
@@ -251,12 +251,12 @@ whiteColor= "#000"
 for (var i = 0; i < cantidadDeSecciones; i++) {
 
     $("#b" + i).click(function () {
-             
-            if(seccion%2==0){
-whiteColor= "#fff"
-            }else{
-whiteColor= "#000"
-            }
+
+        if (seccion % 2 == 0) {
+            whiteColor = "#fff"
+        } else {
+            whiteColor = "#000"
+        }
 
         for (var j = 0; j < cantidadDeSecciones; j++) {
 
@@ -315,11 +315,6 @@ $("#home").animate({
 
 }, 1500, function () {
 
-
-
-
-
-
     setTimeout(
         function () {
             $(".logo-tres").css({
@@ -353,13 +348,13 @@ $("#home").animate({
 
             showText(".introduccion", intro, 0, 60);
         }, 4000);
-    
-      setTimeout(
+
+    setTimeout(
         function () {
-$(".rect-see-my-work").css({
-    'opacity':'1'
-});
-       
+            $(".rect-see-my-work").css({
+                'opacity': '1'
+            });
+
         }, 8000);
 
 
@@ -382,41 +377,135 @@ var showText = function (target, message, index, interval) {
 
 
 
-var skills=[".coding", ".uxui", ".personal"];
 
-$(".skill").each(function(i){
+var skillActivado = [false, false, false];
+
+$(".skill-titulo").each(function (i) {
+   
+$(this).click(function(){
+     
+        if (!skillActivado[i]) {
+            skillActivado[i] = true;
+            $(this).css({
+                "position": "relative",
+                "transform": "translateY(0)",
+                "top": "0.5em",
+                "margin": "inherit",
+                "margin-bottom": "0.5em"
+            })
+        } else if (skillActivado[i]) {
+            skillActivado[i] = false;
+            $(this).css({
+                "position": "absolute",
+                "transform": "translateY(-50%)",
+                "top": "50%",
+                "margin": "auto"
+            });
+        }
     
-    $(skills[i]).click(function(){
-        $(skills[i]+">h1").css({
-    "position": "relative",
-     "transform": "translateY(0)",
-       "top": "0.5em",
+      for (var j = 0; j < $(".skill-titulo").length; j++) {
+            if (this != $(".skill-titulo")[j]) {
+                skillActivado[j] = false;
+                $($(".skill-titulo")[j]).css({
+                    "position": "absolute",
+                    "transform": "translateY(-50%)",
+                    "top": "50%",
+                    "margin": "auto"
+                });
+            }
+        }
+
+
+})})
+
+
+
+
+
+var iconosCode=["img/icon-java.svg","img/icon-csharp.svg","img/icon-python.svg","img/icon-mysql.svg","img/icon-unity.svg","img/icon-android.svg","img/icon-nodejs.svg","img/icon-html.svg","img/icon-css.svg","img/icon-javascript.svg","img/icon-arduino.svg"];
+
+var textCode=[];
+for(var i=0;i<iconosCode.length;i++){
+    textCode.push(iconosCode[i].split("-")[1].split(".")[0]);
+};
+
+for(var i=0;i<iconosCode.length;i++){
+$(".contenedor-icon-code").append("<div class='chip'</div>");
+    }
+
+
+
+
+
+$(".chip").each(function(i){
+   $(this).append("<img src="+iconosCode[i]+">"+textCode[i]);  
+})
+
+$(".skill-titulo").click(function(){
+ if(skillActivado[0]){
+       $(".contenedor-icon-code").css({
+          "opacity":"1"
+      });
+     
+    $(".chip").each(function(i){
         
-    "margin": "inherit",
-    "margin-bottom":"0.5em"
-    }                   
-                       )
-       for(var j=0;j<skills.length;j++){ 
-     if(this!=$(".skill")[j]){
-       $(skills[j]+">h1").css({
-    "position": "absolute",
-     "transform": "translateY(-50%)",
-       "top": "50%",
-    "margin": "auto"});  
-     }}
-       
+    setTimeout(
+        function () {
+$($(".chip")[i]).animate({
+    opacity: 1,
+}, 0)
+        }, 100*i);
+    
+    
+})}else{
+     
+      $(".chip").css({
+          "opacity":"0"
+      });
         
-    }) 
+        $(".contenedor-icon-code").css({
+          "opacity":"0"
+      });
+    }
     
-
     
-/*
-  
+    
+})
 
-  
-*/
-});
 
+
+
+ var ancho=$(window).width();
+
+ if (ancho <= 600) {
+  
+$(".skill-titulo").each(function (i) {
+   
+$(this).click(function(){
+     
+        if (skillActivado[i]) {
+            $(this).css({
+                "font-size": "2em",
+          
+            })
+        } else if (!skillActivado[i]) {
+            $(this).css({
+               "font-size": "4em",
+            });
+        }
+    
+      for (var j = 0; j < $(".skill-titulo").length; j++) {
+            if (this != $(".skill-titulo")[j]) {
+            
+                $($(".skill-titulo")[j]).css({
+                   "font-size": "4em",
+                });
+            }
+        }
+
+
+})})
+}
 
 
 
@@ -449,11 +538,3 @@ $(".home-icon-down>a>i").mouseout(function () {
 
     $(".home-icon-down>a>i").css("color", WHITECOLOR);
 });
-
-
-
-
-
-
-
-
