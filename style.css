@@ -369,6 +369,7 @@ text-align: center;
     position: absolute;
     top:50%;
     transform: translateY(-50%);
+    margin: 0;
 }
 
 .chip{
@@ -473,8 +474,8 @@ text-align: center;
 
     font-size: 4em;
       transition: 0.5s;
-         padding: 0 !important;
-         margin: 0 !important;
+   
+         
 }
     .chip{
         font-size:0.8em;
@@ -524,11 +525,7 @@ text-align: center;
         left: 0;    
 }
  
-        .contenedor-icon-code {
-
-    margin-top: 2.4em;
-   
-}
+ 
    
 }
 

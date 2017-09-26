@@ -6,6 +6,7 @@ var greenColor = "#97c03d";
 var whiteColor = "#fff"
 const GREENCOLOR = "#97c03d";
 const WHITECOLOR = "#fff";
+ var ancho=$(window).width();
 
 $("#b" + seccion).css({
     'background-color': greenColor,
@@ -381,18 +382,18 @@ var showText = function (target, message, index, interval) {
 
 var skillActivado = [false, false, false];
 
+
+
+
 $(".skill-titulo").each(function (i) {
    
 $(this).click(function(){
-     
         if (!skillActivado[i]) {
             skillActivado[i] = true;
             $(this).css({
-                "position": "relative",
-                "transform": "translateY(0)",
-                "top": "0.5em",
+                "transform": "translateY("+altoContenedorIconCode+"px)",
+              
                 "margin": "inherit",
-                "margin-bottom": "0.5em"
             })
         } else if (skillActivado[i]) {
             skillActivado[i] = false;
@@ -422,7 +423,6 @@ $(this).click(function(){
 
 
 
-
 var iconosCode=["img/icon-java.svg","img/icon-csharp.svg","img/icon-python.svg","img/icon-mysql.svg","img/icon-unity.svg","img/icon-android.svg","img/icon-nodejs.svg","img/icon-html.svg","img/icon-css.svg","img/icon-javascript.svg","img/icon-arduino.svg"];
 
 var textCode=[];
@@ -442,10 +442,23 @@ $(".chip").each(function(i){
    $(this).append("<img src="+iconosCode[i]+">"+textCode[i]);  
 })
 
+
+
+var altoContenedorIconCode=$(".contenedor-icon-code").height()*-1;
+
+var marginContenedorIconCode="0em";
+
+if(ancho>992){
+    marginContenedorIconCode="1em";
+}
+
+
 $(".skill-titulo").click(function(){
  if(skillActivado[0]){
        $(".contenedor-icon-code").css({
-          "opacity":"1"
+          "opacity":"1",
+            "transform": "translateY("+marginContenedorIconCode+")",
+           
       });
      
     $(".chip").each(function(i){
@@ -454,6 +467,7 @@ $(".skill-titulo").click(function(){
         function () {
 $($(".chip")[i]).animate({
     opacity: 1,
+    
 }, 0)
         }, 100*i);
     
@@ -462,10 +476,12 @@ $($(".chip")[i]).animate({
      
       $(".chip").css({
           "opacity":"0"
+           
       });
         
         $(".contenedor-icon-code").css({
-          "opacity":"0"
+          "opacity":"0",
+            "transform": "translateY(-50%)",
       });
     }
     
@@ -476,10 +492,10 @@ $($(".chip")[i]).animate({
 
 
 
- var ancho=$(window).width();
+
 
  if (ancho <= 600) {
-  
+ 
 $(".skill-titulo").each(function (i) {
    
 $(this).click(function(){
@@ -487,12 +503,22 @@ $(this).click(function(){
         if (skillActivado[i]) {
             $(this).css({
                 "font-size": "2em",
-          
+          "transform":"translateY(-50%)",
+                "opacity":"0"
             })
+            
+             $(".contenedor-icon-code").css({
+     "transform":"translateY(-50%)",
+  });
         } else if (!skillActivado[i]) {
             $(this).css({
                "font-size": "4em",
+                "opacity":"1"
             });
+            
+             $(".contenedor-icon-code").css({
+     "transform":"translateY(-50%)",
+  });
         }
     
       for (var j = 0; j < $(".skill-titulo").length; j++) {
@@ -500,6 +526,7 @@ $(this).click(function(){
             
                 $($(".skill-titulo")[j]).css({
                    "font-size": "4em",
+                    "opacity":"1",
                 });
             }
         }
