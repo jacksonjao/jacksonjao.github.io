@@ -43,7 +43,7 @@ body {
     top:50%;
     transform: translateY(-50%);
     margin-left: 1rem;
-    
+   
 }
 .boton{
     width: 1em;
@@ -86,6 +86,7 @@ body {
 header {
     position: relative;
     z-index: 1;
+    
 }
 
 header>ul {
@@ -343,7 +344,7 @@ z-index: 10;
 .coding>.fondo {
     height: 100%;
     width: 100%;
-background-image:url(http://media.giphy.com/media/YQHnvymP9lEm4/giphy.gif);
+background-image:url(https://media.giphy.com/media/YQHnvymP9lEm4/giphy.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -356,7 +357,7 @@ background-image:url(http://media.giphy.com/media/YQHnvymP9lEm4/giphy.gif);
 
 
 .uxui>.fondo {
-background-image: url(http://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif);
+background-image: url(https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif);
       height: 100%;
     width: 100%;
      background-size: cover;
@@ -365,7 +366,7 @@ background-image: url(http://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif);
        filter: brightness(0.3) grayscale();
 }
 .personal>.fondo {
-background-image: url(http://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif);
+background-image: url(https://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif);
     height: 100%;
     width: 100%;
      background-size: cover;

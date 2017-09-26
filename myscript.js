@@ -228,16 +228,8 @@ $(window).scroll(function (event) {
 
 
     for (var i = 0; i < cantidadDeSecciones; i++) {
-
-
-
         if (scroll >= ((altoPantalla * i) - altoPantalla / 2)) {
-
-
             seccion = i;
-
-
-
             if (seccion % 2 == 0) {
                 whiteColor = "#fff"
             } else {
@@ -248,9 +240,6 @@ $(window).scroll(function (event) {
                 'background-color': greenColor,
                 'border-color': greenColor
             });
-
-
-
             $("#b" + seccion).mouseout(function () {
                 $(this).css({
                     'background-color': greenColor,
