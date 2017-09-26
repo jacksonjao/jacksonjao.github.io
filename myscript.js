@@ -63,12 +63,12 @@ $(".contenedor-icon-personal>.chip").each(function (i) {
 });
 
 
-var altoContenedorIconCode = $(".contenedor-icon-code").height() * -1;
+var altoContenedorIconCode = ($(".contenedor-icon-code").height()/1.2) * -1;
 
 var marginContenedorIconCode = "0em";
 
 if (ancho > 992) {
-    marginContenedorIconCode = "1em";
+    marginContenedorIconCode = "-2em";
 } else {
     marginContenedorIconCode = "-2em";
 }
@@ -607,7 +607,7 @@ $($(".chip")[i]).animate({
 */
 
 
-if (ancho <= 768) {
+if (ancho <= 992) {
 
     $(".skill-titulo").each(function (i) {
 
@@ -680,3 +680,5 @@ $(".home-icon-down>a>i").mouseout(function () {
 
     $(".home-icon-down>a>i").css("color", WHITECOLOR);
 });
+
+

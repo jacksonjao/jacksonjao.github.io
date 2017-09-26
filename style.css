@@ -329,7 +329,7 @@ text-align: center;
     margin: auto;
     transition: 0.5s;
 z-index: 10;
-}
+    }
 
 
 .skill-titulo:hover {
@@ -340,48 +340,60 @@ z-index: 10;
 
 
 
-.coding {
-background-image: url(img/background-code.jpeg);
+.coding>.fondo {
+    height: 100%;
+    width: 100%;
+background-image:url(http://media.giphy.com/media/YQHnvymP9lEm4/giphy.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    
+       filter: brightness(0.3) grayscale();
+  
+ 
 }
 
 
-.uxui {
-background-image: url(img/background-ux.jpeg);
-    background-size: cover;
+
+
+.uxui>.fondo {
+background-image: url(http://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif);
+      height: 100%;
+    width: 100%;
+     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+       filter: brightness(0.3) grayscale();
 }
-.personal {
-background-image: url(img/background-personal.jpeg);
-    background-size: cover;
+.personal>.fondo {
+background-image: url(http://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif);
+    height: 100%;
+    width: 100%;
+     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+       filter: brightness(0.3) grayscale();
 }
 
 .contenedor-icon {
-text-align: center;
   transition: 0.5s;
     margin-top: 3em;
     position: absolute;
     top:50%;
     transform: translateY(-50%);
     margin: 0;
+    text-align: center
 }
 
 
 
 
 .chip{
+    width: 120px;
     transition: 0.5s;
    background-color:  #eee !important;
     margin: 0.3em;
    opacity: 0;
-    
-
+    text-align: center;
 }
 
 .chip>img{
