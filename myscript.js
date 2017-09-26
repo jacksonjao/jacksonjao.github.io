@@ -1,4 +1,3 @@
-
 var cantidadDeSecciones = 5;
 var seccion = 0;
 var altoPantalla = $(window).height() / cantidadDeSecciones;
@@ -6,12 +5,75 @@ var greenColor = "#97c03d";
 var whiteColor = "#fff"
 const GREENCOLOR = "#97c03d";
 const WHITECOLOR = "#fff";
- var ancho=$(window).width();
+var ancho = $(window).width();
 
 $("#b" + seccion).css({
     'background-color': greenColor,
     'border-color': greenColor
 });
+
+var iconosCode = ["img/icon-java.svg", "img/icon-csharp.svg", "img/icon-python.svg", "img/icon-mysql.svg", "img/icon-unity.svg", "img/icon-android.svg", "img/icon-nodejs.svg", "img/icon-html.svg", "img/icon-css.svg", "img/icon-javascript.svg", "img/icon-arduino.svg"];
+
+var iconosUxUi = ["img/icon-photoshop.svg", "img/icon-illustrator.svg", "img/icon-xd.svg", "img/icon-invision.svg", "img/icon-marvel.svg", "img/icon-balsamiq.svg"];
+
+var iconosPersonal = ["img/icon-photoshop.svg", "img/icon-illustrator.svg", "img/icon-xd.svg", "img/icon-invision.svg", "img/icon-marvel.svg", "img/icon-balsamiq.svg"];
+
+var textCode = [];
+for (var i = 0; i < iconosCode.length; i++) {
+    textCode.push(iconosCode[i].split("-")[1].split(".")[0]);
+};
+
+var textUxUi = [];
+for (var i = 0; i < iconosUxUi.length; i++) {
+    textUxUi.push(iconosUxUi[i].split("-")[1].split(".")[0]);
+};
+
+var textPersonal = [];
+for (var i = 0; i < iconosPersonal.length; i++) {
+    textPersonal.push(iconosPersonal[i].split("-")[1].split(".")[0]);
+};
+
+
+
+for (var i = 0; i < iconosCode.length; i++) {
+    $(".contenedor-icon-code").append("<div class='chip'</div>");
+}
+
+for (var i = 0; i < iconosUxUi.length; i++) {
+    $(".contenedor-icon-uxui").append("<div class='chip'</div>");
+}
+
+for (var i = 0; i < iconosPersonal.length; i++) {
+    $(".contenedor-icon-personal").append("<div class='chip'</div>");
+}
+
+
+
+$(".contenedor-icon-code>.chip").each(function (i) {
+    $(this).append("<img src=" + iconosCode[i] + ">" + textCode[i]);
+});
+
+$(".contenedor-icon-uxui>.chip").each(function (i) {
+    $(this).append("<img src=" + iconosUxUi[i] + ">" + textUxUi[i]);
+});
+
+
+$(".contenedor-icon-personal>.chip").each(function (i) {
+    $(this).append("<img src=" + iconosPersonal[i] + ">" + textPersonal[i]);
+});
+
+
+var altoContenedorIconCode = $(".contenedor-icon-code").height() * -1;
+
+var marginContenedorIconCode = "0em";
+
+if (ancho > 992) {
+    marginContenedorIconCode = "1em";
+} else {
+    marginContenedorIconCode = "-2em";
+}
+
+
 
 
 /*-----Scroll----*/
@@ -386,15 +448,50 @@ var skillActivado = [false, false, false];
 
 
 $(".skill-titulo").each(function (i) {
-   
-$(this).click(function(){
+
+    $(this).click(function () {
         if (!skillActivado[i]) {
             skillActivado[i] = true;
             $(this).css({
-                "transform": "translateY("+altoContenedorIconCode+"px)",
-              
+                "transform": "translateY(" + altoContenedorIconCode + "px)",
                 "margin": "inherit",
+            });
+
+
+
+            $($(".contenedor-icon")[i]).css({
+                "opacity": "1",
+                "transform": "translateY(" + marginContenedorIconCode + ")",
+
+            });
+
+            $("." + $(".contenedor-icon")[i].classList[1] + ">.chip").each(function (j) {
+
+                setTimeout(
+                    function () {
+                        $($("." + $(".contenedor-icon")[i].classList[1] + ">.chip")[j]).animate({
+                            opacity: 1,
+
+                        }, 0)
+                    }, 200*j);
+
+
             })
+
+
+            for (var l = 0; l < $(".skill-titulo").length; l++) {
+                if (this != $(".skill-titulo")[j]) {
+                    skillActivado[j] = false;
+                    $($(".skill-titulo")[j]).css({
+                        "position": "absolute",
+                        "transform": "translateY(-50%)",
+                        "top": "50%",
+                        "margin": "auto"
+                    });
+                }
+            }
+
+
         } else if (skillActivado[i]) {
             skillActivado[i] = false;
             $(this).css({
@@ -403,9 +500,19 @@ $(this).click(function(){
                 "top": "50%",
                 "margin": "auto"
             });
+
+            $("." + $(".contenedor-icon")[i].classList[1] + ">.chip").css({
+                "opacity": "0"
+            });
+
+            $($(".contenedor-icon")[i]).css({
+                "opacity": "0",
+                "transform": "translateY(-50%)",
+            });
+
         }
-    
-      for (var j = 0; j < $(".skill-titulo").length; j++) {
+
+        for (var j = 0; j < $(".skill-titulo").length; j++) {
             if (this != $(".skill-titulo")[j]) {
                 skillActivado[j] = false;
                 $($(".skill-titulo")[j]).css({
@@ -414,44 +521,50 @@ $(this).click(function(){
                     "top": "50%",
                     "margin": "auto"
                 });
+
+
+
+                $("." + $(".contenedor-icon")[j].classList[1] + ">.chip").css({
+                    "opacity": "0"
+                });
+
+                $($(".contenedor-icon")[j]).css({
+                    "opacity": "0",
+                    "transform": "translateY(-50%)",
+                });
             }
         }
 
 
-})})
-
-
-
-
-var iconosCode=["img/icon-java.svg","img/icon-csharp.svg","img/icon-python.svg","img/icon-mysql.svg","img/icon-unity.svg","img/icon-android.svg","img/icon-nodejs.svg","img/icon-html.svg","img/icon-css.svg","img/icon-javascript.svg","img/icon-arduino.svg"];
-
-var textCode=[];
-for(var i=0;i<iconosCode.length;i++){
-    textCode.push(iconosCode[i].split("-")[1].split(".")[0]);
-};
-
-for(var i=0;i<iconosCode.length;i++){
-$(".contenedor-icon-code").append("<div class='chip'</div>");
-    }
-
-
-
-
-
-$(".chip").each(function(i){
-   $(this).append("<img src="+iconosCode[i]+">"+textCode[i]);  
+    })
 })
 
 
 
-var altoContenedorIconCode=$(".contenedor-icon-code").height()*-1;
 
-var marginContenedorIconCode="0em";
 
-if(ancho>992){
-    marginContenedorIconCode="1em";
-}
+$(".skill-titulo").each(function (i) {
 
+    $(this).click(function () {
+
+
+
+        if (skillActivado[i]) {
+
+        } else {
+
+
+
+        }
+
+
+
+    })
+
+});
+
+
+/*
 
 $(".skill-titulo").click(function(){
  if(skillActivado[0]){
@@ -491,48 +604,49 @@ $($(".chip")[i]).animate({
 
 
 
+*/
 
 
+if (ancho <= 600) {
 
- if (ancho <= 600) {
- 
-$(".skill-titulo").each(function (i) {
-   
-$(this).click(function(){
-     
-        if (skillActivado[i]) {
-            $(this).css({
-                "font-size": "2em",
-          "transform":"translateY(-50%)",
-                "opacity":"0"
-            })
-            
-             $(".contenedor-icon-code").css({
-     "transform":"translateY(-50%)",
-  });
-        } else if (!skillActivado[i]) {
-            $(this).css({
-               "font-size": "4em",
-                "opacity":"1"
-            });
-            
-             $(".contenedor-icon-code").css({
-     "transform":"translateY(-50%)",
-  });
-        }
-    
-      for (var j = 0; j < $(".skill-titulo").length; j++) {
-            if (this != $(".skill-titulo")[j]) {
-            
-                $($(".skill-titulo")[j]).css({
-                   "font-size": "4em",
-                    "opacity":"1",
+    $(".skill-titulo").each(function (i) {
+
+        $(this).click(function () {
+
+            if (skillActivado[i]) {
+                $(this).css({
+                    "font-size": "2em",
+                    "transform": "translateY(-50%)",
+                    "opacity": "0"
+                })
+
+                $(".contenedor-icon-code").css({
+                    "transform": "translateY(-50%)",
+                });
+            } else if (!skillActivado[i]) {
+                $(this).css({
+                    "font-size": "4em",
+                    "opacity": "1"
+                });
+
+                $(".contenedor-icon-code").css({
+                    "transform": "translateY(-50%)",
                 });
             }
-        }
+
+            for (var j = 0; j < $(".skill-titulo").length; j++) {
+                if (this != $(".skill-titulo")[j]) {
+
+                    $($(".skill-titulo")[j]).css({
+                        "font-size": "4em",
+                        "opacity": "1",
+                    });
+                }
+            }
 
 
-})})
+        })
+    })
 }
 
 

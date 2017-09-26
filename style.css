@@ -362,7 +362,7 @@ background-image: url(img/background-personal.jpeg);
     background-position: center;
 }
 
-.contenedor-icon-code {
+.contenedor-icon {
 text-align: center;
   transition: 0.5s;
     margin-top: 3em;
@@ -372,13 +372,16 @@ text-align: center;
     margin: 0;
 }
 
+
+
+
 .chip{
     transition: 0.5s;
    background-color:  #eee !important;
-    border: 1px solid var(--color-verde);
+  
     margin: 0.3em;
    opacity: 0;
-    
+    border-radius: 0;
 
 }
 
@@ -396,7 +399,8 @@ text-align: center;
 
 #my-work {
     position: relative;
-    background-color: var(--color-verde);
+    background-image: url(img/pattern.png);
+    
     margin: 0;
     padding: 0;
       height: 100vh; 
