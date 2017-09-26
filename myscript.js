@@ -620,7 +620,7 @@ if (ancho <= 992) {
                     "opacity": "0"
                 })
 
-                $(".contenedor-icon-code").css({
+                $(".contenedor-icon").css({
                     "transform": "translateY(-50%)",
                 });
             } else if (!skillActivado[i]) {
@@ -629,7 +629,7 @@ if (ancho <= 992) {
                     "opacity": "1"
                 });
 
-                $(".contenedor-icon-code").css({
+                $(".contenedor-icon").css({
                     "transform": "translateY(-50%)",
                 });
             }
