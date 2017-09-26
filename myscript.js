@@ -63,7 +63,7 @@ $(".contenedor-icon-personal>.chip").each(function (i) {
 });
 
 
-var altoContenedorIconCode = ($(".contenedor-icon-code").height()/1.2) * -1;
+var altoContenedorIconCode = ($(".contenedor-icon-code").height() / 1.2) * -1;
 
 var marginContenedorIconCode = "0em";
 
@@ -473,7 +473,7 @@ $(".skill-titulo").each(function (i) {
                             opacity: 1,
 
                         }, 0)
-                    }, 200*j);
+                    }, 200 * j);
 
 
             })
@@ -608,18 +608,14 @@ $($(".chip")[i]).animate({
 
 
 if (ancho <= 992) {
-
     $(".skill-titulo").each(function (i) {
-
         $(this).click(function () {
-
             if (skillActivado[i]) {
                 $(this).css({
                     "font-size": "2em",
                     "transform": "translateY(-50%)",
                     "opacity": "0"
                 })
-
                 $(".contenedor-icon").css({
                     "transform": "translateY(-50%)",
                 });
@@ -628,12 +624,10 @@ if (ancho <= 992) {
                     "font-size": "4em",
                     "opacity": "1"
                 });
-
                 $(".contenedor-icon").css({
                     "transform": "translateY(-50%)",
                 });
             }
-
             for (var j = 0; j < $(".skill-titulo").length; j++) {
                 if (this != $(".skill-titulo")[j]) {
 
@@ -643,8 +637,6 @@ if (ancho <= 992) {
                     });
                 }
             }
-
-
         })
     })
 }
@@ -680,5 +672,3 @@ $(".home-icon-down>a>i").mouseout(function () {
 
     $(".home-icon-down>a>i").css("color", WHITECOLOR);
 });
-
-

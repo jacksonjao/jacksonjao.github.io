@@ -381,7 +381,7 @@ background-image: url(http://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif);
     top:50%;
     transform: translateY(-50%);
     margin: 0;
-    text-align: left;
+    text-align: center;
 }
 
 
@@ -393,7 +393,7 @@ background-image: url(http://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif);
    background-color:  #eee !important;
     margin: 0.3em;
    opacity: 0;
-    text-align: center;
+    text-align: left;
 }
 
 .chip>img{
@@ -449,6 +449,10 @@ background-image: url(http://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif);
     .contenedor-icon {
 	  text-align: center;
 }
+    
+    .chip {
+	text-align: center;
+}
 }
 
 @media (max-width: 768px) {
@@ -485,7 +489,9 @@ background-image: url(http://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif);
 
     
 
-    
+    .chip {
+	 width: inherit;
+}
  
     
         #botones {
@@ -505,8 +511,8 @@ background-image: url(http://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif);
          
 }
     .chip{
-        font-size:0.8em;
-      font-size: 0.7em;
+        font-size:0.75em;
+  
          
         
     }
