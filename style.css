@@ -378,10 +378,9 @@ text-align: center;
 .chip{
     transition: 0.5s;
    background-color:  #eee !important;
-  
     margin: 0.3em;
    opacity: 0;
-    border-radius: 0;
+    
 
 }
 
@@ -400,7 +399,6 @@ text-align: center;
 #my-work {
     position: relative;
     background-image: url(img/pattern.png);
-    
     margin: 0;
     padding: 0;
       height: 100vh; 

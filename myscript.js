@@ -607,7 +607,7 @@ $($(".chip")[i]).animate({
 */
 
 
-if (ancho <= 600) {
+if (ancho <= 768) {
 
     $(".skill-titulo").each(function (i) {
 
