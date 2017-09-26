@@ -1,3 +1,4 @@
+
 var cantidadDeSecciones = 5;
 var seccion = 0;
 var altoPantalla = $(window).height() / cantidadDeSecciones;

@@ -317,7 +317,7 @@ margin: 0;
 
 
 
-.skill>H1 {
+.skill-titulo {
 		color: var(--color-verde);
         font-family: Bebas;
     font-size: 5em;
@@ -332,7 +332,7 @@ z-index: 10;
 }
 
 
-.skill>H1:hover {
+.skill-titulo:hover {
   
      cursor: pointer;
     color: white;
