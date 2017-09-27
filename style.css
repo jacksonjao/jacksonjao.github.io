@@ -27,13 +27,12 @@ color: white;
  
 }
 
-html,
-body {
-    min-height: 100vh;
-    overflow-x: hidden;
-    background-color: black;
-    
-    
+
+
+body{
+    width: 100vw;
+    position: relative;
+      overflow-x: hidden;
 }
 
 
@@ -72,25 +71,27 @@ body {
     background-color: black;
     margin: 0;
     padding-bottom: 6rem;
-    height: 100vh;
+height: 100vh;
       min-height: 500px;
       opacity: 0;
+    
 }
 
 #particles-js {
-    width: 100%;
+    width: 0%;
     position: absolute;
     z-index: 1;
 }
 
 header {
+     padding-top: 1em;
     position: relative;
     z-index: 1;
     
 }
 
 header>ul {
-    margin-top: 2em;
+   
     text-align: right;
     padding-right: 2em;
 }
@@ -117,20 +118,38 @@ header>ul>li>a>figure {
     display: inline;
 }
 
+.home-presentacion {
+	position: relative;
+    top:50%;
+    text-align: center;
+    transform: translateY(-50%);
+    margin-top: -3em;
+    
+    
+}
+
+.logo-real {
+    width: calc(100vw/2);
+	max-width: 322px;
+     max-height: 322px;
+    visibility: hidden;
+}
+
+
 .home-contenedor-logo {
     position: relative;
-    margin-top: -5em;
+    display: inline-block;
+    margin-right: 3em;
+ 
 }
 
 .logo-home {
-    
-    position: relative;
     z-index: 1;
     background-size: contain;
     height: 100%;
     max-height: 322px;
     background-repeat: no-repeat;
-    
+    width: 100%;
 }
 
 .logo-uno {
@@ -168,11 +187,18 @@ transition: 1s;
 
 }
 
+.contenedor-introduccion {
+	 position: relative;
+    display: inline-block;
+    margin-left: 3em;
+}
+
 .introduccion {
     position: relative;
     color: white;
     z-index: 1;
     font-size: 1.1em;
+     text-align: left !important;
 }
 
 .rect-see-my-work {
@@ -196,7 +222,8 @@ transition: 1s;
     text-align: center;
     bottom: 0;
     z-index: 10;
-  
+  right: 0;
+    left: 0;
 }
 
 .learn-more>a {
@@ -221,11 +248,6 @@ margin: 0;
     
 }
 
-.home-presentacion {
-    position: absolute;
-    bottom: 0;
-    top: 0;
-}
 
 
 /*-------about me----------*/
@@ -345,10 +367,11 @@ z-index: 10;
     height: 100%;
     width: 100%;
 background-image:url(https://media.giphy.com/media/YQHnvymP9lEm4/giphy.gif);
+     filter: brightness(0.3) grayscale(100%);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-       filter: brightness(0.3) grayscale();
+      
   
  
 }
@@ -358,21 +381,25 @@ background-image:url(https://media.giphy.com/media/YQHnvymP9lEm4/giphy.gif);
 
 .uxui>.fondo {
 background-image: url(https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif);
+     filter: brightness(0.3) grayscale(100%);
+  
       height: 100%;
     width: 100%;
      background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-       filter: brightness(0.3) grayscale();
+      
 }
 .personal>.fondo {
 background-image: url(https://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif);
+           filter: brightness(0.3) grayscale(100%);
+
+   
     height: 100%;
     width: 100%;
      background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-       filter: brightness(0.3) grayscale();
 }
 
 .contenedor-icon {
@@ -457,13 +484,18 @@ background-image: url(https://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif)
 }
 
 @media (max-width: 768px) {
-    margin-top: 0px;
+   
     .introduccion {
         font-size: 0.8em;
     }
     
     .home-contenedor-logo {
-    margin-top: 0;
+    margin:0;
+
+}
+    
+    .contenedor-introduccion {
+	margin: 0;
 }
     
     

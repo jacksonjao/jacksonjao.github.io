@@ -3,14 +3,140 @@ var seccion = 0;
 var altoPantalla = $(window).height() / cantidadDeSecciones;
 var greenColor = "#97c03d";
 var whiteColor = "#fff"
-const GREENCOLOR = "#97c03d";
-const WHITECOLOR = "#fff";
+var GREENCOLOR = "#97c03d";
+var WHITECOLOR = "#fff";
 var ancho = $(window).width();
 
 $("#b" + seccion).css({
     'background-color': greenColor,
     'border-color': greenColor
 });
+
+
+
+/*-----Scroll----*/
+$(document).ready(function() {
+	$('a[rel="relativeanchor"]').click(function(){
+	    $('html, body').animate({
+	        scrollTop: $( $.attr(this, 'href') ).offset().top
+	    }, 1000);
+	    return false;
+	}); 
+});
+
+
+
+
+
+/* ---- particles.js config ---- */
+particlesJS("particles-js", {
+    "particles": {
+        "number": {
+            "value": 40,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#ffffff"
+        },
+        "shape": {
+            "type": "circle",
+            "stroke": {
+                "width": 0,
+                "color": "#000000"
+            },
+            "polygon": {
+                "nb_sides": 5
+            }
+        },
+        "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+            }
+        },
+        "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+            }
+        },
+        "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "grab"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            },
+            "resize": true
+        },
+        "modes": {
+            "grab": {
+                "distance": 200,
+                "line_linked": {
+                    "opacity": 0.8
+                }
+            },
+            "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+            },
+            "repulse": {
+                "distance": 200,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 4
+            },
+            "remove": {
+                "particles_nb": 10
+            }
+        }
+    },
+    "retina_detect": false
+});
+
+
+
 
 var iconosCode = ["img/icon-java.svg", "img/icon-csharp.svg", "img/icon-python.svg", "img/icon-mysql.svg", "img/icon-unity.svg", "img/icon-android.svg", "img/icon-nodejs.svg", "img/icon-html.svg", "img/icon-css.svg", "img/icon-javascript.svg", "img/icon-arduino.svg"];
 
@@ -76,149 +202,6 @@ if (ancho > 992) {
 
 
 
-/*-----Scroll----*/
-$(function () {
-    $('a[href*=#]').click(function () {
-
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
-            location.hostname == this.hostname) {
-
-            var $target = $(this.hash);
-
-            $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
-
-            if ($target.length) {
-
-                var targetOffset = $target.offset().top;
-
-                $('html,body').animate({
-                    scrollTop: targetOffset
-                }, 1000);
-
-                return false;
-
-            }
-
-
-        }
-
-    });
-
-});
-
-
-
-/* ---- particles.js config ---- */
-particlesJS("particles-js", {
-    "particles": {
-        "number": {
-            "value": 50,
-            "density": {
-                "enable": true,
-                "value_area": 800
-            }
-        },
-        "color": {
-            "value": "#ffffff"
-        },
-        "shape": {
-            "type": "circle",
-            "stroke": {
-                "width": 0,
-                "color": "#000000"
-            },
-            "polygon": {
-                "nb_sides": 5
-            },
-            "image": {
-                "src": "img/github.svg",
-                "width": 100,
-                "height": 100
-            }
-        },
-        "opacity": {
-            "value": 0.5,
-            "random": false,
-            "anim": {
-                "enable": false,
-                "speed": 1,
-                "opacity_min": 0.1,
-                "sync": false
-            }
-        },
-        "size": {
-            "value": 3,
-            "random": true,
-            "anim": {
-                "enable": false,
-                "speed": 40,
-                "size_min": 0.1,
-                "sync": false
-            }
-        },
-        "line_linked": {
-            "enable": true,
-            "distance": 150,
-            "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
-        },
-        "move": {
-            "enable": true,
-            "speed": 2,
-            "direction": "none",
-            "random": false,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-                "enable": false,
-                "rotateX": 600,
-                "rotateY": 1200
-            }
-        }
-    },
-    "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-            "onhover": {
-                "enable": true,
-                "mode": "grab"
-            },
-            "onclick": {
-                "enable": true,
-                "mode": "push"
-            },
-            "resize": true
-        },
-        "modes": {
-            "grab": {
-                "distance": 140,
-                "line_linked": {
-                    "opacity": 0.8
-                }
-            },
-            "bubble": {
-                "distance": 400,
-                "size": 40,
-                "duration": 2,
-                "opacity": 8,
-                "speed": 3
-            },
-            "repulse": {
-                "distance": 200,
-                "duration": 0.4
-            },
-            "push": {
-                "particles_nb": 4
-            },
-            "remove": {
-                "particles_nb": 100
-            }
-        }
-    },
-    "retina_detect": true
-});
 
 
 /* ---- Evaluaciones con el scroll ---- */
@@ -426,7 +409,7 @@ var showText = function (target, message, index, interval) {
             showText(target, message, index, interval);
         }, interval);
     }
-}
+};
 
 
 
@@ -554,7 +537,6 @@ $(".skill-titulo").each(function (i) {
 
 
 /*
-
 $(".skill-titulo").click(function(){
  if(skillActivado[0]){
        $(".contenedor-icon-code").css({
@@ -590,9 +572,6 @@ $($(".chip")[i]).animate({
     
     
 })
-
-
-
 */
 
 
@@ -628,7 +607,7 @@ if (ancho <= 992) {
             }
         })
     })
-}
+};
 
 
 
