@@ -189,7 +189,7 @@ $(".contenedor-icon-personal>.chip").each(function (i) {
 });
 
 
-var altoContenedorIconCode = ($(".contenedor-icon-code").height() / 1.2) * -1;
+var altoContenedorIconCode = (210) * -1;
 
 var marginContenedorIconCode = "0em";
 
