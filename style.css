@@ -27,7 +27,12 @@ color: white;
  
 }
 
-
+#particles-js {
+  position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+    z-index: 1;
+}
 
 body{
     width: 100vw;
@@ -77,11 +82,7 @@ height: 100vh;
     
 }
 
-#particles-js {
-    width: 0;
-    height: 0;
-    position: absolute;
-}
+
 
 header {
      padding-top: 1em;
@@ -133,6 +134,7 @@ header>ul>li>a>figure {
 	max-width: 322px;
      max-height: 322px;
     visibility: hidden;
+    
 }
 
 
@@ -140,7 +142,7 @@ header>ul>li>a>figure {
     position: relative;
     display: inline-block;
     margin-right: 3em;
-    z-index: 10 !important;
+   
  
 }
 
@@ -192,7 +194,7 @@ transition: 1s;
 	 position: relative;
     display: inline-block;
     margin-left: 3em;
-    z-index: 10;
+  
 }
 
 .introduccion {
@@ -201,7 +203,7 @@ transition: 1s;
 
     font-size: 1.1em;
      text-align: left !important;
-    z-index: 10;
+   
 }
 
 .rect-see-my-work {
@@ -371,7 +373,7 @@ z-index: 10;
     height: 100%;
     width: 100%;
 background-image:url(https://media.giphy.com/media/YQHnvymP9lEm4/giphy.gif);
-     filter: brightness(0.3) grayscale(100%);
+     filter: brightness(0.3) grayscale(70%);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -385,7 +387,7 @@ background-image:url(https://media.giphy.com/media/YQHnvymP9lEm4/giphy.gif);
 
 .uxui>.fondo {
 background-image: url(https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif);
-     filter: brightness(0.3) grayscale(100%);
+     filter: brightness(0.3) grayscale(70%);
   
       height: 100%;
     width: 100%;
@@ -396,7 +398,7 @@ background-image: url(https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif);
 }
 .personal>.fondo {
 background-image: url(https://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif);
-           filter: brightness(0.3) grayscale(100%);
+           filter: brightness(0.5) ;
 
    
     height: 100%;
