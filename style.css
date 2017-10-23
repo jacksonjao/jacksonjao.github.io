@@ -1,74 +1,56 @@
 :root {
-  --color-verde: #97c03d;
-  /*  font-family: 'Josefin Sans', sans-serif;
+    --color-verde: #97c03d;
+    /*  font-family: 'Josefin Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
     */
 }
+
 @font-face {
     font-family: Bebas;
     src: url(font/BebasNeue.otf);
 }
 
-
-
-
-
-p{
+p {
     font-weight: 100;
-        letter-spacing: 0.2em;
-color: var(--color-verde);
+    letter-spacing: 0.2em;
+    color: var(--color-verde);
 }
 
-
-::selection{
+::selection {
     background: var(--color-verde);
-color: white;
- 
+    color: white;
 }
 
-#particles-js {
-  position: absolute;
-    min-height: 100vh;
-    min-width: 100vw;
-    z-index: 1;
-}
-
-body{
+body {
     width: 100vw;
     position: relative;
-      overflow-x: hidden;
+    overflow-x: hidden;
 }
-
 
 #botones {
-	position: fixed;
+    position: fixed;
     z-index: 100;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
     margin-left: 1rem;
-   
 }
-.boton{
+
+.boton {
     width: 1em;
     height: 1em;
-   border: 0.1em solid white;
+    border: 0.1em solid white;
     border-radius: 5em;
     z-index: 100;
     margin-top: 0.8em;
     margin-bottom: 0.8em;
     transition: 0.5s;
- 
 }
-
 
 .boton:hover {
-     background-color:white;
-       border-color:white;
+    background-color: white;
+    border-color: white;
 }
-
-
-
 
 #home {
     position: relative;
@@ -76,23 +58,19 @@ body{
     background-color: black;
     margin: 0;
     padding-bottom: 6rem;
-height: 100vh;
-      min-height: 500px;
-      opacity: 0;
-    
+    height: 100vh;
+    min-height: 500px;
+    opacity: 0;
 }
 
-
-
 header {
-     padding-top: 1em;
+    padding-top: 1em;
     position: relative;
     z-index: 1;
-    
+   
 }
 
 header>ul {
-   
     text-align: right;
     padding-right: 2em;
 }
@@ -105,7 +83,6 @@ header>ul>li {
 header>ul>li>a>i {
     transition: 0.5s;
     font-size: 1.5em !important;
-   
     color: var(--color-verde);
 }
 
@@ -120,34 +97,27 @@ header>ul>li>a>figure {
 }
 
 .home-presentacion {
-	position: relative;
-    top:50%;
+    position: relative;
+    top: 50%;
     text-align: center;
     transform: translateY(-50%);
     margin-top: -3em;
- 
-    
 }
 
 .logo-real {
     width: calc(100vw/2);
-	max-width: 322px;
-     max-height: 322px;
+    max-width: 322px;
+    max-height: 322px;
     visibility: hidden;
-    
 }
-
 
 .home-contenedor-logo {
     position: relative;
     display: inline-block;
     margin-right: 3em;
-   
- 
 }
 
 .logo-home {
-   
     background-size: contain;
     height: 100%;
     max-height: 322px;
@@ -172,55 +142,45 @@ header>ul>li>a>figure {
 .logo-tres {
     position: absolute;
     background-image: url(img/logo-tres.svg);
-    
     transform: translate(-0.5em)rotate(-180deg);
     background-position: right;
 }
 
 .logo-cuatro {
     position: absolute;
-   
     background-image: url(img/logo-cuatro.svg);
-
-transition: 1s;
+    transition: 1s;
     transform-origin: 0% 100%;
     transform: translateX(-12.500em);
     opacity: 0;
-    
-
 }
 
 .contenedor-introduccion {
-	 position: relative;
+    position: relative;
     display: inline-block;
     margin-left: 3em;
-  
 }
 
 .introduccion {
     position: relative;
     color: white;
-
     font-size: 1.1em;
-     text-align: left !important;
-   
+    text-align: left !important;
 }
 
 .rect-see-my-work {
     position: relative;
-	color: var(--color-verde);;
+    color: var(--color-verde);
+    ;
     display: inline-block;
     border: 0.01em solid var(--color-verde);
-   padding: 0.2em 2em 0.2em 2em;
-    
+    padding: 0.2em 2em 0.2em 2em;
     transition: 0.5s;
     opacity: 0;
-    
 }
 
-
 .rect-see-my-work:hover {
-	color: white;
+    color: white;
 }
 
 .home-contenedor-learn-more {
@@ -228,39 +188,35 @@ transition: 1s;
     text-align: center;
     bottom: 0;
     z-index: 10;
-  right: 0;
+    right: 0;
     left: 0;
 }
 
 .learn-more>a {
-  display:inline-block;
+    display: inline-block;
 }
 
 .learn-more>a>p {
     color: white;
     font-size: 0.9em;
     transition: 0.5s;
-   position: relative;
-     display:inline-block;
-margin: 0;
+    position: relative;
+    display: inline-block;
+    margin: 0;
 }
-
-
 
 .home-icon-down>a>i {
     color: white;
     font-size: 3em;
     transition: 0.5s;
-    
 }
-
 
 
 /*-------about me----------*/
 
 #about-me {
     position: relative;
-   /* background-color:#eee;*/
+    /* background-color:#eee;*/
     background-image: url(img/pattern.png);
     margin: 0;
     padding: 0;
@@ -268,54 +224,45 @@ margin: 0;
     min-height: 500px;
 }
 
-.foto{
-   height: 100%;
+.foto {
+    height: 100%;
     background-image: url(img/foto.jpg);
     background-size: cover;
     margin: 0;
 }
 
 .section-aboutme {
-	margin: 0 !important;
+    margin: 0 !important;
     padding: 0 !important;
 }
 
-
-
 .contenido-aboutme {
-	position: relative;
-     height: 100%;
-    
-    
+    position: relative;
+    height: 100%;
 }
 
 .contenido-aboutme>article {
-        top: 50%;
+    top: 50%;
     transform: translateY(-50%);
-	position: absolute;
-
-   
+    position: absolute;
+    max-width: 1280;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
 
 .contenido-aboutme>article>h1 {
-	color: var(--color-verde);
+    color: var(--color-verde);
     margin-top: 0;
-        font-family: Bebas;
+    font-family: Bebas;
     font-size: 8em;
     text-align: center;
 }
 
 .contenido-aboutme>article>p {
-	color: black;
-     font-size: 1.1em;
-    
-
+    color: black;
+    font-size: 1.1em;
 }
-
-
-
-
-
 
 
 /*-------skills----------*/
@@ -323,116 +270,95 @@ margin: 0;
 #skills {
     position: relative;
     background-color: black;
-    height: 100vh; 
+    height: 100vh;
     min-height: 500px;
 }
+
 .section-skills {
     position: relative;
-	margin: 0 !important;
+    margin: 0 !important;
     padding: 0 !important;
-    
 }
 
-
-
 .skill {
-   height: 100%;
+    height: 100%;
     position: relative;
     padding: 0 !important;
 }
-.skill:hover {
 
-}
-
-
+.skill:hover {}
 
 .skill-titulo {
-		color: var(--color-verde);
-        font-family: Bebas;
+    color: var(--color-verde);
+    font-family: Bebas;
     font-size: 5em;
-text-align: center;
-   width: 100%;
-	position: absolute;
-     transform: translateY(-50%);
-       top: 50%;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
     margin: auto;
     transition: 0.5s;
-z-index: 10;
-    }
-
-
-.skill-titulo:hover {
-  
-     cursor: pointer;
-    color: white;
+    z-index: 10;
 }
 
-
+.skill-titulo:hover {
+    cursor: pointer;
+    color: white;
+}
 
 .coding>.fondo {
     height: 100%;
     width: 100%;
-background-image:url(https://media.giphy.com/media/YQHnvymP9lEm4/giphy.gif);
-     filter: brightness(0.3) grayscale(100%);
+    background-image: url(https://media.giphy.com/media/YQHnvymP9lEm4/giphy.gif);
+    filter: brightness(0.3) grayscale(100%);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-      
-  
- 
 }
-
-
-
 
 .uxui>.fondo {
-background-image: url(https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif);
-     filter: brightness(0.3) grayscale(100%);
-  
-      height: 100%;
-    width: 100%;
-     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-      
-}
-.personal>.fondo {
-background-image: url(https://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif);
-           filter: brightness(0.3) grayscale(100%);
-
-   
+    background-image: url(https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif);
+    filter: brightness(0.3) grayscale(100%);
     height: 100%;
     width: 100%;
-     background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.personal>.fondo {
+    background-image: url(https://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif);
+    filter: brightness(0.3) grayscale(100%);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .contenedor-icon {
-  transition: 0.5s;
+    transition: 0.5s;
     margin-top: 3em;
     position: absolute;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
     margin: 0;
     text-align: center;
 }
 
-
-
-
-.chip{
+.chip {
     width: 120px;
     transition: 0.5s;
-   background-color:  #eee !important;
+    background-color: #eee !important;
     margin: 0.3em;
-   opacity: 0;
+    opacity: 0;
     text-align: left;
 }
 
-.chip>img{
+.chip>img {
     height: 100%;
-   background-color: #eee;
+    background-color: #eee;
     padding: 0.3em;
 }
 
@@ -440,18 +366,43 @@ background-image: url(https://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif)
     text-transform: uppercase;
 }
 
+
 /*-------my Work----------*/
 
 #my-work {
     position: relative;
     background-image: url(img/pattern.png);
-    margin: 0;
-    padding: 0;
-      height: 100vh; 
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100vh;
     min-height: 500px;
-   
 }
 
+.section-mywork {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.trabajo {
+    display: inline-block;
+    float: left;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+        filter: grayscale();
+
+    background-image: url(img/cover-app-hed.jpg);
+    transition: 0.5s;
+    width: calc(100vw/2);
+    height: calc(100vh/2);
+}
+
+.trabajo:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+}
 
 
 /*-------contact me----------*/
@@ -461,9 +412,8 @@ background-image: url(https://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif)
     background-color: black;
     margin: 0;
     padding: 0;
-      height: 100vh; 
+    height: 100vh;
     min-height: 500px;
-   
 }
 
 @media (min-width: 1199px) {}
@@ -471,141 +421,87 @@ background-image: url(https://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif)
 @media (max-width: 1199px) {}
 
 @media (max-width: 992px) {
-    
-       .skill>h1 {
-
-    font-size: 4em;
-      transition: 0.5s;
-   
-         
-}
-    
+    .skill>h1 {
+        font-size: 4em;
+        transition: 0.5s;
+    }
     .contenedor-icon {
-	  text-align: center;
-}
-    
+        text-align: center;
+    }
     .chip {
-	text-align: center;
-}
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {
-   
     .introduccion {
         font-size: 0.8em;
     }
-    
     .home-contenedor-logo {
-    margin:0;
-
-}
-    
-    .contenedor-introduccion {
-	margin: 0;
-}
-    
-    
-    
-    
-    .contenido-aboutme>article>h1 {
-	color: var(--color-verde);
-    margin-top: 0;
-        font-family: Bebas;
-    font-size: 5em;
-    text-align: center;
         margin: 0;
-}
-
-    
-    
-.contenido-aboutme>article>p {
-	color: #000;
-     font-size:0.9em;
-
-    font-weight: 300;
-
-}
-
-    
-
+    }
+    .contenedor-introduccion {
+        margin: 0;
+    }
+    .contenido-aboutme>article>h1 {
+        color: var(--color-verde);
+        margin-top: 0;
+        font-family: Bebas;
+        font-size: 5em;
+        text-align: center;
+        margin: 0;
+    }
+    .contenido-aboutme>article>p {
+        color: #000;
+        font-size: 0.9em;
+        font-weight: 300;
+    }
     .chip {
-	 width: inherit;
-}
- 
-    
-        #botones {
-
-    margin-left: 1rem;
-    
-}
-    
-    
-    
-
-     .skill>h1 {
-
-    font-size: 4em;
-      transition: 0.5s;
-   
-         
-}
-    .chip{
-        font-size:0.75em;
-  
-         
-        
+        width: inherit;
     }
-     .chip>img{
-      margin-right: 0;
-
+    #botones {
+        margin-left: 1rem;
     }
- 
+    .skill>h1 {
+        font-size: 4em;
+        transition: 0.5s;
+    }
+    .chip {
+        font-size: 0.75em;
+    }
+    .chip>img {
+        margin-right: 0;
+    }
 }
-
-
 
 @media (max-width: 600px) {
- .rect-see-my-work {
-    border-color: var(--color-verde);
-      font-size:0.9em;
+    .rect-see-my-work {
+        border-color: var(--color-verde);
+        font-size: 0.9em;
         padding: 0.2em 1em 0.2em 1em;
-}
+    }
     .skill {
-	height:calc(100%/3);
-}
-
-
-    
+        height: calc(100%/3);
+    }
     .rect-see-my-work:hover {
-    border-color: var(--color-verde);
-	
-}
-    
-          .foto{
-  width: 7em;
+        border-color: var(--color-verde);
+    }
+    .foto {
+        width: 7em;
         height: 7em;
         transform: scale(0);
-       border-radius: 5em; 
+        border-radius: 5em;
         position: absolute;
-      margin-left: auto;
+        margin-left: auto;
         margin-right: auto;
         right: 0;
-        left: 0;    
+        left: 0;
+    }
 }
- 
- 
-   
-}
-
-
 
 @media (max-width: 575px) {
-
- 
-    
     .introduccion {
         font-size: 0.9em;
-       
     }
     .home-presentacion {
         position: relative;
@@ -613,41 +509,29 @@ background-image: url(https://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif)
     .valign-wrapper {
         display: inherit !important;
     }
-    
-    
-    
-           .foto{
-  width: 7em;
+    .foto {
+        width: 7em;
         height: 7em;
         transform: scale(0);
-       border-radius: 5em; 
+        border-radius: 5em;
         position: absolute;
-      margin-left: auto;
+        margin-left: auto;
         margin-right: auto;
         right: 0;
-        left: 0;    
-}
-    
+        left: 0;
+    }
 }
 
 @media (max-height: 500px) {
     .home-presentacion {
         position: relative;
     }
-    
     .contenedor-icon-code {
-
-    margin-top: 0em;
-   
-}
-    
-    
-#about-me {
-  
-   /* height: 400vh; 
+        margin-top: 0em;
+    }
+    #about-me {
+        /* height: 400vh; 
     
    */
-}
-    
-    
+    }
 }

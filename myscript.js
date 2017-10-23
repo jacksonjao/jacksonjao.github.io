@@ -428,44 +428,6 @@ $(".skill-titulo").each(function (i) {
 });
 
 
-/*
-$(".skill-titulo").click(function(){
- if(skillActivado[0]){
-       $(".contenedor-icon-code").css({
-          "opacity":"1",
-            "transform": "translateY("+marginContenedorIconCode+")",
-           
-      });
-     
-    $(".chip").each(function(i){
-        
-    setTimeout(
-        function () {
-$($(".chip")[i]).animate({
-    opacity: 1,
-    
-}, 0)
-        }, 100*i);
-    
-    
-})}else{
-     
-      $(".chip").css({
-          "opacity":"0"
-           
-      });
-        
-        $(".contenedor-icon-code").css({
-          "opacity":"0",
-            "transform": "translateY(-50%)",
-      });
-    }
-    
-    
-    
-})
-*/
-
 
 if (ancho <= 992) {
     $(".skill-titulo").each(function (i) {
