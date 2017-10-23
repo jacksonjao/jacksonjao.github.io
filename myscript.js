@@ -30,11 +30,19 @@ $(document).ready(function() {
 
 
 
-var iconosCode = ["img/icon-java.svg", "img/icon-csharp.svg", "img/icon-python.svg", "img/icon-mysql.svg", "img/icon-unity.svg", "img/icon-android.svg", "img/icon-nodejs.svg", "img/icon-html.svg", "img/icon-css.svg", "img/icon-javascript.svg", "img/icon-arduino.svg"];
+
+
+
+
+
+var iconosCode = ["img/icon-java.svg", "img/icon-android.svg", "img/icon-html.svg", "img/icon-css.svg", "img/icon-javascript.svg", "img/icon-nodejs.svg", "img/icon-csharp.svg", "img/icon-python.svg", "img/icon-mysql.svg", "img/icon-unity.svg", "img/icon-arduino.svg"];
 
 var iconosUxUi = ["img/icon-photoshop.svg", "img/icon-illustrator.svg", "img/icon-xd.svg", "img/icon-invision.svg", "img/icon-marvel.svg", "img/icon-balsamiq.svg"];
 
 var iconosPersonal = ["img/icon-photoshop.svg", "img/icon-illustrator.svg", "img/icon-xd.svg", "img/icon-invision.svg", "img/icon-marvel.svg", "img/icon-balsamiq.svg"];
+
+
+
 
 var textCode = [];
 for (var i = 0; i < iconosCode.length; i++) {
@@ -46,9 +54,32 @@ for (var i = 0; i < iconosUxUi.length; i++) {
     textUxUi.push(iconosUxUi[i].split("-")[1].split(".")[0]);
 };
 
+
+
+//estos no los hice por arreglos porque me era mas fácil sin partir los nombres
+var stringsPersonal=["icon-team-working.svg","icon-working-unde-the-preassure.svg","icon-perseverance.svg","icon-perfectionism.svg","icon-autonomous-learning.svg","icon-proactivity.svg"  
+];
+
+stringsPersonal.sort(function(a, b){
+  // ASC  -> a.length - b.length
+  // DESC -> b.length - a.length
+  return b.length - a.length;
+});
+
+
 var textPersonal = [];
 for (var i = 0; i < iconosPersonal.length; i++) {
-    textPersonal.push(iconosPersonal[i].split("-")[1].split(".")[0]);
+    textPersonal.push("");
+    /*
+      textPersonal.push(stringsPersonal[i].split("-")[1].split(".")[0]);
+   */
+    
+    for(var j=1;j<stringsPersonal[i].split("-").length;j++){
+       
+        textPersonal[i]+=stringsPersonal[i].split("-")[j].split(".")[0]+" ";
+        
+    }
+
 };
 
 
@@ -164,18 +195,11 @@ $(window).scroll(function (event) {
 
     }
 
-
-
-
-
-
-
 });
 
 
 
 /* ---- Evaluaciones con el click de los botones ---- */
-
 for (var i = 0; i < cantidadDeSecciones; i++) {
 
     $("#b" + i).click(function () {
@@ -237,17 +261,27 @@ for (var i = 0; i < cantidadDeSecciones; i++) {
 }
 
 
-//inicia con opacidad
+//inicia con opacidad y animación del logo
+
 $("#home").animate({
     opacity: 1,
 
-}, 1500, function () {
+}, 500, function () {
+    
+     setTimeout(
+        function () {
+          $(".logo-uno").css({'padding':'0','opacity':'1'})
+
+        }, 0);
+    
+    
 
     setTimeout(
         function () {
             $(".logo-tres").css({
                 'transition': '1s',
                 'transform': 'translate(0em,0em) rotate(-0deg)',
+                'opacity':'1',
                 'background-position': 'left'
             });
 
@@ -282,6 +316,7 @@ $("#home").animate({
             $(".rect-see-my-work").css({
                 'opacity': '1'
             });
+          
 
         }, 8000);
 
@@ -406,26 +441,6 @@ $(".skill-titulo").each(function (i) {
 
 
 
-
-$(".skill-titulo").each(function (i) {
-
-    $(this).click(function () {
-
-
-
-        if (skillActivado[i]) {
-
-        } else {
-
-
-
-        }
-
-
-
-    })
-
-});
 
 
 

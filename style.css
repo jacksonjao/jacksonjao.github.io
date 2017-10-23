@@ -66,7 +66,8 @@ body {
 header {
     padding-top: 1em;
     position: relative;
-    z-index: 1;
+    z-index: 10;
+   transition: 1s;
    
 }
 
@@ -126,6 +127,9 @@ header>ul>li>a>figure {
 }
 
 .logo-uno {
+        transition: 1s;
+
+    padding:100vw;
     position: absolute;
     background-image: url(img/logo-uno.svg);
 }
@@ -142,8 +146,12 @@ header>ul>li>a>figure {
 .logo-tres {
     position: absolute;
     background-image: url(img/logo-tres.svg);
-    transform: translate(-0.5em)rotate(-180deg);
-    background-position: right;
+    /*transform: translate(-0.5em)rotate(-180deg);
+    background-position: right;*/
+    transform: translateY(-100vh);
+    transition: 1s;
+    opacity: 0;
+    
 }
 
 .logo-cuatro {
@@ -307,19 +315,33 @@ header>ul>li>a>figure {
     color: white;
 }
 
+.conte {
+	position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:0;
+    bottom: 0;
+   width: 100%;
+    max-width: calc(1280px/2);
+   
+}
+
 .coding>.fondo {
     height: 100%;
     width: 100%;
-    background-image: url(https://media.giphy.com/media/YQHnvymP9lEm4/giphy.gif);
-    filter: brightness(0.3) grayscale(100%);
+       background-image: url(img/background-code.jpeg);
+
+    /*background-image: url(https://media.giphy.com/media/YQHnvymP9lEm4/giphy.gif);
+    filter: brightness(0.3) grayscale(100%);*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .uxui>.fondo {
-    background-image: url(https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif);
-    filter: brightness(0.3) grayscale(100%);
+    background-image: url(img/background-ux.jpeg);
+   /* background-image: url(https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif);
+    filter: brightness(0.3) grayscale(100%);*/
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -328,8 +350,10 @@ header>ul>li>a>figure {
 }
 
 .personal>.fondo {
-    background-image: url(https://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif);
-    filter: brightness(0.3) grayscale(100%);
+        background-image: url(img/background-personal.jpeg);
+
+   /* background-image: url(https://media.giphy.com/media/26xBJckiX9CfuIPvi/giphy.gif);
+    filter: brightness(0.3) grayscale(100%);*/
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -339,16 +363,15 @@ header>ul>li>a>figure {
 
 .contenedor-icon {
     transition: 0.5s;
-    margin-top: 3em;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    margin: 0;
+    margin: 0em 30px 0px 30px;
     text-align: center;
 }
 
 .chip {
-    width: 120px;
+    min-width: 120px;
     transition: 0.5s;
     background-color: #eee !important;
     margin: 0.3em;
@@ -472,6 +495,9 @@ header>ul>li>a>figure {
     .chip>img {
         margin-right: 0;
     }
+     .contenedor-icon {
+        margin: 0;
+    }
 }
 
 @media (max-width: 600px) {
@@ -496,6 +522,9 @@ header>ul>li>a>figure {
         margin-right: auto;
         right: 0;
         left: 0;
+    }
+    .contenedor-icon {
+        margin: 0;
     }
 }
 
