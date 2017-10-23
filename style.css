@@ -414,13 +414,32 @@ header>ul>li>a>figure {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    transition: 0.5s;
         filter: grayscale();
 
-    background-image: url(img/cover-app-hed.jpg);
-    transition: 0.5s;
+    
+  
     width: calc(100vw/2);
     height: calc(100vh/2);
 }
+
+
+.trabajo:nth-child(1) {
+	  background-image: url(img/cover-app-hed.jpg);
+    
+}
+
+.trabajo:nth-child(2) {
+	  background-image: url(img/cover-desktop-pixel.png);
+    
+}
+
+.trabajo:nth-child(3) {
+	  background-image: url(img/cover-app-topotapp.png);
+}
+
+
+
 
 .trabajo:hover {
     filter: grayscale(0);
