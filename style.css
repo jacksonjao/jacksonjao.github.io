@@ -412,20 +412,15 @@ header>ul>li>a>figure {
 .trabajo {
     display: inline-block;
     float: left;
-    margin: 0 !important;
-    padding: 0 !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     transition: 0.5s;
         filter: grayscale();
-
-    
-  
-    width: calc(100%/2);
-    height: calc(100vh/2);
+ 
 }
 
+/*
 
 .trabajo:nth-child(1) {
 	  background-image: url(img/cover-app-hed.jpg);
@@ -444,7 +439,7 @@ header>ul>li>a>figure {
 .trabajo:nth-child(4) {
 	  background-image: url(img/cover-app-tonelist.png);
 }
-
+*/
 
 
 .trabajo:hover {
@@ -553,10 +548,7 @@ header>ul>li>a>figure {
         margin: 0;
     }
     
-    .trabajo{
-        width: 100vw;
-        height: calc(100vh/4);
-    }
+   
     
     body{
         margin-bottom: 0;

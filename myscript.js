@@ -15,17 +15,14 @@ $("#b" + seccion).css({
 
 
 /*-----Scroll----*/
-$(document).ready(function() {
-	$('a[rel="relativeanchor"]').click(function(){
-	    $('html, body').animate({
-	        scrollTop: $( $.attr(this, 'href') ).offset().top
-	    }, 1000);
-	    return false;
-	}); 
+$(document).ready(function () {
+    $('a[rel="relativeanchor"]').click(function () {
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 1000);
+        return false;
+    });
 });
-
-
-
 
 
 
@@ -57,13 +54,13 @@ for (var i = 0; i < iconosUxUi.length; i++) {
 
 
 //estos no los hice por arreglos porque me era mas fácil sin partir los nombres
-var stringsPersonal=["icon-team-working.svg","icon-working-unde-the-preassure.svg","icon-perseverance.svg","icon-perfectionism.svg","icon-autonomous-learning.svg","icon-proactivity.svg"  
+var stringsPersonal = ["icon-team-working.svg", "icon-working-unde-the-preassure.svg", "icon-perseverance.svg", "icon-perfectionism.svg", "icon-autonomous-learning.svg", "icon-proactivity.svg"
 ];
 
-stringsPersonal.sort(function(a, b){
-  // ASC  -> a.length - b.length
-  // DESC -> b.length - a.length
-  return b.length - a.length;
+stringsPersonal.sort(function (a, b) {
+    // ASC  -> a.length - b.length
+    // DESC -> b.length - a.length
+    return b.length - a.length;
 });
 
 
@@ -73,11 +70,11 @@ for (var i = 0; i < iconosPersonal.length; i++) {
     /*
       textPersonal.push(stringsPersonal[i].split("-")[1].split(".")[0]);
    */
-    
-    for(var j=1;j<stringsPersonal[i].split("-").length;j++){
-       
-        textPersonal[i]+=stringsPersonal[i].split("-")[j].split(".")[0]+" ";
-        
+
+    for (var j = 1; j < stringsPersonal[i].split("-").length; j++) {
+
+        textPersonal[i] += stringsPersonal[i].split("-")[j].split(".")[0] + " ";
+
     }
 
 };
@@ -267,21 +264,24 @@ $("#home").animate({
     opacity: 1,
 
 }, 500, function () {
-    
-     setTimeout(
+
+    setTimeout(
         function () {
-          $(".logo-uno").css({'padding':'0','opacity':'1'})
+            $(".logo-uno").css({
+                'padding': '0',
+                'opacity': '1'
+            })
 
         }, 0);
-    
-    
+
+
 
     setTimeout(
         function () {
             $(".logo-tres").css({
                 'transition': '1s',
                 'transform': 'translate(0em,0em) rotate(-0deg)',
-                'opacity':'1',
+                'opacity': '1',
                 'background-position': 'left'
             });
 
@@ -316,7 +316,7 @@ $("#home").animate({
             $(".rect-see-my-work").css({
                 'opacity': '1'
             });
-          
+
 
         }, 8000);
 
@@ -344,8 +344,7 @@ var showText = function (target, message, index, interval) {
 var skillActivado = [false, false, false];
 
 
-
-
+    
 $(".skill-titulo").each(function (i) {
 
     $(this).click(function () {
@@ -434,53 +433,82 @@ $(".skill-titulo").each(function (i) {
             }
         }
 
-
     })
-})
+});
 
 
 
 
-
-
-
-if (ancho <= 992) {
-    $(".skill-titulo").each(function (i) {
-        $(this).click(function () {
-            if (skillActivado[i]) {
-                $(this).css({
-                    "font-size": "2em",
-                    "transform": "translateY(-50%)",
-                    "opacity": "0"
-                })
-                $(".contenedor-icon").css({
-                    "transform": "translateY(-50%)",
-                });
-            } else if (!skillActivado[i]) {
-                $(this).css({
-                    "font-size": "4em",
-                    "opacity": "1"
-                });
-                $(".contenedor-icon").css({
-                    "transform": "translateY(-50%)",
-                });
-            }
-            for (var j = 0; j < $(".skill-titulo").length; j++) {
-                if (this != $(".skill-titulo")[j]) {
-
-                    $($(".skill-titulo")[j]).css({
+var skillsResponsive= function(ancho){
+    
+    if (ancho <= 992) {
+        $(".skill-titulo").each(function (i) {
+            $(this).click(function () {
+                if (skillActivado[i]) {
+                    $(this).css({
+                        "font-size": "2em",
+                        "transform": "translateY(-50%)",
+                        "opacity": "0"
+                    })
+                    $(".contenedor-icon").css({
+                        "transform": "translateY(-50%)",
+                    });
+                } else if (!skillActivado[i]) {
+                    $(this).css({
                         "font-size": "4em",
-                        "opacity": "1",
+                        "opacity": "1"
+                    });
+                    $(".contenedor-icon").css({
+                        "transform": "translateY(-50%)",
                     });
                 }
-            }
+                for (var j = 0; j < $(".skill-titulo").length; j++) {
+                    if (this != $(".skill-titulo")[j]) {
+
+                        $($(".skill-titulo")[j]).css({
+                            "font-size": "4em",
+                            "opacity": "1",
+                        });
+                    }
+                }
+            })
         })
-    })
-};
+    };
+}
+
+
+  skillsResponsive(ancho);
 
 
 
+//section my work
 
+
+var covers = ["url(img/cover-app-hed.jpg)", "url(img/cover-app-tonelist.png)", "url(img/cover-desktop-pixel.png)", "url(img/cover-app-topotapp.png)"]
+
+var numX=2;
+var numY=2;
+var anchoTrabajos=ancho;
+var altoTrabajos=$("#my-work").height();
+
+
+$(".trabajo").each(function (i) {
+    $(this).css({
+        'background-image': covers[i],
+        'width':anchoTrabajos/numX,
+        'height':altoTrabajos/numY
+    });
+    
+});
+
+var trabajoResponsive= function(ancho,alto,numX,numY){
+    $(".trabajo").each(function (i) {
+    $(this).css({
+        'width':ancho/numX,
+        'height':alto/numY
+    });
+});
+}
 
 
 
@@ -508,4 +536,26 @@ $(".home-icon-down>a>i").mouseout(function () {
     $(".learn-more>a>p").css("color", WHITECOLOR);
 
     $(".home-icon-down>a>i").css("color", WHITECOLOR);
+});
+
+
+if(ancho<=600){
+    alto=$("#my-work").height();
+    trabajoResponsive(ancho,alto,1,4);   
+}
+
+
+//aquí van los que necesitan ser redimensionados
+$(window).resize(function () {
+    ancho = $(window).width();
+    alto=$("#my-work").height();
+    skillsResponsive(ancho);
+   
+    if(ancho>600){
+        trabajoResponsive(ancho,alto,2,2);} 
+    else{
+       trabajoResponsive(ancho,alto,1,4);
+    }
+
+    
 });
