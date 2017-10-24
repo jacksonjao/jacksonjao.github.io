@@ -419,13 +419,14 @@ header>ul>li>a>figure {
 
     
   
-    width: calc(100vw/2);
+    width: calc(100%/2);
     height: calc(100vh/2);
 }
 
 
 .trabajo:nth-child(1) {
 	  background-image: url(img/cover-app-hed.jpg);
+    
     
 }
 
@@ -437,7 +438,9 @@ header>ul>li>a>figure {
 .trabajo:nth-child(3) {
 	  background-image: url(img/cover-app-topotapp.png);
 }
-
+.trabajo:nth-child(4) {
+	  background-image: url(img/cover-app-tonelist.png);
+}
 
 
 
@@ -544,6 +547,11 @@ header>ul>li>a>figure {
     }
     .contenedor-icon {
         margin: 0;
+    }
+    
+    .trabajo{
+        width: 100vw;
+        height: calc(100vh/4);
     }
 }
 
