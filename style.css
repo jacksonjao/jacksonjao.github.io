@@ -416,7 +416,6 @@ header>ul>li>a>figure {
     background-repeat: no-repeat;
     background-position: center;
     transition: 0.5s;
-        filter: grayscale();
  
 }
 
