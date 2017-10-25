@@ -29,11 +29,12 @@ body {
     width: 100vw;
     position: relative;
     overflow-x: hidden;
+  
 }
 
 #botones {
     position: fixed;
-    z-index: 100;
+    z-index: 10;
     top: 50%;
     transform: translateY(-50%);
     margin-left: 1rem;
@@ -44,7 +45,7 @@ body {
     height: 1em;
     border: 0.1em solid white;
     border-radius: 5em;
-    z-index: 100;
+  
     margin-top: 0.8em;
     margin-bottom: 0.8em;
     transition: 0.5s;
@@ -63,7 +64,7 @@ body {
     padding-bottom: 6rem;
     height: 100vh;
     min-height: 500px;
-    opacity: 0;
+
 }
 
 header {
@@ -85,7 +86,6 @@ header>ul>li {
 }
 
 header>ul>li>a>i {
-    transition: 0.5s;
     font-size: 1.5em !important;
     color: var(--color-verde);
 }
@@ -182,7 +182,7 @@ header>ul>li>a>figure {
 .rect-see-my-work {
     position: relative;
     color: var(--color-verde);
-    ;
+    
     display: inline-block;
     border: 0.01em solid var(--color-verde);
     padding: 0.2em 2em 0.2em 2em;
@@ -404,6 +404,8 @@ header>ul>li>a>figure {
     min-height: 500px;
 }
 
+
+
 .section-mywork {
     margin: 0 !important;
     padding: 0 !important;
@@ -416,7 +418,7 @@ header>ul>li>a>figure {
     background-repeat: no-repeat;
     background-position: center;
     transition: 0.5s;
- 
+ position: relative;
 }
 
 /*
@@ -442,10 +444,65 @@ header>ul>li>a>figure {
 
 
 .trabajo:hover {
-    filter: grayscale(0);
     cursor: pointer;
+    
 }
 
+.cuadro {
+    bottom: 0;
+	width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    position: absolute;
+    overflow-y: scroll;
+}
+
+
+.cuadro>p {
+	color: black;
+}
+
+.contenido-trabajo{
+    height: 0%;
+   background-image: url(img/pattern-topotapp.jpg);
+    transition: 0.5s;
+    bottom: 0;
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: scroll;
+z-index: 11;
+    
+}
+
+.icon-close {
+	width: 100px;
+    height: 0;
+    position: absolute;
+    right: 0;
+    z-index: 15;
+    transition: 0.5s;
+    overflow: hidden;
+    background-color: black;
+    font-size: 40px;
+}
+
+
+.fa-times {
+    position: absolute;
+    right: 50%;
+bottom: 50%;
+    transform: translate(50%,50%);
+    color: white;
+   
+}
+
+
+
+
+.contenido-trabajo>img {
+	width: 100%;
+}
 
 /*-------contact me----------*/
 
