@@ -109,6 +109,8 @@ $(".contenedor-icon-personal>.chip").each(function (i) {
 });
 
 
+
+
 var altoContenedorIconCode = (210) * -1;
 
 var marginContenedorIconCode = "0em";
@@ -481,15 +483,23 @@ skillsResponsive(ancho);
 
 
 
-var covers = ["url(img/cover-app-hed.jpg)", "url(img/cover-app-tonelist.png)", "url(img/cover-desktop-pixel.png)", "url(img/cover-app-topotapp.png)", "url(img/cover-app-topotapp.png)"]
+var covers = ["url(img/cover-app-hed.jpg)", "url(img/cover-app-tonelist.png)", "url(img/cover-desktop-pixel.png)", "url(img/cover-app-topotapp.png)"]
 
+var backgrounds = ["img/pattern.png", "img/pattern.png", "img/pattern.png", "img/pattern-topotapp.jpg"];
 
-var trabajos = [["https://mir-s3-cdn-cf.behance.net/project_modules/1400/63959756457739.59af8a5896928.jpg","https://mir-s3-cdn-cf.behance.net/project_modules/1400/c0b75056457739.59af8a589643d.gif","https://mir-s3-cdn-cf.behance.net/project_modules/1400/2d9f3e56457739.59af8a58960cf.jpg","https://mir-s3-cdn-cf.behance.net/project_modules/1400/90028956457739.59af8a5897439.jpg","https://mir-s3-cdn-cf.behance.net/project_modules/1400/7f7e9e56457739.59af8fbe24927.jpg"],["https://mir-s3-cdn-cf.behance.net/project_modules/1400/c0a09958026619.59ed471fe089b.png","https://mir-s3-cdn-cf.behance.net/project_modules/1400/27407c58026619.59ed471fe048d.png","https://mir-s3-cdn-cf.behance.net/project_modules/1400/7bbf6658026619.59ed471fdff7c.png","https://mir-s3-cdn-cf.behance.net/project_modules/1400/c4634658026619.59ed471fdfaab.png"],["https://mir-s3-cdn-cf.behance.net/project_modules/1400/d633f158026119.59ed40a013bf7.png","https://mir-s3-cdn-cf.behance.net/project_modules/1400/61cd1558026119.59ed40a01384f.png","https://mir-s3-cdn-cf.behance.net/project_modules/1400/4bb3ba58026119.59ed40a014675.png","https://mir-s3-cdn-cf.behance.net/project_modules/1400/62f65d58026119.59ed40a0140fc.png"],["https://mir-s3-cdn-cf.behance.net/project_modules/1400/7d2d4756357879.59ed28d2d2f25.jpg","https://mir-s3-cdn-cf.behance.net/project_modules/1400/4a41c056357879.59ed28d2d366f.jpg", "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c2c32456357879.59ed3d4346d7e.gif"]
+var trabajos = [["https://mir-s3-cdn-cf.behance.net/project_modules/1400/63959756457739.59af8a5896928.jpg", "https://mir-s3-cdn-cf.behance.net/project_modules/1400/c0b75056457739.59af8a589643d.gif", "https://mir-s3-cdn-cf.behance.net/project_modules/1400/2d9f3e56457739.59af8a58960cf.jpg", "https://mir-s3-cdn-cf.behance.net/project_modules/1400/90028956457739.59af8a5897439.jpg"], ["https://mir-s3-cdn-cf.behance.net/project_modules/1400/c0a09958026619.59ed471fe089b.png", "https://mir-s3-cdn-cf.behance.net/project_modules/1400/27407c58026619.59ed471fe048d.png", "https://mir-s3-cdn-cf.behance.net/project_modules/1400/7bbf6658026619.59ed471fdff7c.png", "https://mir-s3-cdn-cf.behance.net/project_modules/1400/c4634658026619.59ed471fdfaab.png"], ["https://mir-s3-cdn-cf.behance.net/project_modules/1400/d633f158026119.59ed40a013bf7.png", "https://mir-s3-cdn-cf.behance.net/project_modules/1400/61cd1558026119.59ed40a01384f.png", "https://mir-s3-cdn-cf.behance.net/project_modules/1400/4bb3ba58026119.59ed40a014675.png", "https://mir-s3-cdn-cf.behance.net/project_modules/1400/62f65d58026119.59ed40a0140fc.png"], ["https://mir-s3-cdn-cf.behance.net/project_modules/1400/7d2d4756357879.59ed28d2d2f25.jpg", "https://mir-s3-cdn-cf.behance.net/project_modules/1400/4a41c056357879.59ed28d2d366f.jpg", "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c2c32456357879.59ed3d4346d7e.gif"]
                ]
 
-for (var i = 0; i < covers.length; i++) {
-    $(".section-mywork").append(" <div  class='trabajo' ><div class = 'cuadro' ></div></div>");
-}
+
+var titulos = ["Hoy Es Diseño", "Tonelist", "Pixel eater", "Topotapp"];
+
+var descripciones = ["Hoy es Diseño es el evento de Diseño más importante del sur occidente Colombiano, es de entrada libre y gratuita, y es desarrollado por los estudiantes de Diseño de Medios Interactivos y Diseño Industrial de la Universidad Icesi.", "Tonelist is an Android Application that improves the DJ - Costumer communication in an Event. It’s easy! The DJ can create an event and people can access to it with a unique code, The DJ will add sogns to a list and you vote for the songs you want to be played. The DJ will know what songs are being the most voted.", "Pixel eater is a simple java aplication made in the designing with algorithms class. It uses processing library to create a graphic interface and manipulate the pixels in the image. Little automaton creatures start moving across the screen and eating the pixels in one side of the screen and those pixels start apearing on the other side of the screen.", "TopoTapp was a 2D mini video game made for the network programming class, this mini game uses a desktop screen controlled by Android device, I programmed this video game on java using Processing library and Android SDK. TopoTapp was inspired in a game for a fair event and the Pokémon character Diglett."];
+
+var tags = [["html", "css","javascript"],["android","firebase","illustrator","java"],["java"],["java","android","photoshop","illustrator"]];
+
+
+var links = ["https://github.com/jacksonjao/", "https://github.com/jacksonjao/", "https://github.com/jacksonjao/", "https://github.com/jacksonjao/"];
+
 
 
 
@@ -499,50 +509,70 @@ for (var i = 0; i < covers.length; i++) {
 
 var numX = 2;
 var numY = 2;
+var numXCel = 1;
+var numYCel = 4
 var anchoTrabajos = ancho;
 var altoTrabajos = $("#my-work").height();
 
 
-$($(".trabajo")[0]).mouseover(function () {
-    $($(".cuadro")[0]).css({
-        "opacity": "0.8"
-    });
-});
+
+
+
+
+for (var i = 0; i < covers.length; i++) {
+    $(".section-mywork").append("<div  class='trabajo' ><div  class='trabajo-cover'></div></div>");
+}
+/*
+ $(".section-mywork").append("<div  class='trabajo' ></div>");
+*/
+
 
 
 
 $(".trabajo").each(function (i) {
 
     $(this).css({
-        'background-image': covers[i],
+
         'width': anchoTrabajos / numX,
         'height': altoTrabajos / numY
     });
 
-    $(this).mouseover(function () {
 
-        $($(".cuadro")[i]).css({
-            "opacity": "0.5"
-        });
-    });
-
-
-    $($(".cuadro")[i]).mouseout(function () {
-        $(".cuadro").css({
-            "opacity": "0"
-        });
+    $($(".trabajo-cover")[i]).css({
+        'background-image': covers[i],
     })
+
+
+
 
 
     $(this).click(function () {
 
-        for(var j=0;j<trabajos[i].length;j++){
-        $(".contenido-trabajo").append("<img src="+trabajos[i][j]+">");
+
+        for (var j = 0; j < trabajos[i].length; j++) {
+            $(".contenido-trabajo").append("<img src=" + trabajos[i][j] + ">");
+
+            $(".contenido-trabajo").css({
+                'background-image': 'url(' + backgrounds[i] + ')'
+            })
+
         }
+
+
+        $(".work-titulo").text(titulos[i]);
+        $(".work-descripcion").text(descripciones[i]);
         
         
+      for (var j = 0; j < tags[i].length; j++) {
+          $(".chipsTag").append("<div class='chipTag chip'> <img class='work-skill' src='img/icon-"+tags[i][j]+".svg'>"+tags[i][j]+"</div>")
+      }
+
         $(".contenido-trabajo").css({
-            'height': '100%'
+            'height': '100vh'
+        })
+
+        $(".contenido-trabajo-descripcion").css({
+            'height': '100vh'
         })
 
         $("body").css({
@@ -552,7 +582,7 @@ $(".trabajo").each(function (i) {
         setTimeout(
             function () {
                 $(".icon-close").css({
-                    'height': '50px'
+                    'width': '100px'
                 })
             }, 500)
 
@@ -569,8 +599,12 @@ $(".icon-close").click(function () {
     $(".contenido-trabajo").css({
         'height': '0'
     })
-    $(this).css({
+
+    $(".contenido-trabajo-descripcion").css({
         'height': '0'
+    })
+    $(this).css({
+        'width': '0'
     })
 
 
@@ -582,7 +616,8 @@ $(".icon-close").click(function () {
     setTimeout(
         function () {
             $(".contenido-trabajo").empty();
-        }, 500)
+              $(".chipsTag").empty();
+        }, 400)
 });
 
 
@@ -627,7 +662,7 @@ $(".home-icon-down>a>i").mouseout(function () {
 
 if (ancho <= 600) {
     alto = $("#my-work").height();
-    trabajoResponsive(ancho, alto, 1, 4);
+    trabajoResponsive(ancho, alto, numXCel, numYCel);
 }
 
 
@@ -641,7 +676,7 @@ $(window).resize(function () {
         trabajoResponsive(ancho, alto, numX, numY);
     } else {
 
-        trabajoResponsive(ancho, alto, 1, 4);
+        trabajoResponsive(ancho, alto, numXCel, numYCel);
     }
 
 

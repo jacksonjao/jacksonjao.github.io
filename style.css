@@ -268,11 +268,13 @@ header>ul>li>a>figure {
     font-family: Bebas;
     font-size: 8em;
     text-align: center;
+    
 }
 
 .contenido-aboutme>article>p {
     color: black;
     font-size: 1.1em;
+    font-weight: 100;
 }
 
 
@@ -380,12 +382,14 @@ header>ul>li>a>figure {
     margin: 0.3em;
     opacity: 0;
     text-align: left;
+    
 }
 
 .chip>img {
     height: 100%;
     background-color: #eee;
     padding: 0.3em;
+    
 }
 
 .chip:first-letter {
@@ -409,100 +413,212 @@ header>ul>li>a>figure {
 .section-mywork {
     margin: 0 !important;
     padding: 0 !important;
+    
 }
 
 .trabajo {
     display: inline-block;
     float: left;
-    background-size: cover;
-    background-repeat: no-repeat;
+ position: relative;
+  overflow: hidden;
+   
+}
+
+.trabajo-cover{
+   display: inline-block;
+    float: left;
+    width: 100%;
+    height: 100%;
+    background-repeat:no-repeat;
     background-position: center;
     transition: 0.5s;
- position: relative;
+
+    background-size: cover;
+    filter: grayscale(60%);
 }
 
-/*
 
-.trabajo:nth-child(1) {
-	  background-image: url(img/cover-app-hed.jpg);
-    
-    
+
+.trabajo-cover:hover {
+	
+    background-position: center;
+   transform-style: flat;
+    filter: grayscale(0);
+    transform: scale(1.1,1.1);
 }
 
-.trabajo:nth-child(2) {
-	  background-image: url(img/cover-desktop-pixel.png);
-    
-}
 
-.trabajo:nth-child(3) {
-	  background-image: url(img/cover-app-topotapp.png);
-}
-.trabajo:nth-child(4) {
-	  background-image: url(img/cover-app-tonelist.png);
-}
-*/
-
-
-.trabajo:hover {
-    cursor: pointer;
-    
-}
-
-.cuadro {
-    bottom: 0;
-	width: 100%;
-    height: 100%;
-    background-color: white;
-    opacity: 0;
+.contenido-trabajo-descripcion{
+    width: 322px;
+    height: 0;
+    transition: 0.5s;
+    top: 0;
+    right: 0;
     position: absolute;
-    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+z-index: 11; 
+    background-image: url(img/pattern.png);
+  background-size: 40%;
+
 }
 
-
-.cuadro>p {
-	color: black;
+hr{
+ 
+    border-top: 1px solid var(--color-verde);
 }
 
 .contenido-trabajo{
+    width: calc(100vw - 322px);
+ 
     height: 0%;
-   background-image: url(img/pattern-topotapp.jpg);
     transition: 0.5s;
     bottom: 0;
+    left: 0;
+    right: 0;
     position: absolute;
     overflow-x: hidden;
     overflow-y: scroll;
 z-index: 11;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+ 
+}
+
+
+
+
+.contenido-trabajo::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.contenido-trabajo::-webkit-scrollbar
+{
+	width: 7px;
+	background-color: #F5F5F5;
+}
+
+.contenido-trabajo::-webkit-scrollbar-thumb
+{
+	  background-color: var(--color-verde);
+}
+
+
+
+
+
+
+
+
+
+
+
+.icon-close {
+	width: 0px;
+    height: 80px;
+    position: absolute;
+    right:0;
+    z-index: 12;
+    transition: 0.25s;
+    overflow: hidden;
+    font-size: 50px;
     
 }
 
-.icon-close {
-	width: 100px;
-    height: 0;
-    position: absolute;
-    right: 0;
-    z-index: 15;
-    transition: 0.5s;
-    overflow: hidden;
-    background-color: black;
-    font-size: 40px;
-}
 
 
-.fa-times {
+
+
+.icon-close>i {
     position: absolute;
     right: 50%;
 bottom: 50%;
     transform: translate(50%,50%);
-    color: white;
-   
+    color: var(--color-verde);
+  font-size: 40pt;
 }
 
+.icon-close>i:hover {
+color: darkgray;
+    
+}
 
 
 
 .contenido-trabajo>img {
 	width: 100%;
 }
+
+
+
+
+.article-descripcion{
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    height: 100%;
+}
+
+.article-descripcion>h5 {
+	    color: var(--color-verde);
+    font-size: 24pt;
+      font-family: Bebas;
+}
+
+.article-descripcion>p {
+    font-weight: 00;
+    color: black;
+       font-size: 10pt;
+}
+
+
+
+.chipsTag{
+    margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.chipTag{
+    width: 90px ;
+    min-width: 0 !important;
+    opacity: 1;
+    margin-right: 0px !important;
+        margin-left: 0px !important;
+
+padding-right: 0 !important;
+    font-size: 8pt !important;
+    background-color: #dfdfdf !important;
+   
+}
+
+.chipTag>img {
+	    background-color: #dfdfdf!important;
+      margin-right: 0px !important;
+padding: 0.4em;
+}
+
+.article-descripcion>h6 {
+	    color: var(--color-verde);
+    font-size: 14pt;
+    font-weight: 400;
+    text-align: 
+}
+
+.section-links {
+}
+
+.section-links>a>.fa-github{
+   font-size: 50px;
+    color: var(--color-verde);
+    text-align: center
+}
+
+
+
 
 /*-------contact me----------*/
 
@@ -531,9 +647,27 @@ bottom: 50%;
     .chip {
         text-align: center;
     }
+    
+    
+
 }
 
 @media (max-width: 768px) {
+    
+  
+    
+    
+.contenido-trabajo-descripcion{
+    width: 0;
+
+}
+
+
+.contenido-trabajo{
+    width: 100%;
+
+}
+    
     .introduccion {
         font-size: 0.8em;
     }
@@ -575,6 +709,8 @@ bottom: 50%;
      .contenedor-icon {
         margin: 0;
     }
+    
+    
 }
 
 @media (max-width: 600px) {
@@ -605,11 +741,22 @@ bottom: 50%;
     }
     
    
-    
+      .contenido-trabajo{
+    width: 100vw;
+   
+}
     body{
         margin-bottom: 0;
     }
     
+    
+    .trabajo {
+ 
+    filter: grayscale(0);
+}
+    
+    
+
 }
 
 @media (max-width: 575px) {
@@ -633,6 +780,7 @@ bottom: 50%;
         right: 0;
         left: 0;
     }
+    
 }
 
 @media (max-height: 500px) {
