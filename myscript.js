@@ -36,9 +36,12 @@ var iconosCode = ["img/icon-java.svg", "img/icon-android.svg", "img/icon-html.sv
 
 var iconosUxUi = ["img/icon-photoshop.svg", "img/icon-illustrator.svg", "img/icon-xd.svg", "img/icon-invision.svg", "img/icon-marvel.svg", "img/icon-balsamiq.svg"];
 
-var iconosPersonal = ["img/icon-photoshop.svg", "img/icon-illustrator.svg", "img/icon-xd.svg", "img/icon-invision.svg", "img/icon-marvel.svg", "img/icon-balsamiq.svg"];
+var iconosPersonal = ["img/icon-team-working.svg", "img/icon-working-under-the-preassure.svg", "img/icon-perseverance.svg", "img/icon-perfectionism.svg", "img/icon-autonomous-learning.svg", "img/icon-proactive.svg"
+];
 
-
+//estos no los hice por arreglos porque me era mas fácil sin partir los nombres
+var stringsPersonal = ["icon-team-working.svg", "icon-working-under-the-preassure.svg", "icon-perseverance.svg", "icon-perfectionism.svg", "icon-autonomous-learning.svg", "icon-proactive.svg"
+];
 
 
 var textCode = [];
@@ -52,10 +55,11 @@ for (var i = 0; i < iconosUxUi.length; i++) {
 };
 
 
-
-//estos no los hice por arreglos porque me era mas fácil sin partir los nombres
-var stringsPersonal = ["icon-team-working.svg", "icon-working-unde-the-preassure.svg", "icon-perseverance.svg", "icon-perfectionism.svg", "icon-autonomous-learning.svg", "icon-proactivity.svg"
-];
+iconosPersonal.sort(function (a, b) {
+    // ASC  -> a.length - b.length
+    // DESC -> b.length - a.length
+    return b.length - a.length;
+});
 
 stringsPersonal.sort(function (a, b) {
     // ASC  -> a.length - b.length
@@ -498,10 +502,12 @@ var descripciones = ["Hoy es Diseño es el evento de Diseño más importante del
 var tags = [["html", "css","javascript"],["android","firebase","illustrator","java"],["java"],["java","android","photoshop","illustrator"]];
 
 
-var links = ["https://github.com/jacksonjao/", "https://github.com/jacksonjao/", "https://github.com/jacksonjao/", "https://github.com/jacksonjao/"];
 
 
+var links = [["https://www.behance.net/gallery/56457739/Aplicacion-evento-Hoy-Es-Diseno","https://play.google.com/store/apps/details?id=it.save.hed"],["https://github.com/jacksonjao/ToneList","https://www.behance.net/gallery/58026619/Tonelist","https://play.google.com/store/apps/details?id=it.save.tonelist"],["https://github.com/jacksonjao/PixelEater","https://www.behance.net/gallery/58026119/Pixel-Eater"],["https://github.com/jacksonjao/TopoTapp_server-game","https://www.behance.net/gallery/56357879/Topotapp"]];
 
+
+var paginas=[["behance","play"],["github","behance","play"],["github","behance"],["github","behance"]]
 
 
 
@@ -566,6 +572,14 @@ $(".trabajo").each(function (i) {
       for (var j = 0; j < tags[i].length; j++) {
           $(".chipsTag").append("<div class='chipTag chip'> <img class='work-skill' src='img/icon-"+tags[i][j]+".svg'>"+tags[i][j]+"</div>")
       }
+        
+        
+           
+      for (var j = 0; j < links[i].length; j++) {
+          $(".section-links").append("<a href="+links[i][j]+" target='_blank'><i class='fa fa-"+paginas[i][j]+"' aria-hidden='true'></i></a>")
+      }
+        
+        
 
         $(".contenido-trabajo").css({
             'height': '100vh'
@@ -617,6 +631,8 @@ $(".icon-close").click(function () {
         function () {
             $(".contenido-trabajo").empty();
               $(".chipsTag").empty();
+            $(".section-links").empty();
+            
         }, 400)
 });
 
