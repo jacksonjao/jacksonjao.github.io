@@ -24,13 +24,19 @@ p {
 
 
 
-
+#particles-js{
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+    position: absolute;
+}
 
 body {
     width: 100vw;
     position: relative;
     overflow-x: hidden;
-background-color: black;
+background-color: transparent;
+    background-color: black;
 }
 
 
@@ -62,11 +68,11 @@ background-color: black;
 #home {
     position: relative;
     width: 100vw;
-    background-color: black;
     margin: 0;
     padding-bottom: 6rem;
     height: 100vh;
     min-height: 500px;
+    
 
 }
 
@@ -109,6 +115,8 @@ header>ul>li>a>figure {
     text-align: center;
     transform: translateY(-50%);
     margin-top: -3em;
+     z-index: 2;
+    
 }
 
 .logo-real {
@@ -122,6 +130,7 @@ header>ul>li>a>figure {
     position: relative;
     display: inline-block;
     margin-right: 3em;
+    
 }
 
 .logo-home {
@@ -130,6 +139,7 @@ header>ul>li>a>figure {
     max-height: 322px;
     background-repeat: no-repeat;
     width: 100%;
+    
 }
 
 .logo-uno {
@@ -173,6 +183,7 @@ header>ul>li>a>figure {
     position: relative;
     display: inline-block;
     margin-left: 3em;
+   
 }
 
 .introduccion {
@@ -180,6 +191,7 @@ header>ul>li>a>figure {
     color: white;
     font-size: 1.1em;
     text-align: left !important;
+    
 }
 
 .rect-see-my-work {
