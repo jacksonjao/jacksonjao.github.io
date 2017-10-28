@@ -43,7 +43,7 @@ background-color: transparent;
 
 #botones {
     position: fixed;
-    z-index: 10;
+    z-index: 100;
     top: 50%;
     transform: translateY(-50%);
     margin-left: 1rem;
@@ -189,10 +189,12 @@ header>ul>li>a>figure {
 .introduccion {
     position: relative;
     color: white;
-    font-size: 1.1em;
+    font-size: 1.1em ;
     text-align: left !important;
-    
+font-weight: 300;
 }
+
+
 
 .rect-see-my-work {
     position: relative;
@@ -203,6 +205,7 @@ header>ul>li>a>figure {
     padding: 0.2em 2em 0.2em 2em;
     transition: 0.5s;
     opacity: 0;
+ font-weight: 300;
 }
 
 .rect-see-my-work:hover {
@@ -216,6 +219,7 @@ header>ul>li>a>figure {
     z-index: 10;
     right: 0;
     left: 0;
+    
 }
 
 .learn-more>a {
@@ -229,6 +233,8 @@ header>ul>li>a>figure {
     position: relative;
     display: inline-block;
     margin: 0;
+    font-weight: 300;
+   
 }
 
 .home-icon-down>a>i {
@@ -391,7 +397,7 @@ header>ul>li>a>figure {
 }
 
 .chip {
-    min-width: 120px;
+ 
     transition: 0.5s;
     background-color: #eee !important;
     margin: 0.3em;
