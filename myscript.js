@@ -29,7 +29,11 @@ $(document).ready(function () {
 
 
 {
-particlesJS("particles-js", {
+    
+    var particulas=["particles-js","particles-js-end"]
+    
+    for(var i=0;i<particulas.length;i++){
+particlesJS(particulas[i], {
   "particles": {
     "number": {
       "value": 80,
@@ -139,6 +143,8 @@ particlesJS("particles-js", {
   },
   "retina_detect": true
 });
+    }
+    
 
 }
 
@@ -379,63 +385,6 @@ for (var i = 0; i < cantidadDeSecciones; i++) {
 }
 
 
-//inicia con opacidad y animación del logo
-
-
-setTimeout(
-    function () {
-        $(".logo-uno").css({
-            'padding': '0',
-            'opacity': '1'
-        })
-
-    }, 0);
-
-
-
-setTimeout(
-    function () {
-        $(".logo-tres").css({
-            'transition': '1s',
-            'transform': 'translate(0em,0em) rotate(-0deg)',
-            'opacity': '1',
-            'background-position': 'left'
-        });
-
-    }, 1000);
-
-
-setTimeout(
-    function () {
-        $(".logo-dos").css({
-            'transform': 'translateX(0)',
-            'opacity': '1'
-        });
-
-    }, 2000);
-
-setTimeout(
-    function () {
-        $(".logo-cuatro").css({
-            'transform': 'translateX(0)',
-            'opacity': '1'
-        });
-    }, 3000);
-
-setTimeout(
-    function () {
-
-        showText(".introduccion", intro, 0, 60);
-    }, 4000);
-
-setTimeout(
-    function () {
-        $(".rect-see-my-work").css({
-            'opacity': '1'
-        });
-
-
-    }, 8000);
 
 
 
@@ -465,7 +414,18 @@ var skillActivado = [false, false, false];
 $(".skill-titulo").each(function (i) {
 
     $(this).click(function () {
+        
+        
+        
+        
         if (!skillActivado[i]) {
+            
+                 $('html, body').animate({
+        scrollTop: $("#skills").offset().top
+    }, 500);
+            
+            
+            
             skillActivado[i] = true;
             $(this).css({
                 "transform": "translateY(" + altoContenedorIconCode + "px)",
@@ -610,9 +570,9 @@ var trabajos = [["https://mir-s3-cdn-cf.behance.net/project_modules/1400/6395975
                ]
 
 
-var titulos = ["Hoy Es Diseño", "Tonelist", "Pixel eater", "Topotapp"];
+var titulos = ["HED", "Tonelist", "Pixel eater", "Topotapp"];
 
-var descripciones = ["Hoy es Diseño es el evento de Diseño más importante del sur occidente Colombiano, es de entrada libre y gratuita, y es desarrollado por los estudiantes de Diseño de Medios Interactivos y Diseño Industrial de la Universidad Icesi.", "Tonelist is an Android Application that improves the DJ - Costumer communication in an Event. It’s easy! The DJ can create an event and people can access to it with a unique code, The DJ will add sogns to a list and you vote for the songs you want to be played. The DJ will know what songs are being the most voted.", "Pixel eater is a simple java aplication made in the designing with algorithms class. It uses processing library to create a graphic interface and manipulate the pixels in the image. Little automaton creatures start moving across the screen and eating the pixels in one side of the screen and those pixels start apearing on the other side of the screen.", "TopoTapp is a mini video game made for the network programming class, this mini game uses a desktop screen controlled by Android device, I programmed this video game on java using Processing library and Android SDK. TopoTapp was inspired in a game for a fair event and the Pokémon character Diglett."];
+var descripciones = ["HED es la aplicación oficial del evento Hoy es Diseño 2017-1, con es esta aplicación se pueden ver con detalle los talleres, conferencias del evento con su respectivo ponente, fecha y lugar, también puedes poner en una foto el marco oficial del evento, ver el mapa del lugar o inscribirse.", "Tonelist is an Android Application that improves the DJ - Costumer communication in an Event. It’s easy! The DJ can create an event and people can access to it with a unique code, The DJ will add sogns to a list and you vote for the songs you want to be played. The DJ will know what songs are being the most voted.", "Pixel eater is a simple java aplication made in the designing with algorithms class. It uses processing library to create a graphic interface and manipulate the pixels in the image. Little automaton creatures start moving across the screen and eating the pixels in one side of the screen and those pixels start apearing on the other side of the screen.", "TopoTapp is a mini video game made for the network programming class, this mini game uses a desktop screen controlled by Android device, I programmed this video game on java using Processing library and Android SDK. TopoTapp was inspired in a game for a fair event and the Pokémon character Diglett."];
 
 var tags = [["html", "css","javascript"],["android","firebase","illustrator","java"],["java"],["java","android","photoshop","illustrator"]];
 
@@ -675,7 +635,10 @@ for (var j = 0; j < trabajos[i].length; j++) {
 
 
     $(this).click(function () {
-
+   $("body").css({
+            'overflow-y': 'hidden'
+        })
+        
             $( ".contenido-trabajo" ).scrollTop(0);
           $(".contenido-trabajo").empty();
               $(".chipsTag").empty();
@@ -836,6 +799,89 @@ $(window).resize(function () {
 
 
 
+window.onload = function() {
+    if (window.jQuery) {  
+        // jQuery is loaded  
+       
+        
+     $("#loading").css({
+         'opacity':'0'
+     });
+        
+       
+        
+        //inicia con opacidad y animación del logo
 
+
+setTimeout(
+    function () {
+          $("#loading").remove();
+        
+         $("body").css({
+            'overflow-y': 'visible'
+        })
+        
+        
+        $(".logo-uno").css({
+            'padding': '0',
+            'opacity': '1'
+        })
+
+      }, 500);
+
+
+
+setTimeout(
+    function () {
+        $(".logo-tres").css({
+            'transition': '1s',
+            'transform': 'translate(0em,0em) rotate(-0deg)',
+            'opacity': '1',
+            'background-position': 'left'
+        });
+
+    }, 1000);
+
+
+setTimeout(
+    function () {
+        $(".logo-dos").css({
+            'transform': 'translateX(0)',
+            'opacity': '1'
+        });
+
+    }, 2000);
+
+setTimeout(
+    function () {
+        $(".logo-cuatro").css({
+            'transform': 'translateX(0)',
+            'opacity': '1'
+        });
+    }, 3000);
+
+setTimeout(
+    function () {
+
+        showText(".introduccion", intro, 0, 60);
+    }, 4000);
+
+setTimeout(
+    function () {
+        $(".rect-see-my-work").css({
+            'opacity': '1'
+        });
+
+
+    }, 8000);
+
+        
+        
+        
+    } else {
+        // jQuery is not loaded
+        alert("Refresh page");
+    }
+}
 
 
