@@ -437,12 +437,18 @@ font-weight: 300;
     
 }
 
+
+
+
 .trabajo {
     display: inline-block;
     float: left;
  position: relative;
   overflow: hidden;
-   
+}
+
+.trabajo:hover{
+    cursor: pointer;
 }
 
 .trabajo-cover{
@@ -550,6 +556,11 @@ body::-webkit-scrollbar {
     
 }
 
+
+.icon-close:hover {
+	cursor: pointer;
+    
+}
 
 
 

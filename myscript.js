@@ -676,11 +676,22 @@ for (var j = 0; j < trabajos[i].length; j++) {
 
     $(this).click(function () {
 
+            $( ".contenido-trabajo" ).scrollTop(0);
           $(".contenido-trabajo").empty();
               $(".chipsTag").empty();
             $(".section-links").empty();
+        
+        
+          $('html, body').animate({
+        scrollTop: $("#my-work").offset().top
+    }, 500);
+        
+        
+    
             
 
+        
+        
         for (var j = 0; j < trabajos[i].length; j++) {
             $(".contenido-trabajo").append("<img src=" + trabajos[i][j] + ">");
 
@@ -718,6 +729,7 @@ for (var j = 0; j < trabajos[i].length; j++) {
         $("body").css({
             'overflow': 'hidden'
         })
+        
 
         setTimeout(
             function () {
@@ -736,6 +748,12 @@ for (var j = 0; j < trabajos[i].length; j++) {
 
 
 $(".icon-close").click(function () {
+    
+     $("body").css({
+        'overflow': 'visible'
+    })
+
+    
     $(".contenido-trabajo").css({
         'height': '0'
     })
@@ -749,10 +767,7 @@ $(".icon-close").click(function () {
 
 
 
-    $("body").css({
-        'overflow': 'visible'
-    })
-
+   
 
 });
 
