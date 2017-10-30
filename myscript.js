@@ -582,7 +582,7 @@ var tags = [["html", "css","javascript"],["android","firebase","illustrator","ja
 var links = [["https://www.behance.net/gallery/56457739/Aplicacion-evento-Hoy-Es-Diseno","https://play.google.com/store/apps/details?id=it.save.hed"],["https://github.com/jacksonjao/ToneList","https://www.behance.net/gallery/58026619/Tonelist","https://play.google.com/store/apps/details?id=it.save.tonelist"],["https://github.com/jacksonjao/PixelEater","https://www.behance.net/gallery/58026119/Pixel-Eater"],["https://github.com/jacksonjao/TopoTapp_server-game","https://www.behance.net/gallery/56357879/Topotapp"]];
 
 
-var paginas=[["behance","play"],["github","behance","play"],["github","behance"],["github","behance"]]
+var paginas=[["behance","playstore"],["github","behance","playstore"],["github","behance"],["github","behance"]]
 
 
 
@@ -676,7 +676,7 @@ for (var j = 0; j < trabajos[i].length; j++) {
         
            
       for (var j = 0; j < links[i].length; j++) {
-          $(".section-links").append("<a href="+links[i][j]+" target='_blank'><i class='fa fa-"+paginas[i][j]+"' aria-hidden='true'></i></a>")
+          $(".section-links").append("<a href="+links[i][j]+" target='_blank'><i class='icon-"+paginas[i][j]+"'></i></a>")
       }
         
         
