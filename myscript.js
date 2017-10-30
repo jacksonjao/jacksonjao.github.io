@@ -704,11 +704,11 @@ for (var j = 0; j < trabajos[i].length; j++) {
         
 
         $(".contenido-trabajo").css({
-            'height': '100%'
+            'height': '100vh'
         })
 
         $(".contenido-trabajo-descripcion").css({
-            'height': '100%'
+            'height': '100vh'
         })
 
         $("body").css({
