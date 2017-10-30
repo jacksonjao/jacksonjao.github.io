@@ -965,6 +965,9 @@ color: #97c03d;
 @media (max-width: 768px) {
     
  
+    #botones{
+        display: none;
+    }
   
 
 .contenedor-icon-info {
