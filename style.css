@@ -1216,7 +1216,16 @@ color: #97c03d;
 }
 
 
-    
+    .trabajo-cover{
+    filter: none;
+}
+
+
+
+.trabajo-cover:hover {
+     filter: none;
+    transform: none;
+}
     
     
     
