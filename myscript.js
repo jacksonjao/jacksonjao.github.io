@@ -686,7 +686,7 @@ for (var j = 0; j < trabajos[i].length; j++) {
         $(".work-titulo").text(titulos[i]);
         $(".work-descripcion").text(descripciones[i])
         if(i==0){
-              $(".work-descripcion").append("<a class='link-web-trabajo' href='portfolio/hoy-es-diseno' target='_blank' > La Página página web del evento.</a>")
+              $(".work-descripcion").append("<a class='link-web-trabajo' href='portfolio/hoy-es-diseno' target='_blank' > La página web del evento.</a>")
         }
         ;
         
