@@ -158,7 +158,7 @@ background-color: black;
 
 #botones {
     position: fixed;
-    z-index: 100;
+    z-index: 10;
     top: 50%;
     transform: translateY(-50%);
     margin-left: 1rem;
@@ -589,6 +589,10 @@ font-weight: 300;
     transform: scale(1.1,1.1);
 }
 
+hr{
+ 
+    border-top: 1px solid #97c03d;
+}
 
 .contenido-trabajo-descripcion{
     width: 322px;
@@ -605,10 +609,7 @@ z-index: 11;
 
 }
 
-hr{
- 
-    border-top: 1px solid #97c03d;
-}
+
 
 .contenido-trabajo{
     width: calc(100vw - 322px);
@@ -646,14 +647,6 @@ body::-webkit-scrollbar {
 {
 	  background-color: #97c03d;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -934,7 +927,9 @@ color: #97c03d;
 }
 
 
+ 
 
+    
 
 
 @media (min-width: 1199px) {}
@@ -959,12 +954,54 @@ color: #97c03d;
 
 @media (max-width: 768px) {
     
+ 
   
+
+.contenedor-icon-info {
+	width: 100px;
+    height: 0;
+    position: absolute;
+    right:0;
+    z-index: 13;
+    transition: 0.25s;
+    overflow: hidden;
+    font-size: 50px;
+    bottom: 0;
+}
+
+
+.contenedor-icon-info:hover {
+	cursor: pointer;
+}
+
+.icon-info, .icon-chevron-circle-left {
+    position: absolute;
+    right: 50%;
+bottom: 50%;
+    transform: translate(50%,50%);
+    color: #97c03d;
+  font-size: 40pt;
+}
+    
+    .icon-chevron-circle-left {
+
+  font-size: 35pt;
+}
+    
+
+.icon-info:hover, .icon-chevron-circle-left:hover {
+color: darkgray;
+    
+}
+
+    
+
+    
+    
     
     
 .contenido-trabajo-descripcion{
     width: 0;
-
 }
 
 
@@ -1211,10 +1248,7 @@ color: #97c03d;
     }
     
    
-      .contenido-trabajo{
-    width: 100vw;
    
-}
     
     
     

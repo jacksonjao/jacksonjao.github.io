@@ -635,6 +635,10 @@ for (var j = 0; j < trabajos[i].length; j++) {
 
 
     $(this).click(function () {
+        
+       
+        
+        
    $("body").css({
             'overflow-y': 'hidden'
         })
@@ -651,7 +655,21 @@ for (var j = 0; j < trabajos[i].length; j++) {
         
         
     
+            if(ancho>768){
+            $(".contenido-trabajo-descripcion").css({'width':'322px'})
+                
+                $(".contenido-trabajo").css({'width':ancho-322})
+        } else{
+            $(".contenido-trabajo-descripcion").css({'width':'0'})
+                
+                $(".contenido-trabajo").css({'width':'100%'})  
             
+            $(".contenedor-icon-info").css({'height':'80px'})
+         
+            $(".contenedor-icon-info").empty();
+            
+            $(".contenedor-icon-info").append("<div class='icon-info'></div>")
+        }
 
         
         
@@ -729,7 +747,10 @@ $(".icon-close").click(function () {
     })
 
 
-
+   $(".contenedor-icon-info").css({
+            'height':'0',
+         
+     })
    
 
 });
@@ -745,6 +766,44 @@ var trabajoResponsive = function (ancho, alto, numX, numY) {
     });
 }
 
+var infoTrabajos=false;
+
+
+$(".icon-close").click(function(){
+    infoTrabajos=false;
+    
+})
+
+
+$(".contenedor-icon-info").click(function(){
+
+    if(infoTrabajos==false){
+    $(".contenido-trabajo-descripcion").css({'width':'100%'})
+     $(".contenido-trabajo").css({'width':'0'})
+        
+        
+            $(".contenedor-icon-info").empty();
+        
+         $(".contenedor-icon-info").append("<div class='icon-chevron-circle-left'></div>")
+        
+       
+       
+       
+    }else{
+        $(".contenido-trabajo-descripcion").css({'width':'0'})
+     $(".contenido-trabajo").css({'width':'100%'})
+          $(".contenedor-icon-info").empty();
+        
+            $(".contenedor-icon-info").append("<div class='icon-info'></div>")
+       
+       
+    }
+    
+    infoTrabajos=!infoTrabajos;
+});
+
+
+    
 
 
 
@@ -774,6 +833,8 @@ $(".home-icon-down>a>i").mouseout(function () {
 });
 
 
+
+
 if (ancho <= 600) {
     alto = $("#my-work").height();
     trabajoResponsive(ancho, alto, numXCel, numYCel);
@@ -786,8 +847,14 @@ $(window).resize(function () {
     alto = $("#my-work").height();
     skillsResponsive(ancho);
 
+ 
+    
+
     if (ancho > 600) {
         trabajoResponsive(ancho, alto, numX, numY);
+        
+        
+        
     } else {
 
         trabajoResponsive(ancho, alto, numXCel, numYCel);
