@@ -40,7 +40,7 @@ function p1() {
 
     $("body").fadeOut(300, function () {
 
-        window.location.href = '/';
+        window.location.href = 'index.html';
 
     });
 }

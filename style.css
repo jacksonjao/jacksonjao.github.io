@@ -764,7 +764,10 @@ padding: 0.4em;
 }
 
 
-
+.link-web-trabajo{
+   color: #97c03d;
+    font-weight: 600;
+}
 
 
 /*-------contact me----------*/
@@ -929,7 +932,12 @@ color: #97c03d;
 }
 
 
- 
+ .contenedor-icon-info {
+
+    height: 0;
+
+}
+
 
     
 
@@ -1054,7 +1062,14 @@ color: darkgray;
         margin: 0;
     }
     
-    
+    .chipTag{
+
+ 
+
+padding-right: 10px !important;
+
+   
+}
     
     
     
@@ -1296,16 +1311,18 @@ color: #97c03d;
     
 }
 
-@media (max-height: 500px) {
+@media (max-height: 550px) {
     .home-presentacion {
         position: relative;
     }
     .contenedor-icon-code {
         margin-top: 0em;
     }
-    #about-me {
-        /* height: 400vh; 
+ 
     
-   */
+    #home,#about-me,#skills,#my-work,#contact-me{
+        min-height: 700px !important;
     }
+    
+
 }

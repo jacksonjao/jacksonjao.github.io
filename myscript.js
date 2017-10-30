@@ -572,17 +572,17 @@ var trabajos = [["https://mir-s3-cdn-cf.behance.net/project_modules/1400/6395975
 
 var titulos = ["HED", "Tonelist", "Pixel eater", "Topotapp"];
 
-var descripciones = ["HED es la aplicación oficial del evento Hoy es Diseño 2017-1, con es esta aplicación se pueden ver con detalle los talleres, conferencias del evento con su respectivo ponente, fecha y lugar, también puedes poner en una foto el marco oficial del evento, ver el mapa del lugar o inscribirse.", "Tonelist is an Android Application that improves the DJ - Costumer communication in an Event. It’s easy! The DJ can create an event and people can access to it with a unique code, The DJ will add sogns to a list and you vote for the songs you want to be played. The DJ will know what songs are being the most voted.", "Pixel eater is a simple java aplication made in the designing with algorithms class. It uses processing library to create a graphic interface and manipulate the pixels in the image. Little automaton creatures start moving across the screen and eating the pixels in one side of the screen and those pixels start apearing on the other side of the screen.", "TopoTapp is a mini video game made for the network programming class, this mini game uses a desktop screen controlled by Android device, I programmed this video game on java using Processing library and Android SDK. TopoTapp was inspired in a game for a fair event and the Pokémon character Diglett."];
+var descripciones = ["HED es la aplicación oficial del evento Hoy es Diseño 2017-1, con es esta aplicación se pueden ver con detalle los talleres, conferencias del evento con su respectivo ponente, fecha y lugar, también puedes poner una foto el marco oficial del evento, ver el mapa del lugar o inscribirse. En esta versión de Hoy es Diseño también tuve la oportunidad de desarrollar ", "Tonelist is an Android Application that improves the DJ - Costumer communication in an Event. It’s easy! The DJ can create an event and people can access to it with a unique code, The DJ will add sogns to a list and you vote for the songs you want to be played. The DJ will know what songs are being the most voted.", "Pixel eater is a simple java aplication made in the designing with algorithms class. It uses processing library to create a graphic interface and manipulate the pixels in the image. Little automaton creatures start moving across the screen and eating the pixels in one side of the screen and those pixels start apearing on the other side of the screen.", "TopoTapp is a mini video game made for the network programming class, this mini game uses a desktop screen controlled by Android device, I programmed this video game on java using Processing library and Android SDK. TopoTapp was inspired in a game for a fair event and the Pokémon character Diglett."];
 
 var tags = [["html", "css","javascript"],["android","firebase","illustrator","java"],["java"],["java","android","photoshop","illustrator"]];
 
 
 
 
-var links = [["https://www.behance.net/gallery/56457739/Aplicacion-evento-Hoy-Es-Diseno","https://play.google.com/store/apps/details?id=it.save.hed"],["https://github.com/jacksonjao/ToneList","https://www.behance.net/gallery/58026619/Tonelist","https://play.google.com/store/apps/details?id=it.save.tonelist"],["https://github.com/jacksonjao/PixelEater","https://www.behance.net/gallery/58026119/Pixel-Eater"],["https://github.com/jacksonjao/TopoTapp_server-game","https://www.behance.net/gallery/56357879/Topotapp"]];
+var links = [["https://www.behance.net/gallery/56457739/Aplicacion-evento-Hoy-Es-Diseno","https://play.google.com/store/apps/details?id=it.save.hed","portfolio/hoy-es-diseno/index.html"],["https://github.com/jacksonjao/ToneList","https://www.behance.net/gallery/58026619/Tonelist","https://play.google.com/store/apps/details?id=it.save.tonelist"],["https://github.com/jacksonjao/PixelEater","https://www.behance.net/gallery/58026119/Pixel-Eater"],["https://github.com/jacksonjao/TopoTapp_server-game","https://www.behance.net/gallery/56357879/Topotapp"]];
 
 
-var paginas=[["behance","playstore"],["github","behance","playstore"],["github","behance"],["github","behance"]]
+var paginas=[["behance","playstore","internet"],["github","behance","playstore"],["github","behance"],["github","behance"]]
 
 
 
@@ -684,7 +684,11 @@ for (var j = 0; j < trabajos[i].length; j++) {
 
 
         $(".work-titulo").text(titulos[i]);
-        $(".work-descripcion").text(descripciones[i]);
+        $(".work-descripcion").text(descripciones[i])
+        if(i==0){
+              $(".work-descripcion").append("<a class='link-web-trabajo' href='portfolio/hoy-es-diseno'> La Página página web del evento.</a>")
+        }
+        ;
         
         
       for (var j = 0; j < tags[i].length; j++) {
@@ -700,11 +704,11 @@ for (var j = 0; j < trabajos[i].length; j++) {
         
 
         $(".contenido-trabajo").css({
-            'height': '100vh'
+            'height': '100%'
         })
 
         $(".contenido-trabajo-descripcion").css({
-            'height': '100vh'
+            'height': '100%'
         })
 
         $("body").css({
