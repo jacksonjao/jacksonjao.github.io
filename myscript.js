@@ -788,7 +788,7 @@ $(".contenedor-icon-info").click(function(){
         
             $(".contenedor-icon-info").empty();
         
-         $(".contenedor-icon-info").append("<div class='icon-chevron-circle-left'></div>")
+         $(".contenedor-icon-info").append("<div class='icon-chevron-circle-right'></div>")
         
        
        

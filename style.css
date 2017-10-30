@@ -984,7 +984,7 @@ color: #97c03d;
 	cursor: pointer;
 }
 
-.icon-info, .icon-chevron-circle-left {
+.icon-info, .icon-chevron-circle-right {
     position: absolute;
     right: 50%;
 bottom: 50%;
@@ -993,13 +993,13 @@ bottom: 50%;
   font-size: 40pt;
 }
     
-    .icon-chevron-circle-left {
+    .icon-chevron-circle-right {
 
   font-size: 35pt;
 }
     
 
-.icon-info:hover, .icon-chevron-circle-left:hover {
+.icon-info:hover, .icon-chevron-circle-right:hover {
 color: darkgray;
     
 }
