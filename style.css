@@ -657,20 +657,17 @@ body::-webkit-scrollbar {
     height: 80px;
     position: absolute;
     right:0;
+    top:0;
     z-index: 12;
     transition: 0.25s;
     overflow: hidden;
-    font-size: 50px;
-    
+    font-size: 50px;  
 }
 
 
 .icon-close:hover {
-	cursor: pointer;
-    
+	cursor: pointer; 
 }
-
-
 
 
 .icon-close>i {

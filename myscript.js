@@ -852,6 +852,14 @@ $(window).resize(function () {
     skillsResponsive(ancho);
 
  
+            if(ancho>768){
+            $(".contenido-trabajo-descripcion").css({'width':'322px'})
+                
+                $(".contenido-trabajo").css({'width':ancho-322})
+        } else{
+            $(".contenido-trabajo-descripcion").css({'width':'0'})
+                
+                $(".contenido-trabajo").css({'width':'100%'})  }
     
 
     if (ancho > 600) {
