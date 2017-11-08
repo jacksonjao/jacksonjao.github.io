@@ -878,11 +878,10 @@ $(window).resize(function () {
 
 
 
-window.onload = function() {
-    if (window.jQuery) {  
-        // jQuery is loaded  
-       
-        
+
+
+var iniciar = function(){
+         
      $("#loading").css({
          'opacity':'0'
      });
@@ -956,11 +955,32 @@ setTimeout(
 
         
         
+}
+
+setTimeout(
+    function () {
         
+       
+        $(".titulo-loading").css({
+            'opacity': '1',
+            'visibility':'visible'
+        });
+
+
+    }, 10000);
+
+
+
+window.onload = function() {
+    if (window.jQuery) {  
+        // jQuery is loaded   
+ iniciar();   
     } else {
         // jQuery is not loaded
         alert("Refresh page");
     }
 }
 
-
+$(".titulo-loading>p").click(function(){
+    iniciar();  
+})
