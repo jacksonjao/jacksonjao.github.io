@@ -1,6 +1,6 @@
   window.fbAsyncInit = function() {
     FB.init({
-      appId            : 'your-app-id',
+      appId            : '509917229384323',
       autoLogAppEvents : true,
       xfbml            : true,
       version          : 'v2.11'
@@ -15,11 +15,41 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 
+
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+    
+    
+});
+
+
+{
+    status: 'connected',
+    authResponse: {
+        accessToken: '...',
+        expiresIn:'...',
+        signedRequest:'...',
+        userID:'...'
+    }
+}
+
+<fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button>
+
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+
+/*
 FB.api(
     "/{user-id}/music",
     function (response) {
         if (response && !response.error) {
-            /* handle the result */
+            //handle the result 
             alert("holi")
         } else {
             alert("holi")
@@ -27,3 +57,9 @@ FB.api(
         }
     }
 );
+
+*/
+
+
+
+
