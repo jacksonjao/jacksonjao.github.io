@@ -6,9 +6,9 @@ body{
     background: -webkit-linear-gradient(-90deg, #E80C7A, #FFA400);
     position: relative;
          text-align: center;
-    max-height: 100vh;
+    max-height: 100vh !important;
     
-    overflow: hidden;
+    overflow: hidden !important;
     
     font-family: 'Roboto', sans-serif;
 }
