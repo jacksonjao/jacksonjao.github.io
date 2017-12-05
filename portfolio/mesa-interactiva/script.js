@@ -8,6 +8,8 @@ var config = {
 };
 firebase.initializeApp(config);
 
+var estadoConexion;
+
 //var newPostKey = firebase.database().ref().child('mesas/'+"0").push().key;
 
 
@@ -36,6 +38,7 @@ leadsRef.on('value', function(snapshot) {
     // app know the current login status of the person.
     // Full docs on the response object can be found in the documentation
     // for FB.getLoginStatus().
+      estadoConexion=response.status;
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
       testAPI();
@@ -53,7 +56,6 @@ leadsRef.on('value', function(snapshot) {
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
         
-        console.log("hohoho")
         FB.login(function (response) {
         if (response.status === 'connected') {
             uid = response.authResponse.userID;
