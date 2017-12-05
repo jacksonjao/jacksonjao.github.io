@@ -4,12 +4,31 @@
     <title>Document</title>
     <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-database.js"></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+   
     
     
 </head>
 <body>
+   <div class="container">
+   <div class="col">
+      <h1>Mesa Interactiva</h1>
+   <figure><img src="icono.svg" alt=""></figure>
+ 
+    <p>¡Hola! Bienvenidos a la Mesa Interactiva, para que la mesa pueda reproducir la música que te gusta necesitamos saber tus gustos musicales, cualquier otra información tuya será eliminada cuando te retires del restaurante, dale click al botón y ¡Adelante!</p>
+     <br>
+<fb:login-button scope="public_profile,email,user_likes" onlogin="checkLoginState();" class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true" >
+</fb:login-button>
+        
     
-<script src="script.js?v=13"></script>
+        
+         <br><br>
+          <div id="status"></div>
+          </div>
+
+    </div>
+    
+<script src="script.js?v=72"></script>
 </body>
 </html>
