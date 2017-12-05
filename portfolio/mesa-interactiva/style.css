@@ -1,10 +1,12 @@
 body{
     padding: 0 !important;
-    min-width: 100% !important;
+    min-width: 100vw !important;
+    max-width: 100vw !important;
     min-height: 100% !important;
     background: -webkit-linear-gradient(-90deg, #E80C7A, #FFA400);
     position: relative;
          text-align: center;
+    
     
     font-family: 'Roboto', sans-serif;
 }
