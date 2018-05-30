@@ -1,0 +1,21 @@
+:root {
+    --ground: rgb(198, 152, 92);
+    --lightGrass: rgb(23, 199, 28);
+    --darkGrass: rgb(14, 108, 17);
+    --lightSky: rgb(149,194,245);
+    --darkSky: rgb(110,158,244);
+}
+
+canvas{
+    background: linear-gradient(var(--darkSky), var(--lightSky));
+
+}
+
+body {
+    overflow:hidden;
+padding: 0;
+    margin: 0;
+    background-color: var(--ground);
+}
+
+
