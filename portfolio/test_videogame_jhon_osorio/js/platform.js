@@ -6,7 +6,7 @@ class Platform {
         this.height = height;
         this.x = x;
         this.y = y;
-
+this.cameraMov=0;
 
 
         this.shape = function() {
@@ -22,7 +22,7 @@ class Platform {
     }
 
     draw() {
-
+this.x+=this.cameraMov;
         this.shape();
     }
 

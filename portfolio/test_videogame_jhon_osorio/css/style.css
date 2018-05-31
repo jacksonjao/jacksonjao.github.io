@@ -4,6 +4,8 @@
     --darkGrass: rgb(14, 108, 17);
     --lightSky: rgb(149,194,245);
     --darkSky: rgb(110,158,244);
+    --player: rgb(246, 255, 100);
+    --playerOpacity: rgba(246, 255, 100, 0.26);
 }
 
 canvas{
@@ -19,3 +21,31 @@ padding: 0;
 }
 
 
+#btnRight{
+    border-radius: 40px;
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    margin-top: -50px;
+    margin-left: 90px;
+    background-color: black;
+}
+
+#btnLeft{
+    border-radius: 40px;
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    margin-top: -50px;
+    margin-left: 20px;
+    background-color: black;
+}
+#btnUp{
+    border-radius: 40px;
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    margin-top: -50px;
+    margin-left: 200px;
+    background-color: black;
+}

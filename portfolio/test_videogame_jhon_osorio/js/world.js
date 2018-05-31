@@ -1,85 +1,158 @@
 import Jugador from "./jugador.js";
 import Platform from "./platform.js";
 import Enemy from "./enemy.js";
-
-
-var jugador= Jugador;
-var platforms=[];
-var startMovement=false;
-var enemies=[];
+import PlatformFire from "./platform_fire.js";
+var jugador = Jugador;
+var platforms = [];
+var enemies = [];
+var boss = Jugador;
+var bossVelocity = 0.6;
+var cameraMov = 0;
+var posCameraX;
+var penance=0;
+var platformFire=PlatformFire;
 initWorld();
 
 function initWorld() {
-    var bottomPos=height;
-    platforms.push(new Platform(0,bottomPos-100,400,100,GAME.context));
-    platforms.push(new Platform(335,bottomPos-186,100,50,GAME.context));
-    platforms.push(new Platform(512,bottomPos-256,100,50,GAME.context));
-    platforms.push(new Platform(350,bottomPos-356,100,50,GAME.context));
-    platforms.push(new Platform(212,bottomPos-456,100,50,GAME.context));
-    platforms.push(new Platform(350,bottomPos-556,800,50,GAME.context));
-    enemies.push(new Enemy(350, bottomPos-356-30,  30, 30,"red",GAME.context))
+    var bottomPos = height;
+    platforms.push(new Platform(0, bottomPos - 100, 400, 100, GAME.context));
+    platforms.push(new Platform(335, bottomPos - 186, 100, 50, GAME.context));
+    platforms.push(new Platform(512, bottomPos - 256, 100, 50, GAME.context));
+    platforms.push(new Platform(350, bottomPos - 356, 100, 50, GAME.context));
+    platforms.push(new Platform(212, bottomPos - 456, 100, 50, GAME.context));
+    platforms.push(new Platform(350, bottomPos - 556, 800, 50, GAME.context));
+    platforms.push(new Platform(1150, bottomPos - 100, 1200, 100, GAME.context));
+
+    platforms.push(new Platform(1000, bottomPos - 190, 100, 50, GAME.context));
+    platforms.push(new Platform(1150, bottomPos - 290, 100, 50, GAME.context));
+    platforms.push(new Platform(1350, bottomPos - 256, 200, 50, GAME.context));
+    platforms.push(new Platform(1650, bottomPos - 256, 100, 50, GAME.context));
+    platforms.push(new Platform(1890, bottomPos - 256, 100, 50, GAME.context));
+    platforms.push(new Platform(2480, bottomPos - 100, 700, 100, GAME.context));
 
 
+    platformFire=new PlatformFire(1600, bottomPos - 100, 500, 10,"black", GAME.context);
+    enemies.push(new Enemy(350, bottomPos - 556 - 30, 30, 30, "red", GAME.context, 350, 350 + 800));
+    enemies.push(new Enemy(1890, bottomPos - 256 - 30, 30, 30, "red", GAME.context, 1890, 1890 + 100));
 
-    jugador= new Jugador(10, 30,  30, 30,"gray",GAME.context);
+
+    boss = new Jugador(30, 30, 30, 30, "black", GAME.context);
+    boss.setVelocity(bossVelocity);
+    jugador = new Jugador(50, 30, 30, 30, "rgb(246, 255, 100)", GAME.context);
 
 
-
-    setInterval(draw,1);
+    setInterval(draw, 1);
 }
-
 
 
 function draw() {
     GAME.clear();
-    behaviors();
-
-    for(var i=0;i<platforms.length;i++){
-    platforms[i].draw();
-    cameraMovenment(i);
+    generalBehaviors();
+    bossBehaviors();
+    cameraMovenment();
+    for (var i = 0; i < platforms.length; i++) {
+        platforms[i].draw();
+        platforms[i].cameraMov = cameraMov;
     }
-
-    for (var i=0;i<enemies.length;i++){
+    for (var i = 0; i < enemies.length; i++) {
         enemies[i].draw();
+        enemies[i].cameraMov = cameraMov;
     }
-
+    boss.draw();
     jugador.draw();
+    platformFire.draw();
 }
 
 
+function cameraMovenment() {
+    posCameraX += cameraMov;
+    if (jugador.x > width - 400) {
+        cameraMov = -1;
+    }
+    if (jugador.x <= width - 400) {
+        cameraMov = 0;
+    }
 
-function cameraMovenment(i) {
-    if(jugador.x>width-(width/2)){
-        startMovement=true;
-    }
-    if(startMovement){
-       /// platforms[i].x-=0.2;
-    }
+    jugador.cameraMov = cameraMov;
+    boss.cameraMov = cameraMov;
+platformFire.cameraMov=cameraMov;
+
+
 
 }
 
-function behaviors(){
-    //observa que el jugador esté sobre las superficies
-    for(var i=0;i<platforms.length;i++){
-        if(jugador.y+jugador.height>platforms[i].y&&jugador.y+jugador.height<platforms[i].y+10&&jugador.x+jugador.width>platforms[i].x&&jugador.x<platforms[i].x+platforms[i].width){
-            jugador.isFalling=false;
+function bossBehaviors() {
+    for (var i = 0; i < platforms.length; i++) {
+        if (boss.y + boss.height > platforms[i].y && boss.y + boss.height < platforms[i].y + 10 && boss.x + boss.width > platforms[i].x && boss.x < platforms[i].x + platforms[i].width) {
+            boss.isFalling = false;
             break;
-        }else{
-            jugador.isFalling=true;
+        } else {
+            boss.isFalling = true;
         }
-
-
-
     }
 
 
-    for(var i=0;i<jugador.bullets.length;i++){
+    if (boss.isJumping) {
+        boss.setVelocity(bossVelocity * 2);
+    } else {
+        boss.setVelocity(bossVelocity);
+    }
 
-        for(var j=0;j<enemies.length;j++){
-            if(jugador.bullets[i].x<enemies[j].x+enemies[j].width&&jugador.bullets[i].x>enemies[j].x&&jugador.bullets[i].y>enemies[j].y-(jugador.bullets[i].height/2)&&jugador.bullets[i].y<enemies[j].y+enemies[j].height){
+    if (boss.x > platforms[1].x&&boss.x < platforms[1].x+30 && boss.y + boss.height >= platforms[0].y && boss.y + boss.height < platforms[0].y + 10) {
 
-                jugador.bullets.splice(i,1);
-                enemies.splice(j,1);
+        boss.setGravityJump(3.3);
+    }
+    if (boss.x > platforms[1].x + platforms[1].width - 30 && boss.y + boss.height >= platforms[1].y && boss.y + boss.height < platforms[1].y + 10) {
+        boss.setGravityJump(3.3);
+    }
+
+    if (boss.x > platforms[2].x && boss.y + boss.height >= platforms[2].y && boss.y + boss.height < platforms[2].y + 10) {
+        bossVelocity = bossVelocity * -1;
+        boss.setGravityJump(3.3);
+    }
+
+    if (boss.x < platforms[3].x + 30 && boss.y + boss.height >= platforms[3].y && boss.y + boss.height < platforms[3].y + 10) {
+
+        boss.setGravityJump(3.3);
+    }
+
+    if (boss.x > platforms[4].x && boss.x < platforms[4].x + platforms[4].width - 30 && boss.y + boss.height >= platforms[4].y && boss.y + boss.height < platforms[4].y + 10) {
+        bossVelocity = bossVelocity * -1;
+        boss.setGravityJump(3.3);
+    }
+
+    if (boss.x > platforms[6].x+platforms[6].width-1 && boss.x < platforms[6].x + platforms[6].width+10  && boss.y + boss.height >= platforms[6].y && boss.y + boss.height < platforms[6].y + 10) {
+
+        boss.setGravityJump(3.3);
+    }
+}
+
+function generalBehaviors() {
+    if(penance>0){
+        penance--;
+        if(penance<2){
+            penance=0;
+            jugador.color="rgb(246, 255, 100)"
+        }
+    }
+    //observa que el jugador esté sobre las superficies
+    for (var i = 0; i < platforms.length; i++) {
+        if (jugador.y + jugador.height > platforms[i].y && jugador.y + jugador.height < platforms[i].y + 10 && jugador.x + jugador.width > platforms[i].x && jugador.x < platforms[i].x + platforms[i].width) {
+            jugador.isFalling = false;
+            break;
+        } else {
+            jugador.isFalling = true;
+        }
+    }
+
+//evalúa la posición de la bala del jugador
+    for (var i = 0; i < jugador.bullets.length; i++) {
+
+        for (var j = 0; j < enemies.length; j++) {
+            if (jugador.bullets[i].x < enemies[j].x + enemies[j].width && jugador.bullets[i].x > enemies[j].x && jugador.bullets[i].y > enemies[j].y - (jugador.bullets[i].height / 2) && jugador.bullets[i].y < enemies[j].y + enemies[j].height) {
+
+                jugador.bullets.splice(i, 1);
+                enemies.splice(j, 1);
             }
 
         }
@@ -87,20 +160,47 @@ function behaviors(){
 
 
 
+    for (var i = 0; i < enemies.length; i++) {
+        if (enemies[i].x < jugador.x + jugador.width && enemies[i].x > jugador.x && enemies[i].y > jugador.y - (enemies[i].height / 2) && enemies[i].y < jugador.y + jugador.height) {
+
+            penance=200;
+            jugador.setVelocity(0);
+            jugador.color="rgb(246, 255, 100,0.2)"
+        }
+
+        for (var j = 0; j < enemies[i].bullets.length; j++) {
+            if (enemies[i].bullets[j].x < jugador.x + jugador.width && enemies[i].bullets[j].x > jugador.x && enemies[i].bullets[j].y > jugador.y - (enemies[i].bullets[j].height / 2) && enemies[i].bullets[j].y < jugador.y + jugador.height) {
+
+                enemies[i].bullets.splice(i, 1);
+                penance=200;
+             jugador.setVelocity(0);
+                jugador.color="rgb(246, 255, 100,0.2)"
+            }
 
 
 
+        }
+    }
+
+    if(jugador.x>platformFire.x&&jugador.x<platformFire.x+platformFire.width){
+        if(jugador.y+jugador.height>=platformFire.y&&jugador.y+jugador.height<platformFire.y+10){
+            jugador.setVelocity(0);
+        }
+
+    }
 
 }
 
 keyBoard();
-function keyBoard(){
-    document.addEventListener('keydown', function(event) {
 
-        switch (event.key){
+function keyBoard() {
+    document.addEventListener('keydown', function (event) {
+        if(penance===0){
+        switch (event.key) {
             case 'd':
             case 'D':
             case 'ArrowRight':
+
                 jugador.setVelocity(1);
                 break;
             case 'a':
@@ -125,20 +225,22 @@ function keyBoard(){
                 console.log('Space was pressed');
                 break;
         }
-
+        }
     });
 
-    document.addEventListener('keyup', function(event) {
+    document.addEventListener('keyup', function (event) {
 
-        switch (event.key){
+        switch (event.key) {
             case 'd':
             case 'D':
             case 'ArrowRight':
+                cameraMov = 0;
                 jugador.setVelocity(0);
                 break;
             case 'a':
             case 'A':
             case 'ArrowLeft':
+                cameraMov = 0;
                 jugador.setVelocity(0);
                 break;
             case 'u':
@@ -160,4 +262,22 @@ function keyBoard(){
     });
 }
 
+var btnRigth=document.getElementById("btnRight");
+var btnUp=document.getElementById("btnUp");
 
+
+window.onmousedown=function (event) {
+    if(event.target===btnRigth){
+        jugador.setVelocity(1);
+    }
+
+    if(event.target===btnUp){
+        jugador.setGravityJump(3.3);
+    }
+}
+
+window.onmouseup=function (event) {
+    if(event.target===btnRigth){
+        jugador.setVelocity(0);
+    }
+}

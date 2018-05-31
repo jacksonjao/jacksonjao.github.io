@@ -8,10 +8,10 @@ class Bullet {
         this.x = x;
         this.y = y;
         this.gravity = 0.001;
-        this.gravitySpeed = 0;
+        this.gravitySpeed = 0.1;
         this.isJumping=false;
         this.speedX = 2;
-
+        this.cameraMov=0;
 
         this.shape = function() {
             context.fillStyle = color;
@@ -20,15 +20,12 @@ class Bullet {
 
         this.move = function() {
             if(this.dir>0){
-            this.x += this.speedX;}
+            this.x += this.speedX+this.cameraMov;}
             if(this.dir<0){
-                this.x -= this.speedX;}
+                this.x -= this.speedX-this.cameraMov;}
         }
 
-        this.fall = function () {
-                this.gravitySpeed += this.gravity;
-                this.y += this.gravitySpeed;
-        }
+
 
 
     }
@@ -36,20 +33,17 @@ class Bullet {
     draw() {
 
         this.move();
-        this.fall();
+
         this.shape();
     }
-
-
-
-
-    getX(){
-        return this.x;
+    fall () {
+        this.gravitySpeed += this.gravity;
+        this.y += this.gravitySpeed;
     }
 
-    getY(){
-        return this.y;
-    }
+
+
+
 
 
 

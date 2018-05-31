@@ -17,15 +17,19 @@ class Jugador {
         this.bullets = [];
         this.backupDirection = 1;
         this.isFalling=true;
-
+        this.cameraMov=0;
+        this.color=color;
         this.shape = function () {
-            this.context.fillStyle = color;
+            this.context.fillStyle = this.color;
+
             this.context.fillRect(this.x, this.y, this.width, this.height);
         }
 
         this.move = function () {
 
-            this.x += this.speedX;
+            this.x += this.speedX+this.cameraMov;
+
+
         }
 
 
@@ -61,7 +65,9 @@ class Jugador {
         this.shape();
         for (var i = 0; i < this.bullets.length; i++) {
             this.bullets[i].draw();
-            if(this.bullets[i].getY()>height){
+            this.bullets[i].fall();
+            this.bullets[i].cameraMov=this.cameraMov;
+            if(this.bullets[i].x>width||this.bullets[i].x<0){
                 this.bullets.splice(i,1);
             }
         }

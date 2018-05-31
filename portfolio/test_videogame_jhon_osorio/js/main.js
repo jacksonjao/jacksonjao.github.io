@@ -8,7 +8,7 @@ function startGame() {
 
 
 const SETTINGS = {
-    width:width,
+    width:1400,
     height:height,
 }
 
