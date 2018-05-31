@@ -10,17 +10,58 @@
 
 canvas{
     background: linear-gradient(var(--darkSky), var(--lightSky));
+    opacity: 1;
+transition: 0.2s;
+    position: absolute;
 
+}
+
+
+h1{
+width: 100vw;
+    position: absolute;
+
+    text-align: center;
+
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: -100px;
+    color: white;
+
+}
+
+
+
+#newGame{
+
+    position: absolute;
+
+
+right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+
+    color: white;
+    background-color:var( --ground);
+    padding: 10px;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+#newGame:hover{
+    cursor: pointer;
 }
 
 body {
     overflow:hidden;
 padding: 0;
     margin: 0;
-    background-color: var(--ground);
+    background-color: black;
 }
 
 
+
+/*
 #btnRight{
     border-radius: 40px;
     position: fixed;
@@ -48,4 +89,4 @@ padding: 0;
     margin-top: -50px;
     margin-left: 200px;
     background-color: black;
-}
+}*/

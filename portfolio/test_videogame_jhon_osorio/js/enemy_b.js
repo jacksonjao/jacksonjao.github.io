@@ -1,10 +1,10 @@
 import Bullet from "./bullet.js"
 
-class Enemy {
+class EnemyB {
 
 
 //con backupDirection guardo la dirección en la que quedó el jugador para agregarle esa dirección a la bala
-    constructor(x, y, width, height, color, context, start, end) {
+    constructor(x, y, width, height, color, context) {
         this.width = width;
         this.height = height;
         this.speedX = 0;
@@ -13,29 +13,21 @@ class Enemy {
         this.context = context;
         this.bullets = [];
         this.counter = 0;
-        this.setVelocity(1.5);
+
         this.cameraMov = 0;
+
         this.shape = function () {
             this.context.fillStyle = color;
-            this.context.fillRect(this.x, this.y, this.width, this.height);
-            for (var i = 0; i <= 5; i++) {
-                var ran = Math.floor((Math.random() * 15) + 1);
-                this.context.fillRect(this.x - (ran / 2), this.y + (6 * i), this.width + ran, 1);
-            }
+            var ranW = Math.floor((Math.random() * this.width) + 1);
+            this.context.fillRect(this.x + ranW, this.y, this.width, this.height);
+
 
         };
 
         this.move = function () {
-            this.x += this.speedX + this.cameraMov;
-            start = start + this.cameraMov;
-            end = end + this.cameraMov;
-            if (this.x < start) {
-                this.setVelocity(1.5);
-            }
+            this.x += this.cameraMov;
 
-            if (this.x > end - (this.width)) {
-                this.setVelocity(-1.5);
-            }
+
         };
 
 
@@ -43,7 +35,12 @@ class Enemy {
 
     draw() {
         this.move();
-        this.shape();
+
+        if (this.counter > 1000) {
+            this.shape();
+        }
+
+
         for (var i = 0; i < this.bullets.length; i++) {
             this.bullets[i].draw();
             this.bullets[i].cameraMov = this.cameraMov;
@@ -53,9 +50,14 @@ class Enemy {
             }
         }
         this.counter += 1;
-        if (this.counter > 400) {
+        if (this.counter > 2000) {
             this.fire();
             this.counter = 0;
+            var ranW = Math.floor((Math.random() * width) + 1);
+            var ranH = Math.floor((Math.random() * height) + 1);
+
+            this.x = ranW;
+            this.y = ranH;
         }
 
 
@@ -63,7 +65,7 @@ class Enemy {
 
 
     setVelocity(vel) {
-        this.speedX = vel;
+
         if (vel > 0) {
             this.backupDirection = 1;
         }
@@ -82,4 +84,4 @@ class Enemy {
 
 }
 
-export default Enemy;
+export default EnemyB;

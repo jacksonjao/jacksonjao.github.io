@@ -4,7 +4,7 @@ class Jugador {
 
 
 //con backupDirection guardo la dirección en la que quedó el jugador para agregarle esa dirección a la bala
-    constructor(x,y,width, height,color, context) {
+    constructor(x, y, width, height, color, context) {
         this.width = width;
         this.height = height;
         this.speedX = 0;
@@ -16,9 +16,9 @@ class Jugador {
         this.context = context;
         this.bullets = [];
         this.backupDirection = 1;
-        this.isFalling=true;
-        this.cameraMov=0;
-        this.color=color;
+        this.isFalling = true;
+        this.cameraMov = 0;
+        this.color = color;
         this.shape = function () {
             this.context.fillStyle = this.color;
 
@@ -27,32 +27,28 @@ class Jugador {
 
         this.move = function () {
 
-            this.x += this.speedX+this.cameraMov;
+            this.x += this.speedX + this.cameraMov;
 
 
         }
 
 
-
-
-        this.jump= function () {
+        this.jump = function () {
             if (this.isJumping) {
                 this.gravitySpeed -= this.gravity;
                 this.y -= this.gravitySpeed;
             }
 
 
-            if(this.isFalling &&this.gravitySpeed<=0) {
-                this.isJumping=false;
+            if (this.isFalling && this.gravitySpeed <= 0) {
+                this.isJumping = false;
                 this.gravitySpeed -= this.gravity;
                 this.y -= this.gravitySpeed;
             }
 
-            if(this.isJumping==false&&this.isFalling==false){
-                this.gravitySpeed=0;
+            if (this.isJumping == false && this.isFalling == false) {
+                this.gravitySpeed = 0;
             }
-
-
 
 
         }
@@ -66,17 +62,14 @@ class Jugador {
         for (var i = 0; i < this.bullets.length; i++) {
             this.bullets[i].draw();
             this.bullets[i].fall();
-            this.bullets[i].cameraMov=this.cameraMov;
-            if(this.bullets[i].x>width||this.bullets[i].x<0){
-                this.bullets.splice(i,1);
+            this.bullets[i].cameraMov = this.cameraMov;
+            if (this.bullets[i].x > width || this.bullets[i].x < 0) {
+                this.bullets.splice(i, 1);
             }
         }
 
 
-
-
     }
-
 
 
     setVelocity(vel) {
@@ -90,20 +83,15 @@ class Jugador {
     }
 
     setGravityJump(jump) {
-        if (this.isJumping == false &&this.isFalling==false) {
+        if (this.isJumping == false && this.isFalling == false) {
             this.isJumping = true;
             this.gravitySpeed = jump;
         }
     }
 
     fire() {
-        this.bullets.push(new Bullet(this.x, this.y,  10, 10,"red",this.backupDirection, this.context))
+        this.bullets.push(new Bullet(this.x, this.y, 10, 10, "red", this.backupDirection, this.context))
     }
-
-
-
-
-
 
 
 }

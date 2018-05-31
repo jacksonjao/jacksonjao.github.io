@@ -1,15 +1,15 @@
 class Platform {
 
 
-    constructor(x,y,width, height,context){
+    constructor(x, y, width, height, context) {
         this.width = width;
         this.height = height;
         this.x = x;
         this.y = y;
-this.cameraMov=0;
+        this.cameraMov = 0;
 
 
-        this.shape = function() {
+        this.shape = function () {
             context.fillStyle = "rgb(198, 152, 92)";
             context.fillRect(this.x, this.y, this.width, this.height);
             context.fillStyle = "rgb(23, 199, 28)";
@@ -17,29 +17,21 @@ this.cameraMov=0;
         }
 
 
-
-
     }
 
     draw() {
-this.x+=this.cameraMov;
+        this.x += this.cameraMov;
         this.shape();
     }
 
 
-
-
-    getX(){
+    getX() {
         return this.x;
     }
 
-    getY(){
+    getY() {
         return this.y;
     }
-
-
-
-
 
 
 }

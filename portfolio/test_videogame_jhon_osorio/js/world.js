@@ -2,15 +2,18 @@ import Jugador from "./jugador.js";
 import Platform from "./platform.js";
 import Enemy from "./enemy.js";
 import PlatformFire from "./platform_fire.js";
+import EnemyB from "./enemy_b.js";
+
 var jugador = Jugador;
 var platforms = [];
 var enemies = [];
 var boss = Jugador;
-var bossVelocity = 0.6;
+var bossVelocity = 0.7;
 var cameraMov = 0;
 var posCameraX;
-var penance=0;
-var platformFire=PlatformFire;
+var penance = 0;
+var platformFire = PlatformFire;
+var enemyB = EnemyB;
 initWorld();
 
 function initWorld() {
@@ -27,19 +30,20 @@ function initWorld() {
     platforms.push(new Platform(1150, bottomPos - 290, 100, 50, GAME.context));
     platforms.push(new Platform(1350, bottomPos - 256, 200, 50, GAME.context));
     platforms.push(new Platform(1650, bottomPos - 256, 100, 50, GAME.context));
-    platforms.push(new Platform(1890, bottomPos - 256, 100, 50, GAME.context));
-    platforms.push(new Platform(2480, bottomPos - 100, 700, 100, GAME.context));
+    platforms.push(new Platform(1890, bottomPos - 256, 300, 50, GAME.context));
+    platforms.push(new Platform(2480, bottomPos - 100, 1500, 100, GAME.context));
 
 
-    platformFire=new PlatformFire(1600, bottomPos - 100, 500, 10,"black", GAME.context);
+    platformFire = new PlatformFire(1600, bottomPos - 100, 650, 10, "black", GAME.context);
     enemies.push(new Enemy(350, bottomPos - 556 - 30, 30, 30, "red", GAME.context, 350, 350 + 800));
-    enemies.push(new Enemy(1890, bottomPos - 256 - 30, 30, 30, "red", GAME.context, 1890, 1890 + 100));
+    enemies.push(new Enemy(1890, bottomPos - 256 - 30, 30, 30, "red", GAME.context, 1890, 1890 + 300));
+    enemies.push(new Enemy(2480, bottomPos - 100 - 30, 30, 30, "red", GAME.context, 2480, 2480 + 1500));
 
 
     boss = new Jugador(30, 30, 30, 30, "black", GAME.context);
     boss.setVelocity(bossVelocity);
-    jugador = new Jugador(50, 30, 30, 30, "rgb(246, 255, 100)", GAME.context);
-
+    jugador = new Jugador(30, 30, 30, 30, "rgb(246, 255, 100)", GAME.context);
+    enemyB = new EnemyB(jugador.y, 1400, 30, 15, "red", GAME.context);
 
     setInterval(draw, 1);
 }
@@ -61,22 +65,24 @@ function draw() {
     boss.draw();
     jugador.draw();
     platformFire.draw();
+    // enemyB.draw();
+
+
 }
 
 
 function cameraMovenment() {
     posCameraX += cameraMov;
-    if (jugador.x > width - 400) {
+    if (jugador.x > width - width / 2) {
         cameraMov = -1;
     }
-    if (jugador.x <= width - 400) {
+    if (jugador.x <= width - width / 2) {
         cameraMov = 0;
     }
 
     jugador.cameraMov = cameraMov;
     boss.cameraMov = cameraMov;
-platformFire.cameraMov=cameraMov;
-
+    platformFire.cameraMov = cameraMov;
 
 
 }
@@ -93,20 +99,22 @@ function bossBehaviors() {
 
 
     if (boss.isJumping) {
-        boss.setVelocity(bossVelocity * 2);
+        boss.setVelocity(bossVelocity * 1.8);
     } else {
         boss.setVelocity(bossVelocity);
     }
 
-    if (boss.x > platforms[1].x&&boss.x < platforms[1].x+30 && boss.y + boss.height >= platforms[0].y && boss.y + boss.height < platforms[0].y + 10) {
+    if (boss.x > platforms[1].x-30 && boss.x < platforms[1].x + 30 && boss.y + boss.height >= platforms[0].y && boss.y + boss.height < platforms[0].y + 10) {
 
         boss.setGravityJump(3.3);
     }
-    if (boss.x > platforms[1].x + platforms[1].width - 30 && boss.y + boss.height >= platforms[1].y && boss.y + boss.height < platforms[1].y + 10) {
+
+
+    if (boss.x > platforms[1].x + 30 && boss.x < platforms[1].x + platforms[1].width && boss.y + boss.height >= platforms[1].y && boss.y + boss.height < platforms[1].y + 10) {
         boss.setGravityJump(3.3);
     }
 
-    if (boss.x > platforms[2].x && boss.y + boss.height >= platforms[2].y && boss.y + boss.height < platforms[2].y + 10) {
+    if (boss.x > platforms[2].x + 10 && boss.x < platforms[2].x + platforms[2].width - 30 && boss.y + boss.height >= platforms[2].y && boss.y + boss.height < platforms[2].y + 10) {
         bossVelocity = bossVelocity * -1;
         boss.setGravityJump(3.3);
     }
@@ -121,18 +129,28 @@ function bossBehaviors() {
         boss.setGravityJump(3.3);
     }
 
-    if (boss.x > platforms[6].x+platforms[6].width-1 && boss.x < platforms[6].x + platforms[6].width+10  && boss.y + boss.height >= platforms[6].y && boss.y + boss.height < platforms[6].y + 10) {
+    if (boss.x > platforms[6].x + platforms[6].width - 1 && boss.x < platforms[6].x + platforms[6].width + 10 && boss.y + boss.height >= platforms[6].y && boss.y + boss.height < platforms[6].y + 10) {
 
         boss.setGravityJump(3.3);
+    }
+
+
+    if (boss.x > platforms[platforms.length - 1].x + platforms[platforms.length - 1].width - 200) {
+
+        GAME.finish();
+        document.getElementById("tittle").innerHTML = "PERDISTE LA CARRERA";
+        jugador.setVelocity(0);
+        jugador.y = 0;
+        boss.setVelocity(0);
     }
 }
 
 function generalBehaviors() {
-    if(penance>0){
+    if (penance > 0) {
         penance--;
-        if(penance<2){
-            penance=0;
-            jugador.color="rgb(246, 255, 100)"
+        if (penance < 2) {
+            penance = 0;
+            jugador.color = "rgb(246, 255, 100)"
         }
     }
     //observa que el jugador esté sobre las superficies
@@ -159,33 +177,49 @@ function generalBehaviors() {
     }
 
 
-
     for (var i = 0; i < enemies.length; i++) {
         if (enemies[i].x < jugador.x + jugador.width && enemies[i].x > jugador.x && enemies[i].y > jugador.y - (enemies[i].height / 2) && enemies[i].y < jugador.y + jugador.height) {
 
-            penance=200;
+            penance = 200;
             jugador.setVelocity(0);
-            jugador.color="rgb(246, 255, 100,0.2)"
+            jugador.color = "rgb(246, 255, 100,0.2)"
         }
 
         for (var j = 0; j < enemies[i].bullets.length; j++) {
             if (enemies[i].bullets[j].x < jugador.x + jugador.width && enemies[i].bullets[j].x > jugador.x && enemies[i].bullets[j].y > jugador.y - (enemies[i].bullets[j].height / 2) && enemies[i].bullets[j].y < jugador.y + jugador.height) {
 
                 enemies[i].bullets.splice(i, 1);
-                penance=200;
-             jugador.setVelocity(0);
-                jugador.color="rgb(246, 255, 100,0.2)"
+                penance = 200;
+                jugador.setVelocity(0);
+                jugador.color = "rgb(246, 255, 100,0.2)"
             }
-
 
 
         }
     }
 
-    if(jugador.x>platformFire.x&&jugador.x<platformFire.x+platformFire.width){
-        if(jugador.y+jugador.height>=platformFire.y&&jugador.y+jugador.height<platformFire.y+10){
-            jugador.setVelocity(0);
+    if (jugador.x > platformFire.x && jugador.x < platformFire.x + platformFire.width) {
+        if (jugador.y + jugador.height >= platformFire.y && jugador.y + jugador.height < platformFire.y + 10) {
+            jugador.setVelocity(jugador.speedX*0.95);
+            jugador.isJumping=false;
         }
+
+    }
+
+    if (jugador.y > SETTINGS.height) {
+        GAME.finish();
+        document.getElementById("tittle").innerHTML = "PERDISTE LA CARRERA";
+        jugador.setVelocity(0);
+        jugador.y = 0;
+        boss.setVelocity(0);
+    }
+
+    if (jugador.x > platforms[platforms.length - 1].x + platforms[platforms.length - 1].width - 200) {
+
+        GAME.finish();
+        document.getElementById("tittle").innerHTML = "GANASTE LA CARRERA";
+        boss.setVelocity(0);
+        jugador.setVelocity(0);
 
     }
 
@@ -195,36 +229,36 @@ keyBoard();
 
 function keyBoard() {
     document.addEventListener('keydown', function (event) {
-        if(penance===0){
-        switch (event.key) {
-            case 'd':
-            case 'D':
-            case 'ArrowRight':
+        if (penance === 0) {
+            switch (event.key) {
+                case 'd':
+                case 'D':
+                case 'ArrowRight':
 
-                jugador.setVelocity(1);
-                break;
-            case 'a':
-            case 'A':
-            case 'ArrowLeft':
-                jugador.setVelocity(-1);
-                break;
-            case 'w':
-            case 'W':
-            case 'ArrowUp':
-                jugador.setGravityJump(3.3);
-                break;
-            case 'd':
-            case 'D':
-            case 'ArrowDown':
-                console.log('Down was pressed');
-                break;
+                    jugador.setVelocity(1);
+                    break;
+                case 'a':
+                case 'A':
+                case 'ArrowLeft':
+                    jugador.setVelocity(-1);
+                    break;
+                case 'w':
+                case 'W':
+                case 'ArrowUp':
+                    jugador.setGravityJump(3.3);
+                    break;
+                case 'd':
+                case 'D':
+                case 'ArrowDown':
+                    console.log('Down was pressed');
+                    break;
 
-            case ' ':
+                case ' ':
 
-                jugador.fire();
-                console.log('Space was pressed');
-                break;
-        }
+                    jugador.fire();
+                    console.log('Space was pressed');
+                    break;
+            }
         }
     });
 
@@ -262,6 +296,20 @@ function keyBoard() {
     });
 }
 
+var btnNewGame = document.getElementById("newGame");
+
+window.onmousedown = function (event) {
+
+    if (event.target === btnNewGame) {
+        location.reload();
+
+    }
+}
+
+//buttons mobile, no terminado
+
+/*
+
 var btnRigth=document.getElementById("btnRight");
 var btnUp=document.getElementById("btnUp");
 
@@ -280,4 +328,4 @@ window.onmouseup=function (event) {
     if(event.target===btnRigth){
         jugador.setVelocity(0);
     }
-}
+}*/

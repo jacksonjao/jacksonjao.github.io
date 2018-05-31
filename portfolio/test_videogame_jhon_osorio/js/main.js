@@ -8,7 +8,7 @@ function startGame() {
 
 
 const SETTINGS = {
-    width:1400,
+    width:3980,
     height:height,
 }
 
@@ -23,12 +23,22 @@ const GAME = {
     },
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    },
+    updateHeight: function (height) {
+        this.canvas.height = height;
+
+    },
+    finish:function () {
+      this.canvas.style.opacity="0"
+        document.getElementById("newGame").style.visibility="visible";
     }
+    
+    
+    
 }
 
 
 
-
-// add listener to disable scroll
-window.addEventListener('scroll', window.scrollTo( 0, 0 ));
-
+window.onresize = function(event) {
+GAME.updateHeight(window.outerHeight)
+};
