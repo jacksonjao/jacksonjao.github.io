@@ -10,7 +10,7 @@ var enemies = [];
 var boss = Jugador;
 var bossVelocity = 0.7;
 var cameraMov = 0;
-var posCameraX;
+var posCameraX=0;
 var penance = 0;
 var platformFire = PlatformFire;
 var enemyB = EnemyB;
@@ -73,16 +73,20 @@ function draw() {
 
 function cameraMovenment() {
     posCameraX += cameraMov;
-    if (jugador.x > width - width / 2) {
-        cameraMov = -1;
-    }
-    if (jugador.x <= width - width / 2) {
-        cameraMov = 0;
-    }
 
-    jugador.cameraMov = cameraMov;
-    boss.cameraMov = cameraMov;
-    platformFire.cameraMov = cameraMov;
+        if (jugador.x > width - width / 2) {
+            cameraMov = -1;
+        }
+        if (jugador.x <= width - width / 2 && jugador.x >= 20) {
+            cameraMov = 0;
+        }
+        if (jugador.x < width -( (width / 2)+width / 4)&&posCameraX<=0) {
+            cameraMov = 1;
+        }
+
+        jugador.cameraMov = cameraMov;
+        boss.cameraMov = cameraMov;
+        platformFire.cameraMov = cameraMov;
 
 
 }
@@ -297,9 +301,32 @@ function keyBoard() {
     });
 }
 
+
+
+
+//buttons mobile, no terminado
+
+
+var btnRight=document.getElementById("btnRight");
+var btnLeft=document.getElementById("btnLeft");
+var btnUp=document.getElementById("btnUp");
 var btnNewGame = document.getElementById("newGame");
 
-window.onmousedown = function (event) {
+
+window.onmousedown=function (event) {
+    if(event.target===btnRight){
+        jugador.setVelocity(1);
+    }
+
+    if(event.target===btnUp){
+        jugador.setGravityJump(3.3);
+    }
+    if(event.target===btnLeft){
+        jugador.setVelocity(-1);
+    }
+    if(event.target===btnFire){
+        jugador.fire();
+    }
 
     if (event.target === btnNewGame) {
         location.reload();
@@ -307,26 +334,14 @@ window.onmousedown = function (event) {
     }
 }
 
-//buttons mobile, no terminado
-
-/*
-
-var btnRigth=document.getElementById("btnRight");
-var btnUp=document.getElementById("btnUp");
-
-
-window.onmousedown=function (event) {
-    if(event.target===btnRigth){
-        jugador.setVelocity(1);
-    }
-
-    if(event.target===btnUp){
-        jugador.setGravityJump(3.3);
-    }
-}
-
 window.onmouseup=function (event) {
-    if(event.target===btnRigth){
+    if(event.target===btnRight){
         jugador.setVelocity(0);
     }
-}*/
+
+
+    if(event.target===btnLeft){
+        jugador.setVelocity(0);
+    }
+
+}
