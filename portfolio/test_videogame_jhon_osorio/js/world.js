@@ -220,6 +220,7 @@ function generalBehaviors() {
         document.getElementById("tittle").innerHTML = "GANASTE LA CARRERA";
         boss.setVelocity(0);
         jugador.setVelocity(0);
+        boss.x=0;
 
     }
 
