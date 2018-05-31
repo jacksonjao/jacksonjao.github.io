@@ -129,7 +129,7 @@ function bossBehaviors() {
         boss.setGravityJump(3.3);
     }
 
-    if (boss.x > platforms[6].x + platforms[6].width - 1 && boss.x < platforms[6].x + platforms[6].width + 10 && boss.y + boss.height >= platforms[6].y && boss.y + boss.height < platforms[6].y + 10) {
+    if (boss.x > platforms[6].x + platforms[6].width - 10 && boss.x < platforms[6].x + platforms[6].width + 10 && boss.y + boss.height >= platforms[6].y && boss.y + boss.height < platforms[6].y + 10) {
 
         boss.setGravityJump(3.3);
     }
