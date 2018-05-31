@@ -4,6 +4,9 @@ en el camino habrán obstáculos y enemigos que te impedirán avanzar.
 Gamepad:
 
 A: Derecha
+
 D: Izquierda
+
 W: Salta
+
 SPACEBAR: Dispara
