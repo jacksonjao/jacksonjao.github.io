@@ -538,12 +538,12 @@ var BehanceService = /** @class */ (function () {
         this.corsHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({
             'Content-Type': 'application/json',
             'Accept': 'application/json',
-            'Access-Control-Allow-Origin': 'http://localhost:4200/',
+            '*Access-Control-Allow-Origin': '*://*/*',
         });
     }
     // http://behance.net/v2/projects/56457739?api_key=u8897rZilTJ7TWx56Uw5wMfT3v7NSOCq
     BehanceService.prototype.getData = function () {
-        return this.httpClient.get(this.DATABASE_URL + 'projects/56457739' + this.API_KEY, { headers: this.corsHeaders });
+        return this.httpClient.get(this.DATABASE_URL + 'projects/56457739' + this.API_KEY);
     };
     BehanceService.prototype.synchronizeWithFirebase = function () {
         this.httpClient.get(this.DATABASE_URL + 'users/raymicfc/projects' + this.API_KEY).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (data) {
@@ -553,7 +553,7 @@ var BehanceService = /** @class */ (function () {
                })).subscribe();
             });*/
         }));
-        this.httpClient.get(this.DATABASE_URL + ("projects/" + '56457739') + this.API_KEY + '&callback=JSON_CALLBACK', { headers: this.corsHeaders })
+        this.httpClient.get(this.DATABASE_URL + ("projects/" + '56457739') + this.API_KEY)
             .subscribe(function (projectDetail) {
             var project = projectDetail['project'];
             var projectMaped = {
@@ -569,6 +569,7 @@ var BehanceService = /** @class */ (function () {
                     projectMaped.modules.push({ src: data['sizes']['original'] });
                 }
             });
+            console.log(projectMaped);
             // this.firebaseService.synchronizeWithBehance(projectMaped);
         });
     };
