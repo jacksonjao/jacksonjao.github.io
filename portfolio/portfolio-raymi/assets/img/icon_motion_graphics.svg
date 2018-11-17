@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 72.851 68.698">
+  <defs>
+    <style>.a,.d{fill:#fff;}.b{fill:url(#a);}.c{fill:#141519;}.d{font-size:9px;font-family:Spectral-Italic,
+      Spectral;font-style:italic;letter-spacing:0.08em;}
+    </style>
+    <linearGradient id="a" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.1" stop-color="#fff"/>
+      <stop offset="0.24" stop-color="#fff" stop-opacity="0.761"/>
+      <stop offset="0.414" stop-color="#fff" stop-opacity="0.494"/>
+      <stop offset="0.572" stop-color="#fff" stop-opacity="0.282"/>
+      <stop offset="0.706" stop-color="#fff" stop-opacity="0.129"/>
+      <stop offset="0.814" stop-color="#fff" stop-opacity="0.035"/>
+      <stop offset="0.88" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(-653 -562.652)">
+    <circle class="a" cx="9.727" cy="9.727" r="9.727" transform="translate(661.369 562.652)"/>
+    <rect class="b" width="40.603" height="19.455" transform="translate(671.097 562.652)"/>
+    <rect class="c" width="72.851" height="26.551" rx="1.799" transform="translate(653 604.515)"/>
+    <path class="c" d="M748.425,610.047l-4.533-5.532,4.533-5.533,4.533,5.533Z" transform="translate(-59)"/>
+    <text class="d" transform="translate(689.425 615.35)">
+      <tspan x="-15.534" y="0">Motion</tspan>
+      <tspan x="-18.963" y="12">Graphics</tspan>
+    </text>
+  </g>
+</svg>
