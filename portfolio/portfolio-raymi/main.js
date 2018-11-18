@@ -664,7 +664,7 @@ __webpack_require__.r(__webpack_exports__);
 var MenuComponent = /** @class */ (function () {
     function MenuComponent(behance) {
         this.valueChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        // behance.synchronizeWithFirebase()
+        // behance.synchronizeWithFirebase();
     }
     MenuComponent.prototype.ngOnInit = function () {
     };
@@ -803,6 +803,41 @@ var MoreComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/pipes/safe.pipe.ts":
+/*!************************************!*\
+  !*** ./src/app/pipes/safe.pipe.ts ***!
+  \************************************/
+/*! exports provided: SafePipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SafePipe", function() { return SafePipe; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+
+
+var SafePipe = /** @class */ (function () {
+    function SafePipe(sanitizer) {
+        this.sanitizer = sanitizer;
+    }
+    SafePipe.prototype.transform = function (value, type) {
+        switch (type) {
+            case 'html': return this.sanitizer.bypassSecurityTrustHtml(value);
+            case 'style': return this.sanitizer.bypassSecurityTrustStyle(value);
+            case 'script': return this.sanitizer.bypassSecurityTrustScript(value);
+            case 'url': return this.sanitizer.bypassSecurityTrustUrl(value);
+            case 'resourceUrl': return this.sanitizer.bypassSecurityTrustResourceUrl(value);
+            default: throw new Error("Invalid safe type specified: " + type);
+        }
+    };
+    return SafePipe;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/project/project.component.css.shim.ngstyle.js":
 /*!***************************************************************!*\
   !*** ./src/app/project/project.component.css.shim.ngstyle.js ***!
@@ -819,7 +854,7 @@ __webpack_require__.r(__webpack_exports__);
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
  */ 
-var styles = [".container[_ngcontent-%COMP%]{\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  padding-top: 30px;\n  background: #32343F url('https://loading.io/spinners/flat-ball/lg.flat-bouncing-circle-loading-icon.gif') no-repeat center;\n  background-size: 50px;\n}\n\n\nh4[_ngcontent-%COMP%]{\n  font-size: 60px;\n  font-weight: 400;\n  letter-spacing: -0.02em;\n  line-height: 60px;\n  box-sizing: border-box;\n  text-transform: uppercase;\npadding-left: 30px;\n  padding-right: 30px;\n}\n\n\np[_ngcontent-%COMP%]{\n  padding-left: 30px;\n  padding-right: 30px;\n}\n\n\n.line[_ngcontent-%COMP%]{\n  height: 1px;\n  background-color: white;\n  margin-top: 10px;\n  margin-bottom: 10px;\n  opacity: 0;\n}\n\n\n.icon[_ngcontent-%COMP%]{\n  width: 24px;\n  position: absolute;\n  right: 0;\n  margin-right: 30px;\n}\n\n\n.icon[_ngcontent-%COMP%]:hover{\n  cursor: pointer;\n}\n\n\nfigure.project[_ngcontent-%COMP%]{\n  width: 100%;\nmargin: 0;\n  padding: 0;\n  min-height: 100%;\n\n}\n\n\nimg[_ngcontent-%COMP%]{\n  width: 100%;\n  display: block;\n}\n\n\n.container-images[_ngcontent-%COMP%]{\n  width: 100%;\n  margin-top: 30px;\n  min-height: 100%;\n  box-shadow: 0 0 20px 0 black;\n  background-color: #32343F;\n}"];
+var styles = [".container[_ngcontent-%COMP%]{\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  padding-top: 30px;\n  background: #32343F url('https://loading.io/spinners/flat-ball/lg.flat-bouncing-circle-loading-icon.gif') no-repeat center;\n  background-size: 50px;\n  box-sizing: border-box;\n\n}\n\n.container-content[_ngcontent-%COMP%]{\n  width: 100%;\n  display: flex;\n  text-align: center;\n  flex-direction: column;\n  align-items: center;\n}\n\nh4[_ngcontent-%COMP%]{\n  font-size: 60px;\n  font-weight: 400;\n  letter-spacing: -0.02em;\n  line-height: 60px;\n  box-sizing: border-box;\n  text-transform: uppercase;\npadding-left: 30px;\n  padding-right: 30px;\n}\n\np[_ngcontent-%COMP%]{\n  padding-left: 30px;\n  padding-right: 30px;\n}\n\n.line[_ngcontent-%COMP%]{\n  height: 1px;\n  background-color: white;\n  margin-top: 10px;\n  margin-bottom: 10px;\n  opacity: 0;\n}\n\n.icon[_ngcontent-%COMP%]{\n  width: 24px;\n  position: absolute;\n  right: 0;\n  margin-right: 30px;\n}\n\n.icon[_ngcontent-%COMP%]:hover{\n  cursor: pointer;\n}\n\nfigure.project[_ngcontent-%COMP%]{\n  width: 100%;\nmargin: 0;\n  padding: 0;\n  min-height: 100%;\n\n}\n\nimg[_ngcontent-%COMP%]{\n  width: 100%;\n  display: block;\n}\n\n.container-images[_ngcontent-%COMP%]{\n  width: 100%;\n  margin-top: 30px;\n  min-height: 100%;\n  box-shadow: 0 0 20px 0 black;\n  background-color: #32343F;\n\n}\n\n.video[_ngcontent-%COMP%]{\n  padding:40% 0 0 0;\n  margin-top: 20px;\n  margin-bottom: 20px;\n  position:relative;\n  box-sizing: border-box;\n\n}\n\n.text[_ngcontent-%COMP%]{\n  padding-right: 14.3%;\n  padding-left: 14.3%;\n  box-sizing: border-box;\n}\n\niframe[_ngcontent-%COMP%]{\n  position:absolute;top:0;left:0;width:100%;height:100%;\n}"];
 
 
 
@@ -841,7 +876,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _project_component_css_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project.component.css.shim.ngstyle */ "./src/app/project/project.component.css.shim.ngstyle.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _project_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./project.component */ "./src/app/project/project.component.ts");
+/* harmony import */ var _pipes_safe_pipe__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pipes/safe.pipe */ "./src/app/pipes/safe.pipe.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _project_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./project.component */ "./src/app/project/project.component.ts");
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
  *
@@ -852,20 +889,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 var styles_ProjectComponent = [_project_component_css_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__["styles"]];
 var RenderType_ProjectComponent = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵcrt"]({ encapsulation: 0, styles: styles_ProjectComponent, data: {} });
 
-function View_ProjectComponent_2(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "figure", [["class", "project"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 0, "img", [["alt", ""]], [[8, "src", 4]], null, null, null, null))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.sizes[_co.imageQ]; _ck(_v, 1, 0, currVal_0); }); }
-function View_ProjectComponent_1(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, [[6, 0], ["containerElement", 1]], null, 11, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, [[4, 0], ["title", 1]], null, 1, "h4", [["style", "opacity: 0"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](2, null, ["", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, [[2, 0], ["tinyLine", 1]], null, 0, "div", [["class", "line"], ["style", "{width: 0; opacity: 0}"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, [[5, 0], ["description", 1]], null, 1, "p", [["style", "opacity: 0"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](5, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, [[3, 0], ["bigLine", 1]], null, 0, "div", [["class", "line"], ["style", "{width: 0; opacity: 0}"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, [[1, 0], ["containerImages", 1]], null, 2, "div", [["class", "container-images"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ProjectComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, null, 1, "figure", [["class", "icon"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+function View_ProjectComponent_3(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 0, "img", [["alt", ""]], [[8, "src", 4]], null, null, null, null))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.parent.context.$implicit.sizes[_co.imageQ]; _ck(_v, 0, 0, currVal_0); }); }
+function View_ProjectComponent_4(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [["class", "video"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "iframe", [["allowfullscreen", ""], ["frameborder", "0"], ["height", "600"], ["mozallowfullscreen", ""], ["webkitallowfullscreen", ""], ["width", "800"]], [[8, "src", 5]], null, null, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵppd"](2, 2)], null, function (_ck, _v) { var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 1, 0, _ck(_v, 2, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v.parent.parent.parent, 0), _v.parent.context.$implicit.embed.split("src=")[1].split(" ")[0].substr(1).slice(0, (0 - 1)), "resourceUrl")); _ck(_v, 1, 0, currVal_0); }); }
+function View_ProjectComponent_5(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [["class", "text"]], [[8, "innerHTML", 1]], null, null, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵppd"](1, 2)], null, function (_ck, _v) { var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵunv"](_v, 0, 0, _ck(_v, 1, 0, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v.parent.parent.parent, 0), _v.parent.context.$implicit.text, "html")); _ck(_v, 0, 0, currVal_0); }); }
+function View_ProjectComponent_2(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 6, "figure", [["class", "project"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ProjectComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ProjectComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ProjectComponent_5)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var currVal_0 = (_v.context.$implicit.type == "image"); _ck(_v, 2, 0, currVal_0); var currVal_1 = (_v.context.$implicit.type == "embed"); _ck(_v, 4, 0, currVal_1); var currVal_2 = (_v.context.$implicit.type == "text"); _ck(_v, 6, 0, currVal_2); }, null); }
+function View_ProjectComponent_1(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, [[6, 0], ["containerElement", 1]], null, 14, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 13, "div", [["class", "container-content"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, [[4, 0], ["title", 1]], null, 1, "h4", [["style", "opacity: 0"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](3, null, ["", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, [[2, 0], ["tinyLine", 1]], null, 0, "div", [["class", "line"], ["style", "{width: 0; opacity: 0}"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, [[5, 0], ["description", 1]], null, 1, "p", [["style", "opacity: 0"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](6, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, [[3, 0], ["bigLine", 1]], null, 0, "div", [["class", "line"], ["style", "{width: 0; opacity: 0}"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, [[1, 0], ["containerImages", 1]], null, 4, "div", [["class", "container-images"]], null, null, null, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgStyle"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["KeyValueDiffers"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]], { ngStyle: [0, "ngStyle"] }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](10, { "background": 0 }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ProjectComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 1, "figure", [["class", "icon"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.closeProject() !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 0, "img", [["alt", ""], ["src", "assets/img/icon_close.svg"]], null, null, null, null, null))], function (_ck, _v) { var _co = _v.component; var currVal_2 = _co.project.modules; _ck(_v, 9, 0, currVal_2); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.project.name; _ck(_v, 2, 0, currVal_0); var currVal_1 = _co.project.description; _ck(_v, 5, 0, currVal_1); }); }
-function View_ProjectComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](671088640, 1, { containerImages: 0 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](671088640, 2, { tinyLine: 0 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](671088640, 3, { bigLine: 0 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](671088640, 4, { title: 0 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](671088640, 5, { description: 0 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](671088640, 6, { containerElement: 0 }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ProjectComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.project; _ck(_v, 7, 0, currVal_0); }, null); }
+    } return ad; }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](14, 0, null, null, 0, "img", [["alt", ""], ["src", "assets/img/icon_close.svg"]], null, null, null, null, null))], function (_ck, _v) { var _co = _v.component; var currVal_2 = _ck(_v, 10, 0, ("#" + _co.project.styles.background.color)); _ck(_v, 9, 0, currVal_2); var currVal_3 = _co.project.modules; _ck(_v, 12, 0, currVal_3); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.project.name; _ck(_v, 3, 0, currVal_0); var currVal_1 = _co.project.description; _ck(_v, 6, 0, currVal_1); }); }
+function View_ProjectComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpid"](0, _pipes_safe_pipe__WEBPACK_IMPORTED_MODULE_3__["SafePipe"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["DomSanitizer"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](671088640, 1, { containerImages: 0 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](671088640, 2, { tinyLine: 0 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](671088640, 3, { bigLine: 0 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](671088640, 4, { title: 0 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](671088640, 5, { description: 0 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](671088640, 6, { containerElement: 0 }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](402653184, 7, { ifrobj: 0 }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ProjectComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.project; _ck(_v, 9, 0, currVal_0); }, null); }
 function View_ProjectComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "app-project", [], null, [["window", "resize"]], function (_v, en, $event) { var ad = true; if (("window:resize" === en)) {
         var pd_0 = (_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1).onResize($event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, View_ProjectComponent_0, RenderType_ProjectComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 4308992, null, 0, _project_component__WEBPACK_IMPORTED_MODULE_3__["ProjectComponent"], [], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
-var ProjectComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("app-project", _project_component__WEBPACK_IMPORTED_MODULE_3__["ProjectComponent"], View_ProjectComponent_Host_0, { project: "project" }, { returnGallery: "returnGallery" }, []);
+    } return ad; }, View_ProjectComponent_0, RenderType_ProjectComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 4308992, null, 0, _project_component__WEBPACK_IMPORTED_MODULE_5__["ProjectComponent"], [], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+var ProjectComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("app-project", _project_component__WEBPACK_IMPORTED_MODULE_5__["ProjectComponent"], View_ProjectComponent_Host_0, { project: "project" }, { returnGallery: "returnGallery" }, []);
 
 
 
@@ -889,6 +931,7 @@ var ProjectComponent = /** @class */ (function () {
     function ProjectComponent() {
         this.imageQ = 'disp';
         this.returnGallery = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.video = 'https://www.youtube.com/embed/CD-E-LDc384';
         this.qImage();
     }
     ProjectComponent.prototype.qImage = function () {
@@ -908,6 +951,25 @@ var ProjectComponent = /** @class */ (function () {
     };
     ProjectComponent.prototype.ngOnInit = function () {
     };
+    ProjectComponent.prototype.scrollIfrmeOutside = function (element) {
+        var vert_speed = 0;
+        var hor_speed = 0;
+        function vert_scroll() {
+            element.nativeElement.scrollBy(0, vert_speed);
+        }
+        function hor_scroll() {
+            element.nativeElement.scrollBy(hor_speed, 0);
+            console.log('holii');
+        }
+        setInterval(function () {
+            if (vert_speed !== 0) {
+                vert_scroll();
+            }
+            if (hor_speed !== 0) {
+                hor_scroll();
+            }
+        }, 20);
+    };
     ProjectComponent.prototype.onResize = function (event) {
         this.qImage();
     };
@@ -925,6 +987,7 @@ var ProjectComponent = /** @class */ (function () {
             TweenMax.to(_this.bigLine.nativeElement, tm, { width: '80%', opacity: 1, ease: gsap_all__WEBPACK_IMPORTED_MODULE_1__["Power1"].easeOut });
             TweenMax.fromTo(_this.title.nativeElement, tm, { transform: 'translateY(-100px)' }, { opacity: 1, transform: 'translateY(0px)', ease: gsap_all__WEBPACK_IMPORTED_MODULE_1__["Power1"].easeOut });
             TweenMax.to(_this.description.nativeElement, tm, { opacity: 1, ease: gsap_all__WEBPACK_IMPORTED_MODULE_1__["Power1"].easeOut });
+            _this.scrollIfrmeOutside(_this.ifrobj);
         });
     };
     return ProjectComponent;
@@ -975,11 +1038,18 @@ var BehanceService = /** @class */ (function () {
                         description: project.description,
                         modules: [],
                         covers: project.covers,
-                        url: project.url
+                        url: project.url,
+                        styles: { background: { color: project.styles.background.color } }
                     };
                     project.modules.map(function (data) {
-                        if (data.sizes) {
-                            projectMaped.modules.push({ sizes: data['sizes'] });
+                        if (data.type === 'image') {
+                            projectMaped.modules.push({ type: data.type, text: '', embed: '', sizes: data.sizes });
+                        }
+                        if (data.type === 'embed') {
+                            projectMaped.modules.push({ type: data.type, text: '', embed: data.embed, sizes: [] });
+                        }
+                        if (data.type === 'text') {
+                            projectMaped.modules.push({ type: data.type, text: data.text, embed: '', sizes: [] });
                         }
                     });
                     console.log(projectMaped);
