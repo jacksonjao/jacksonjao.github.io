@@ -1,6 +1,4 @@
 class Bullet {
-
-
     constructor(x, y, width, height, color, dir, context) {
         this.width = width;
         this.height = height;
@@ -12,37 +10,32 @@ class Bullet {
         this.isJumping = false;
         this.speedX = 2;
         this.cameraMov = 0;
-
-        this.shape = function () {
-            context.fillStyle = color;
-            context.fillRect(this.x, this.y, this.width, this.height);
-        }
-
-        this.move = function () {
-            if (this.dir > 0) {
-                this.x += this.speedX + this.cameraMov;
-            }
-            if (this.dir < 0) {
-                this.x -= this.speedX - this.cameraMov;
-            }
-        }
-
-
+        this.context = context;
+        this.color = color;
     }
 
     draw() {
-
         this.move();
-
         this.shape();
+    }
+
+    shape() {
+        this.context.fillStyle = this.color;
+        this.context.fillRect(this.x, this.y, this.width, this.height);
+    }
+
+    move() {
+        if (this.dir > 0) {
+            this.x += this.speedX + this.cameraMov;
+        }
+        if (this.dir < 0) {
+            this.x -= this.speedX - this.cameraMov;
+        }
     }
 
     fall() {
         this.gravitySpeed += this.gravity;
         this.y += this.gravitySpeed;
     }
-
-
 }
 
-export default Bullet;

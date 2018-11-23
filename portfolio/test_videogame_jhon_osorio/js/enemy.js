@@ -1,8 +1,4 @@
-import Bullet from "./bullet.js"
-
 class Enemy {
-
-
 //con backupDirection guardo la dirección en la que quedó el jugador para agregarle esa dirección a la bala
     constructor(x, y, width, height, color, context, start, end) {
         this.width = width;
@@ -15,30 +11,9 @@ class Enemy {
         this.counter = 0;
         this.setVelocity(1.5);
         this.cameraMov = 0;
-        this.shape = function () {
-            this.context.fillStyle = color;
-            this.context.fillRect(this.x, this.y, this.width, this.height);
-            for (var i = 0; i <= 5; i++) {
-                var ran = Math.floor((Math.random() * 15) + 1);
-                this.context.fillRect(this.x - (ran / 2), this.y + (6 * i), this.width + ran, 1);
-            }
-
-        };
-
-        this.move = function () {
-            this.x += this.speedX + this.cameraMov;
-            start = start + this.cameraMov;
-            end = end + this.cameraMov;
-            if (this.x < start) {
-                this.setVelocity(1.5);
-            }
-
-            if (this.x > end - (this.width)) {
-                this.setVelocity(-1.5);
-            }
-        };
-
-
+        this.color = color;
+        this.start = start;
+        this.end = end;
     }
 
     draw() {
@@ -48,7 +23,7 @@ class Enemy {
             this.bullets[i].draw();
             this.bullets[i].cameraMov = this.cameraMov;
             this.bullets[i].speedX = 4;
-            if (this.bullets[i].x > width || this.bullets[i].x < 0) {
+            if (this.bullets[i].x > window.innerWidth || this.bullets[i].x < 0) {
                 this.bullets.splice(i, 1);
             }
         }
@@ -57,10 +32,28 @@ class Enemy {
             this.fire();
             this.counter = 0;
         }
-
-
     }
 
+    shape() {
+        this.context.fillStyle = this.color;
+        this.context.fillRect(this.x, this.y, this.width, this.height);
+        for (var i = 0; i <= 5; i++) {
+            var ran = Math.floor((Math.random() * 15) + 1);
+            this.context.fillRect(this.x - (ran / 2), this.y + (6 * i), this.width + ran, 1);
+        }
+    };
+
+    move() {
+        this.x += this.speedX + this.cameraMov;
+        this.start = this.start + this.cameraMov;
+        this.end = this.end + this.cameraMov;
+        if (this.x < this.start) {
+            this.setVelocity(1.5);
+        }
+        if (this.x > this.end - (this.width)) {
+            this.setVelocity(-1.5);
+        }
+    };
 
     setVelocity(vel) {
         this.speedX = vel;
@@ -72,14 +65,9 @@ class Enemy {
         }
     }
 
-
     fire() {
         this.bullets.push(new Bullet(this.x, this.y + (this.height / 2), 10, 10, "red", 1, this.context))
         this.bullets.push(new Bullet(this.x, this.y + (this.height / 2), 10, 10, "red", -1, this.context))
-
     }
-
-
 }
 
-export default Enemy;

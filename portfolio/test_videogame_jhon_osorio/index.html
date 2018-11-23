@@ -4,17 +4,31 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="google" content="notranslate" />
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body onload="startGame()">
+<body>
+<h2>Your window needs a minimal height of 600px. <br>
+    Remember to refresh. <br>
+    Buttons are for mobile only. <br>play with "aswd" or "↔↕" and "spacebar" <br> your height: <span id="size"></span></h2>
+
 
 <h1 id="tittle"></h1>
 <h3 id="newGame">Jugar de nuevo</h3>
 
-<div id="btnLeft"></div>
-<div id="btnRight"></div>
-<div id="btnUp"></div>
-<div id="btnFire"></div>
+<div id="btnLeft" ontouchstart="btnLeft(-1)" ontouchend="btnLeft(0)" ></div>
+<div id="btnRight" ontouchstart="btnRight(1)" ontouchend="btnRight(0)"></div>
+<div id="btnUp" ontouchstart="btnJump()"></div>
+<div id="btnFire" ontouchstart="btnFire()"></div>
+
+
+
+<script src="js/bullet.js"></script>
+<script src="js/enemy.js"></script>
+<script src="js/jugador.js"></script>
+<script src="js/platform.js"></script>
+<script src="js/platform_fire.js"></script>
+<script src="js/world.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
