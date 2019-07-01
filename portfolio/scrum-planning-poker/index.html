@@ -1,1 +1,62 @@
-<!DOCTYPE html><html lang="en"><head> <meta charset="UTF-8"> <meta name="viewport" content="initial-scale=1, width=device-width"> <link rel="shortcut icon" href="/favicon-sizes.ico" type="image/x-icon"> <meta http-equiv="Content-Language" content="en"/> <meta name="Keywords" content="tutorial,html"/> <meta name="Description" content="Scrum. Planning poker"/> <meta name="Distribution" content="global"/> <meta name="Robots" content="all"/> <link rel="apple-touch-icon" sizes="57x57" href="favicon-sizes.ico/apple-icon-57x57.png"> <link rel="apple-touch-icon" sizes="60x60" href="favicon-sizes.ico/apple-icon-60x60.png"> <link rel="apple-touch-icon" sizes="72x72" href="favicon-sizes.ico/apple-icon-72x72.png"> <link rel="apple-touch-icon" sizes="76x76" href="favicon-sizes.ico/apple-icon-76x76.png"> <link rel="apple-touch-icon" sizes="114x114" href="favicon-sizes.ico/apple-icon-114x114.png"> <link rel="apple-touch-icon" sizes="120x120" href="favicon-sizes.ico/apple-icon-120x120.png"> <link rel="apple-touch-icon" sizes="144x144" href="favicon-sizes.ico/apple-icon-144x144.png"> <link rel="apple-touch-icon" sizes="152x152" href="favicon-sizes.ico/apple-icon-152x152.png"> <link rel="apple-touch-icon" sizes="180x180" href="favicon-sizes.ico/apple-icon-180x180.png"> <link rel="icon" type="image/png" sizes="192x192" href="favicon-sizes.ico/android-icon-192x192.png"> <link rel="icon" type="image/png" sizes="32x32" href="favicon-sizes.ico/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="96x96" href="favicon-sizes.ico/favicon-96x96.png"> <link rel="icon" type="image/png" sizes="16x16" href="favicon-sizes.ico/favicon-16x16.png"> <meta name="msapplication-TileColor" content="#ffffff"> <meta name="msapplication-TileImage" content="favicon-sizes.ico/ms-icon-144x144.png"> <meta name="theme-color" content="#ffffff"> <title>Planning Poker</title> <link rel="stylesheet" href="css.css"> <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet"> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous"></head><body><div class="container"> <div class="container-big-card"><div id="big-card" class="align-center card"> <h1 id="big-card-data" class="label-start">Planning <br>Poker</h1> <div id="big-card-init"></div></div></div><div id="container-cards"></div><footer> <div class="footer-container"> <div class="footer-container-data"> <p>© Jhon Osorio</p><div class="footer-container-icons"> <a class="about-me" style="margin-left: -10px" href="https://www.linkedin.com/in/jhon-osorio/" target="_blank" ><i class="fab fa-linkedin"></i></a> <a class="about-me" style="margin-left: 10px" href="mailto:jhon.osorio.holguin@gmail.com?Subject=¡Hola Jhon!" target="_top" ><i class="fas fa-envelope"></i></a> </div></div></div></footer></div><script type="text/javascript" src="card.js"></script><script type="text/javascript" src="logica.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="shortcut icon" href="/favicon-sizes.ico" type="image/x-icon">
+    <meta http-equiv="Content-Language" content="en"/>
+    <meta name="Keywords" content="tutorial,html"/>
+    <meta name="Description" content="Scrum. Planning poker"/>
+    <meta name="Distribution" content="global"/>
+    <meta name="Robots" content="all"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon-sizes.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon-sizes.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon-sizes.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon-sizes.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon-sizes.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon-sizes.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon-sizes.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon-sizes.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-sizes.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon-sizes.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-sizes.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-sizes.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-sizes.ico/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon-sizes.ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Planning Poker</title>
+    <link rel="stylesheet" href="css.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+
+
+</head>
+<body>
+<div class="container">
+
+        <div class="container-big-card">
+<div id="big-card" class="align-center card">
+    <h1 id="big-card-data" class="label-start">Planning <br> Poker</h1>
+    <div id="big-card-init"></div>
+</div>
+</div>
+<div id="container-cards">
+</div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-container-data">
+        <p>© Jhon Osorio</p>
+        <div class="footer-container-icons">
+            <a class="about-me" style="margin-left: -10px" href="https://www.linkedin.com/in/jhon-osorio/" target="_blank" ><i class="fab fa-linkedin"></i></a>
+            <a  class="about-me"  style="margin-left: 10px" href="mailto:jhon.osorio.holguin@gmail.com?Subject=¡Hola Jhon!" target="_top" ><i class="fas fa-envelope"></i></a>
+        </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script type="text/javascript" src="card.js"></script>
+<script type="text/javascript" src="logica.js"></script>
+</body>
+
+</html>
