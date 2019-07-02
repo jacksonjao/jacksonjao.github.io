@@ -21,8 +21,10 @@ class Logica {
         }
 
         bigCardView.addEventListener("click", () => {
-            this.changeData(bigCardView, bigCardViewData, 'Planning <br> Poker', true)
+            if (this.animationStart && this.backupDataValue !== 'Planning <br> Poker') {
+                this.changeData(bigCardView, bigCardViewData, 'Planning <br> Poker', true)
 
+            }
         });
 
 
