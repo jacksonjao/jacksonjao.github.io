@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
-<project name="Javascript compress project" basedir="/Volumes/Documentos2/Panter/bibliotecavivaRefactor/BibliotecaViva" default="compile">
+<project name="Javascript compress project" basedir="/Users/jhon.osorio/Documents/Panter/biblioteca-viva-2" default="compile">
 
     <taskdef name="jscomp" classname="com.google.javascript.jscomp.ant.CompileTask"
-             classpath="/Users/jhonosorio/Downloads/cocos2d-x-3.17.1/tools/cocos2d-console/plugins/plugin_compile/build_web/bin/compiler-1.7.jar"/>
+             classpath="/Users/jhon.osorio/Documents/Librerias-y-frameworks/cocos2d-x-3.17.2/tools/cocos2d-console/plugins/plugin_compile/build_web/bin/compiler-1.7.jar"/>
 
     <target name="compile">
         <jscomp compilationLevel="simple" 
                 warning="quiet"
                 debug="false" 
-                output="/Volumes/Documentos2/Panter/bibliotecavivaRefactor/BibliotecaViva/publish/html5/game.min.js"
+                output="/Users/jhon.osorio/Documents/Panter/biblioteca-viva-2/publish/html5/game.min.js"
                 languagein="ECMASCRIPT5"
                 
                 >
-            <sources dir="/Volumes/Documentos2/Panter/bibliotecavivaRefactor/BibliotecaViva/frameworks/cocos2d-html5">
+            <sources dir="/Users/jhon.osorio/Documents/Panter/biblioteca-viva-2/frameworks/cocos2d-html5">
                 <file name="CCBoot.js"/>
                 <file name="cocos2d/core/event-manager/CCEventHelper.js"/>
                 <file name="CCDebugger.js"/>
@@ -172,16 +172,26 @@
             <sources dir="${basedir}">
                 <file name="src/resource.js"/>
                 <file name="src/resources/book0.js"/>
+                <file name="src/resources/book1.js"/>
+                <file name="src/resources/book2.js"/>
+                <file name="src/resources/book3.js"/>
+                <file name="src/resources/book4.js"/>
                 <file name="src/resources/main.js"/>
                 <file name="src/resources/player.js"/>
                 <file name="src/util/util.js"/>
                 <file name="src/animations/configBook0.js"/>
                 <file name="src/animations/configBook1.js"/>
+                <file name="src/animations/configBook2.js"/>
+                <file name="src/animations/configBook3.js"/>
+                <file name="src/animations/configBook4.js"/>
                 <file name="src/player/config.js"/>
                 <file name="src/main/config.js"/>
                 <file name="src/library/config.js"/>
                 <file name="src/books/configBook0.js"/>
                 <file name="src/books/configBook1.js"/>
+                <file name="src/books/configBook2.js"/>
+                <file name="src/books/configBook3.js"/>
+                <file name="src/books/configBook4.js"/>
                 <file name="src/player/controller.js"/>
                 <file name="src/main/controller.js"/>
                 <file name="src/library/controller.js"/>
@@ -190,6 +200,50 @@
                 <file name="src/books/view.js"/>
                 <file name="src/library/view.js"/>
                 <file name="src/main/view.js"/>
+                <file name="src/games/util/simple_button.js"/>
+                <file name="src/games/util/gameFinishedDialog.js"/>
+                <file name="src/games/util/time_bar.js"/>
+                <file name="src/games/Commons/TimeBar.js"/>
+                <file name="src/games/Commons/ProgressBar.js"/>
+                <file name="src/games/Commons/SimpleButton2.js"/>
+                <file name="src/games/Commons/Dialogs/BaseDialog.js"/>
+                <file name="src/games/Commons/Dialogs/IntroDialog.js"/>
+                <file name="src/games/Commons/Dialogs/FailureDialog.js"/>
+                <file name="src/games/Commons/Dialogs/WinDialog.js"/>
+                <file name="src/games/BaseLayer.js"/>
+                <file name="src/games/book0/gamePage2.js"/>
+                <file name="src/games/book0/gamePage6.js"/>
+                <file name="src/games/book0/gamePage9.js"/>
+                <file name="src/games/book1/gamePage1/gameBook1Page1.js"/>
+                <file name="src/games/book1/gamePage1/piece.js"/>
+                <file name="src/games/book1/gamePage1/timing_belt.js"/>
+                <file name="src/games/book1/gamePage1/buttonArrow.js"/>
+                <file name="src/games/book1/gamePage3/obstacle.js"/>
+                <file name="src/games/book1/gamePage3/progressBar.js"/>
+                <file name="src/games/book1/gamePage3/hud.js"/>
+                <file name="src/games/book1/gamePage3/background.js"/>
+                <file name="src/games/book1/gamePage3/gameBook1Page3.js"/>
+                <file name="src/games/book1/gamePage7/gameBook1Page7.js"/>
+                <file name="src/games/book2/Cannon/CannonManager.js"/>
+                <file name="src/games/book2/Cannon/CannonGame.js"/>
+                <file name="src/games/book2/Hanged/HangedBackground.js"/>
+                <file name="src/games/book2/Hanged/HangedManager.js"/>
+                <file name="src/games/book2/Hanged/HangedGame.js"/>
+                <file name="src/games/book2/Matching/MatchingManager.js"/>
+                <file name="src/games/book2/Matching/MatchingGame.js"/>
+                <file name="src/games/book3/Veterinary/VeterinaryGame.js"/>
+                <file name="src/games/book3/Veterinary/VeterinaryManager.js"/>
+                <file name="src/games/book3/Feeding/FeedingGame.js"/>
+                <file name="src/games/book3/Feeding/FeedingManager.js"/>
+                <file name="src/games/book3/Puzzle/PuzzleGame.js"/>
+                <file name="src/games/book3/Puzzle/PuzzleManager.js"/>
+                <file name="src/games/book4/Buying/BuyingGame.js"/>
+                <file name="src/games/book4/Buying/BuyingManager.js"/>
+                <file name="src/games/book4/Memory/Card.js"/>
+                <file name="src/games/book4/Memory/MemoryGame.js"/>
+                <file name="src/games/book4/Memory/MemoryManager.js"/>
+                <file name="src/games/book4/FlappyMom/FlappyMomBackground.js"/>
+                <file name="src/games/book4/FlappyMom/FlappyMomGame.js"/>
                 <file name="src/app.js"/>
                 <file name="main.js"/>
 

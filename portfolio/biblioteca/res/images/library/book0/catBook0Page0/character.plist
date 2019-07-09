@@ -649,6 +649,21 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
+            <key>character49.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-7,-3}</string>
+                <key>spriteSize</key>
+                <string>{252,212}</string>
+                <key>spriteSourceSize</key>
+                <string>{300,250}</string>
+                <key>textureRect</key>
+                <string>{{845,541},{252,212}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
             <key>character5.png</key>
             <dict>
                 <key>aliases</key>
