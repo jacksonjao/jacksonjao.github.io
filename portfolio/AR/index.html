@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<a href="camera.html">VR camera</a>
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script>
+    AFRAME.registerComponent("animate-png", {
+        init: function() {
+            // load the .pngs
+            let loader = new THREE.TextureLoader()
+            this.pngArray = []
+
+           for (let i = 0; i<14; i++) {
+               this.pngArray.push(loader.load('assets/woman/bird/bird_'+i+'.png'));
+           }
+
+            this.el.addEventListener('loaded', e => {
+                let mesh = this.el.getObject3D("mesh");
+                this.material = mesh.material
+
+                var i = 0
+                this.id = setInterval(e => {
+                    if (i >= this.pngArray.length) i = 0;
+                    this.material.map = this.pngArray[i++]
+                    this.material.needsUpdate = true
+                }, 60)
+            })
+        },
+        remove: function() {
+            clearInterval(this.id);
+            // free the memory
+            for (let i = 0; i < this.pngArray.length; i++) {
+                this.pngArray[i].dispose();
+            }
+        }
+    })
+
+</script>
+<a-scene>
+    <a-box position="-1 0.5 -3" rotation="0 45 0" animate-png></a-box>
+</a-scene>
+</body>
+</html>
