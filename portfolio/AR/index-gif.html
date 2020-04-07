@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="js/aframe-spritesheet-component.min.js"></script>
+
+
+
+    <!-- style for the loader -->
+    <style>
+        .arjs-loader {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .arjs-loader div {
+            text-align: center;
+            font-size: 1.25em;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+
+<!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
+<a-scene
+        vr-mode-ui="enabled: false;"
+        renderer="logarithmicDepthBuffer: true;"
+        embedded
+        arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+    <a-assets></a-assets>
+
+    <!-- a-nft is the anchor that defines an Image Tracking entity -->
+    <!-- on 'url' use the path to the Image Descriptors created before. -->
+    <!-- the path should end with the name without the extension e.g. if file is trex.fset' the path should end with trex -->
+    <a-nft
+            type="nft"
+            url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/jacksonjao/jacksonjao.github.io/master/portfolio/AR/assets/woman/marker/marker"
+            smooth="true"
+            smoothCount="10"
+            smoothTolerance=".01"
+            smoothThreshold="5">
+        <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
+
+    <a-image scale="100 100"   src="assets/pig.png"
+             sprite-sheet="cols:8; rows: 3; progress: 0;" width="1" height="1"></a-image>
+
+    </a-nft>
+
+    <!-- static camera that moves according to the device movemenents -->
+    <a-entity camera></a-entity>
+</a-scene>
+<script type="text/javascript">
+    var animation = { progress: 0 };
+    var element = document.querySelector('a-image');
+    draw()
+    function draw(){
+        animation.progress ++;
+        var attribute = element.getAttribute('sprite-sheet');
+        if (animation.progress > attribute.cols * attribute.rows){
+            animation.progress = 0;
+        }
+        element.setAttribute('sprite-sheet', 'progress', animation.progress);
+        requestAnimationFrame(() => {this.draw()})
+    }
+</script>
+
+</body>
+</html>

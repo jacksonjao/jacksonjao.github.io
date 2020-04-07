@@ -2,10 +2,6 @@
 class AnimationPng {
     constructor(sequences, mainNameSequences, id, numberOfFiles) {
         AFRAME.registerComponent(id, {
-            schema: {
-                color: {type: 'color', is: 'uniform', default: 'red'},
-                opacity: {type: 'number', is: 'uniform', default: 0}
-            },
             init: function() {
                 // load the .pngs
                 let loader = new THREE.TextureLoader()
