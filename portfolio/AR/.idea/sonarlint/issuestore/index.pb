@@ -23,3 +23,11 @@ js/main.js,d/a/dae13fd6f331d1c91ab58b06e81d05cb8958bfb1
 index.html,f/6/f6013a00b362253c64368d6eebc50ea2131754e2
 >
 index-gif.html,8/3/837d3914e9aa384a0090f5b45b0f97c90d702108
+9
+	style.css,4/6/46e3381e9569c09e85a30b9e5a2af7525ee9fd78
+I
+index-absolute-value.html,7/b/7b93338391d28489789158dbdfc8c0c23c5d93ef
+F
+index-vr-modelado.html,9/7/977f03c29304d3553db69d1e3da73777e0f6636d
+=
+index-vr.html,2/7/27f782a6e18b703f14e5e9126b3571c318cf23ba

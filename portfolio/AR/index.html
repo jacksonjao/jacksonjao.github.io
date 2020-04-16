@@ -66,7 +66,7 @@
             smoothThreshold="5">
         <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
 
-        <a-entity position="150 0 0">
+        <a-entity position="0 0 -150" id="entity">
         <a-box   scale="150 1.5 75"  position="0 -75 0"  id="floor"></a-box>
         <a-box   scale="150 1.5 75"  position="0 75 0"  id="roof" ></a-box>
 
@@ -128,7 +128,14 @@
     <p>
         <a href="index-vr.html">Sólo vr</a>
     </p>
-
+    <label for="myRangeZ">Position Z: </label>
+    <input type="range" min="-500" max="500" value="0" class="slider" id="myRangeZ" oninput="range(this, 'entity', 'z')">
+    <br>
+    <label for="myRangeY">Position Y: </label>
+    <input type="range" min="-500" max="500" value="0" class="slider" id="myRangeY" oninput="range(this, 'entity', 'y')">
+    <br>
+    <label for="myRangeX">Position Y: </label>
+    <input type="range" min="-500" max="500" value="0" class="slider" id="myRangeX" oninput="range(this, 'entity', 'x')">
 </div>
 </body>
 </html>
