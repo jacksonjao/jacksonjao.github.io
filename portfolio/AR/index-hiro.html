@@ -8,12 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 -->
 
-    <script src="js/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
     <script src="js/animation.js"></script>
     <script src="js/main.js"></script>
-
-    <script src="js/aframe-spritesheet-component.min.js"></script>
 
     <!-- style for the loader -->
     <style>
@@ -46,24 +45,12 @@
 </div>
 
 <!-- a-frame scene -->
-<a-scene
-        vr-mode-ui="enabled: false;"
-        renderer="logarithmicDepthBuffer: true;"
-        embedded
-        arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+<a-scene embedded arjs>
 
-    <a-assets>
-    </a-assets>
     <!-- a-nft is the anchor that defines an Image Tracking entity -->
     <!-- on 'url' use the path to the Image Descriptors created before. -->
     <!-- the path should end with the name without the extension e.g. if file is trex.fset' the path should end with trex -->
-    <a-nft id="nft"
-            type="nft"
-            url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/jacksonjao/jacksonjao.github.io/master/portfolio/AR/assets/woman/marker/marker"
-            smooth="true"
-            smoothCount="10"
-            smoothTolerance=".01"
-            smoothThreshold="5">
+    <a-marker preset="hiro">
         <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
 
         <a-entity position="0 0 -150" id="entity">
@@ -89,7 +76,7 @@
 
 
 
-    </a-nft>
+    </a-marker>
 
     <!-- static camera that moves according to the device movemenents -->
     <a-entity camera></a-entity>
@@ -127,25 +114,16 @@
 
     <p>
         <a href="index-vr.html">Sólo vr</a>
-        <a href="index-hiro.html">Hiro</a>
+        <a href="index.html">Target with Image</a>
     </p>
     <label for="myRangeZ">Position Z: </label>
-    <input type="range" min="-500" max="500" value="0" class="slider" id="myRangeZ" oninput="range(this, 'entity', 'position', 'z')">
+    <input type="range" min="-500" max="500" value="0" class="slider" id="myRangeZ" oninput="range(this, 'entity', 'z')">
     <br>
     <label for="myRangeY">Position Y: </label>
-    <input type="range" min="-500" max="500" value="0" class="slider" id="myRangeY" oninput="range(this, 'entity', 'position', 'y')">
+    <input type="range" min="-500" max="500" value="0" class="slider" id="myRangeY" oninput="range(this, 'entity', 'y')">
     <br>
-    <label for="myRangeX">Position X: </label>
-    <input type="range" min="-500" max="500" value="0" class="slider" id="myRangeX" oninput="range(this, 'entity', 'position', 'x')">
-    <br>
-    <label for="smoothCount">smoothCount : </label>
-    <input type="range" min="-500" max="500" value="0" class="slider" id="smoothCount" oninput="range(this, 'nft', 'smoothCount')">
-    <br>
-    <label for="smoothTolerance">smoothTolerance : </label>
-    <input type="range" min="-500" max="500" value="0" class="slider" id="smoothTolerance" oninput="range(this, 'nft', 'smoothTolerance', false)">
-    <br>
-    <label for="smoothThreshold">smoothThreshold : </label>
-    <input type="range" min="-500" max="500" value="0" class="slider" id="smoothThreshold" oninput="range(this, 'nft', 'smoothThreshold', false)">
+    <label for="myRangeX">Position Y: </label>
+    <input type="range" min="-500" max="500" value="0" class="slider" id="myRangeX" oninput="range(this, 'entity', 'x')">
 </div>
 </body>
 </html>
