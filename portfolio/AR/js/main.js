@@ -3,12 +3,26 @@ new AnimationPng('assets/woman/woman/', 'girl','woman-animation' , 14);
 
 function range(self, target, attribute, key) {
     const element = document.getElementById(target);
+
+
     if(key) {
-        element.getAttribute(attribute)[key] = self.value
+        element.getAttribute(attribute)[key] = self.value;
+        getLableFromInput(self).innerHTML = `${attribute} ${key}: ${self.value} `;
         console.log(attribute + ' ' + key + ': '+element.getAttribute(attribute)[key])
 
     } else {
         element.setAttribute(attribute, self.value);
+        getLableFromInput(self).innerHTML = `${attribute}: ${self.value} `;
         console.log(attribute + ': '+element.getAttribute(attribute))
+    }
+}
+
+
+function getLableFromInput(input) {
+    var labels = document.getElementsByTagName('label');
+    for (var i = 0; i < labels.length; i++) {
+        if(labels[i].htmlFor === input.id){
+            return labels[i];
+        }
     }
 }
