@@ -87,13 +87,13 @@
         <a-image scale="150 150" position="0 0 -20"    src="assets/woman/bird/birds.png" sprite-sheet="cols: 4; rows: 4; progress: 0;" width="1" height="1"></a-image>
 -->
 
-        <a-entity camera ></a-entity>
 
 
 
     </a-nft>
 
     <!-- static camera that moves according to the device movemenents -->
+    <a-entity id="camera" camera ></a-entity>
 
 
   <!--  <a-plane  material="shader: flat" position="0 1.5 -2" width="1" height="1" rotation="0 0 0" bg-animation></a-plane>
@@ -143,6 +143,20 @@
     <br>
     <input type="range" min="-500" max="500" value="0" class="slider" id="myRangeX" oninput="range(this, 'entity', 'position', 'x')">
     <br>
+
+    <label for="cameraZ">camera z: 0 </label>
+    <br>
+    <input type="range" min="-1000" max="1000" value="0" class="slider" id="cameraZ" oninput="range(this, 'camera', 'position', 'z')">
+    <br>
+    <label for="cameraY">camera y: 0</label>
+    <br>
+    <input type="range" min="-500" max="500" value="0" class="slider" id="cameraY" oninput="range(this, 'camera', 'position', 'y')">
+    <br>
+    <label for="cameraX">camera x: 0</label>
+    <br>
+    <input type="range" min="-500" max="500" value="0" class="slider" id="cameraX" oninput="range(this, 'camera', 'position', 'x')">
+    <br>
+
     <label for="smoothCount">smoothCount: 10</label>
     <br>
     <input type="range" min="0" max="100" value="10" class="slider" id="smoothCount" oninput="range(this, 'nft', 'smoothCount')">
@@ -155,7 +169,10 @@
     <br>
     <input type="range"  min="0" max="100" value="5" class="slider" id="smoothThreshold" oninput="range(this, 'nft', 'smoothThreshold', false)">
     <br>
-    <p id="motion">Motion</p>
+
+    <p id="device_motion_X">X: </p>
+    <p id="device_motion_Y">Y: </p>
+    <p id="device_motion_Z">Z: </p>
 
 </div>
 </body>

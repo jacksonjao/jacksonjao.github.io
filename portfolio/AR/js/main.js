@@ -33,3 +33,25 @@ window.ondevicemotion = function(event) {
     document.getElementById('motion').innerText=event.toString()
     console.log(event);
 }
+
+function handleMotionEvent(event) {
+
+
+    var x = event.accelerationIncludingGravity.x;
+    var y = event.accelerationIncludingGravity.y;
+    var z = event.accelerationIncludingGravity.z;
+    document.getElementById('device_motion_X').innerText="X: "+ x;
+    document.getElementById('device_motion_Y').innerText="Y: "+ y;
+    document.getElementById('device_motion_X').innerText="X: "+ x;
+
+
+    // Do something awesome.
+}
+
+
+window.addEventListener("devicemotion", handleMotionEvent, true);
+
+
+setInterval(()=> {
+    console.log(document.getElementById('camera').getAttribute('camera'))
+},1000)
