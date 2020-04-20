@@ -43,7 +43,7 @@ function handleMotionEvent(event) {
     document.getElementById('device_motion_X').innerText="X: "+ x;
     document.getElementById('device_motion_Y').innerText="Y: "+ y;
     document.getElementById('device_motion_Z').innerText="Z: "+ z;
-
+    document.getElementById('camera').getAttribute('position').y=y;
 
     // Do something awesome.
 }
