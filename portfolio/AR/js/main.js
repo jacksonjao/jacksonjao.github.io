@@ -19,10 +19,17 @@ function range(self, target, attribute, key) {
 
 
 function getLableFromInput(input) {
+
     var labels = document.getElementsByTagName('label');
     for (var i = 0; i < labels.length; i++) {
         if(labels[i].htmlFor === input.id){
             return labels[i];
         }
     }
+}
+
+
+window.ondevicemotion = function(event) {
+    document.getElementById('motion').innerText=event.toString()
+    console.log(event);
 }
