@@ -63,7 +63,7 @@
             smooth="true"
             smoothCount="10"
             smoothTolerance=".01"
-            smoothThreshold="5">
+            smoothThreshold="0">
         <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
 
         <a-entity position="0 0 0" id="entity">
@@ -123,15 +123,15 @@
 
 
 
-<div id="text">
 
-    <p>
-        <a href="index-vr.html">Sólo vr</a>
-        <a href="index-hiro.html">Hiro</a>
-    </p>
+<div id="text">
+<p>
+    <a href="index-vr.html">Sólo vr</a>
+    <a href="index-hiro.html">Hiro</a>
+</p>
     <label for="myRangeZ">position z: 0 </label>
     <br>
-    <input type="range" min="-500" max="500" value="0" class="slider" id="myRangeZ" oninput="range(this, 'entity', 'position', 'z')">
+    <input type="range" min="-1000" max="1000" value="0" class="slider" id="myRangeZ" oninput="range(this, 'entity', 'position', 'z')">
     <br>
     <label for="myRangeY">position y: 0</label>
     <br>
@@ -149,9 +149,9 @@
     <br>
     <input type="range" min="0" step="0.01" max="1" value=".01" class="slider" id="smoothTolerance" oninput="range(this, 'nft', 'smoothTolerance', false)">
     <br>
-    <label for="smoothThreshold">smoothThreshold: 5</label>
+    <label for="smoothThreshold">smoothThreshold: 0</label>
     <br>
-    <input type="range"  min="0" max="100" value="5" class="slider" id="smoothThreshold" oninput="range(this, 'nft', 'smoothThreshold', false)">
+    <input type="range"  min="0" max="100" value="0" class="slider" id="smoothThreshold" oninput="range(this, 'nft', 'smoothThreshold', false)">
 </div>
 </body>
 </html>
