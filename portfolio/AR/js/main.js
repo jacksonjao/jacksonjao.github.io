@@ -51,7 +51,3 @@ function handleMotionEvent(event) {
 
 window.addEventListener("devicemotion", handleMotionEvent, true);
 
-
-setInterval(()=> {
-    console.log(document.getElementById('camera').getAttribute('camera'))
-},1000)
