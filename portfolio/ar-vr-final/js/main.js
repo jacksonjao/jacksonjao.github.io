@@ -1,4 +1,5 @@
-new AnimationPng('assets/sprites/art1/bird/', 'birds','birds-animation' , 15);
+new AnimationPng('assets/sprites/art1/bird/', 'birds','birds-animation' , 150);
+new AnimationPng('assets/sprites/art1/background/', 'bg','bg-animation' , 15);
 new AnimationPng('assets/sprites/art1/woman/', 'girl','woman-animation' , 14);
 
 /*
