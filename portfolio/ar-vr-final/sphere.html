@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <title>Title</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+<a-scene id="scene" inspector="url: https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js" background>
+
+    <a-assets>
+        <a-asset-item id="mansion" src="assets/models/luigis-mansion/scene.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-entity>
+        <a-camera wasd-controls="" camera="" position="0.01933 1 1.12365" rotation="" look-controls="" data-aframe-inspector-original-camera=""></a-camera>
+
+    <a-sky src="assets/sprites/art1/background/background360.jpeg" rotation="0 0 0"></a-sky>
+    <a-entity position="0 0" scale="1 1 1" material="color: #ff0045; side: double" rotation="0 0 0">
+        <a-plane birds-animation="" transparent="true" id="birds" position="0 1 -0.1" scale="2 2 1" material="" geometry=""></a-plane>
+        <a-plane woman-animation="" transparent="true" id="woman" position="0 0.5 0" material="" geometry=""></a-plane>
+
+    </a-entity>
+
+</a-scene>
+
+
+</body>
+</html>
