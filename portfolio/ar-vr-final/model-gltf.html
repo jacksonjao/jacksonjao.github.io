@@ -17,22 +17,27 @@
 <a-scene id="scene" inspector="url: https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js" background>
 
     <a-assets>
-        <a-asset-item id="mansion" src="assets/models/luigis-mansion/scene.gltf"></a-asset-item>
+        <a-gltf-model id="art1-museo" src="assets/sprites/art1/scene.gltf"></a-gltf-model>
+        <img id="sky" src="assets/sprites/art1/sky.jpg">
     </a-assets>
 
-    <a-entity>
-        <a-camera wasd-controls="acceleration: 10000" camera="" position="-3105.05619 -74.25122 28.29417" rotation="5.500394833255904 111.15381225537973 0" look-controls="" data-aframe-inspector-original-camera=""></a-camera>
+
+
+    <a-sky material="src: #sky" geometry="radius: 355.34;" rotation="90 0 0"></a-sky>
+    <a-gltf-model src="#art1-museo"></a-gltf-model>
+
+
+    <a-entity position="0 0" >
+
+        <a-plane birds-animation="" transparent="true" id="birds" position="0 1 163759.54667" scale="2 2 1"></a-plane>
+        <a-plane woman-animation="" transparent="true" id="woman" position="0 0.5 191283.49095" ></a-plane>
+
     </a-entity>
-        <a-gltf-model src="#mansion"></a-gltf-model>
 
-    <a-entity position="-3183.97396 -104.62386 88.58769" scale="50 50 0.00001" material="color: #ff0045; side: double" rotation="0 90 0">
 
-        <a-plane birds-animation="" transparent="true" id="birds" position="0 1 163759.54667" scale="2 2 1" material="" geometry=""></a-plane>
-        <a-plane woman-animation="" transparent="true" id="woman" position="0 0.5 191283.49095" material="" geometry=""></a-plane>
-        <a-plane bg-animation="" scale="2 2 1" id="background" position="0 1 -1.5" material="" geometry=""></a-plane>
-
+    <a-entity rotation="0 180 0">
+    <a-camera id="camera" position="20 26 40" wasd-controls="acceleration: 5000"></a-camera>
     </a-entity>
-
 </a-scene>
 
 

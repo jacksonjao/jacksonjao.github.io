@@ -13,3 +13,9 @@ index.html,f/6/f6013a00b362253c64368d6eebc50ea2131754e2
 portal.html,a/e/ae660580bdbee119376c12e71a6d162c904d4ec6
 ?
 model-gltf.html,8/a/8ade0b1e6e3b1da1a5a84f93cb232fc54682d597
+;
+sphere.html,5/4/5451f3705c47b7e1494f45081d0299221efd1d0f
+<
+3d-fake.html,9/e/9e0d3038c7e4d622674ffd03c08d0b98b1b21f9a
+I
+model-gltf-only-girl.html,6/c/6cda897068dd6b8b2e1e1bcd154a4d21270ede93
