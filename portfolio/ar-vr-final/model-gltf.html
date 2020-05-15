@@ -15,6 +15,8 @@
 </head>
 <body>
 <a-scene id="scene"
+         stats
+         shadow="type: pcfsoft"
          renderer="antialias: true;
                    colorManagement: false;
                    sortObjects: true;
@@ -42,11 +44,10 @@
         <a-gltf-model id="art1-museo" src="assets/sprites/art1/scene.gltf"></a-gltf-model>
     </a-assets>
 
-    <a-entity light="penumbra: 0.83; type: spot; castShadow: true; shadowMapHeight: 486.490; decay: 1.05; intensity: 300; shadowRadius: 1" rotation="-90 189 180" visible="" id="spot-light" position="-21 68.48352 15.92282"></a-entity>
-    <a-entity light="type: ambient; intensity: 2" id="ambient-ligth" visible=""></a-entity>
+    <a-entity light="penumbra: 1; type: spot; castShadow: true; shadowMapHeight: 486.49; decay: 1.05; intensity: 300; angle: 45.12; distance: 100; shadowCameraVisible: true" rotation="-45 180 180" visible="" id="spot-light" position="-21 68.48352 -1.00855"></a-entity>    <a-entity light="type: ambient; intensity: 2" id="ambient-ligth" visible=""></a-entity>
 
     <a-sky material="src: #sky" geometry="radius: 355.34;" rotation="90 0 0"></a-sky>
-    <a-gltf-model src="#art1-museo" shadow ></a-gltf-model>
+    <a-gltf-model  src="#art1-museo" shadow ></a-gltf-model>
 
     <a-entity id="art1-animation" position="-20.712 24.430 31" scale="21 21 21" rotation="0 180 0" >
 
