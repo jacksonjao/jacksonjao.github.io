@@ -14,17 +14,39 @@
 
 </head>
 <body>
-<a-scene id="scene" inspector="url: https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js" background>
+<a-scene id="scene"
+         renderer="antialias: true;
+                   colorManagement: false;
+                   sortObjects: true;
+                   physicallyCorrectLights: true;
+                   maxCanvasWidth: 1920;
+                   maxCanvasHeight: 1920;"
+         loading-screen="dotsColor: red; backgroundColor: black" inspector="url: https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js" background>
 
     <a-assets>
-        <a-gltf-model id="art1-museo" src="assets/sprites/art1/scene.gltf"></a-gltf-model>
         <img id="sky" src="assets/sprites/art1/sky.jpg">
+        <img  src="assets/sprites/art1/woman/girl_0.png">
+        <img  src="assets/sprites/art1/woman/girl_1.png">
+        <img  src="assets/sprites/art1/woman/girl_2.png">
+        <img  src="assets/sprites/art1/woman/girl_3.png">
+        <img  src="assets/sprites/art1/woman/girl_4.png">
+        <img  src="assets/sprites/art1/woman/girl_5.png">
+        <img  src="assets/sprites/art1/woman/girl_6.png">
+        <img  src="assets/sprites/art1/woman/girl_7.png">
+        <img  src="assets/sprites/art1/woman/girl_8.png">
+        <img  src="assets/sprites/art1/woman/girl_9.png">
+        <img  src="assets/sprites/art1/woman/girl_10.png">
+        <img  src="assets/sprites/art1/woman/girl_11.png">
+        <img  src="assets/sprites/art1/woman/girl_12.png">
+        <img  src="assets/sprites/art1/woman/girl_13.png">
+        <a-gltf-model id="art1-museo" src="assets/sprites/art1/scene.gltf"></a-gltf-model>
     </a-assets>
 
-
+    <a-entity light="penumbra: 0.83; type: spot; castShadow: true; shadowMapHeight: 486.490; decay: 1.05; intensity: 300; shadowRadius: 1" rotation="-90 189 180" visible="" id="spot-light" position="-21 68.48352 15.92282"></a-entity>
+    <a-entity light="type: ambient; intensity: 2" id="ambient-ligth" visible=""></a-entity>
 
     <a-sky material="src: #sky" geometry="radius: 355.34;" rotation="90 0 0"></a-sky>
-    <a-gltf-model src="#art1-museo"></a-gltf-model>
+    <a-gltf-model src="#art1-museo" shadow ></a-gltf-model>
 
     <a-entity id="art1-animation" position="-20.712 24.430 31" scale="21 21 21" rotation="0 180 0" >
 
@@ -34,10 +56,11 @@
     </a-entity>
 
 
-
     <a-entity rotation="0 180 0">
     <a-camera id="camera" position="20 26 40" wasd-controls="acceleration: 5000"></a-camera>
     </a-entity>
+
+
 </a-scene>
 
 
