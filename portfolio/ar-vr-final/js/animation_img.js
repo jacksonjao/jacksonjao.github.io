@@ -4,20 +4,15 @@ class AnimationPngBySrc {
         AFRAME.registerComponent(id, {
             init: function() {
                 // load the .pngs
-                let frameRate = 0;
                 let i = 0;
-                this.el.addEventListener('loaded', e => {
-                    function animation () {
-                        frameRate++;
-                        if (frameRate % 3 === 0) {
-                            frameRate = 0;
-                            i++;
-                            if (i > numberOfFiles) i = 0;
-                            e.target.setAttribute("src", sequences + mainNameSequences + '_' + i + '.png');
-                        }
-                        window.requestAnimationFrame(animation);
-                    }
-                    window.requestAnimationFrame(animation);
+                this.el.addEventListener('loaded', element => {
+
+                    setInterval(e => {
+                        i++;
+                        if (i > numberOfFiles) i = 0;
+                        element.target.setAttribute("src", sequences + mainNameSequences + '_' + i + '.png');
+                    }, 60)
+
                 })
             },
         })
