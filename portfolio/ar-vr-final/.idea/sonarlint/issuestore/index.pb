@@ -19,3 +19,9 @@ index.html,f/6/f6013a00b362253c64368d6eebc50ea2131754e2
 3d-fake.html,9/e/9e0d3038c7e4d622674ffd03c08d0b98b1b21f9a
 I
 model-gltf-only-girl.html,6/c/6cda897068dd6b8b2e1e1bcd154a4d21270ede93
+C
+model-gltf-off.html,6/1/613c85343b3d9ca901ad7c0e911070acf9683353
+C
+model-gltf-out.html,4/1/411c9d96b0c8316d7145c99d43cab9a68496f5b4
+N
+assets/sprites/art1/scene.gltf,e/6/e66231d8b88d672f3ca434bb4a6b41ae270fa7b6

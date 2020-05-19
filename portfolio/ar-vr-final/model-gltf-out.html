@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <title>Title</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+<a-scene id="scene"
+         stats
+         shadow="type: pcfsoft"
+         renderer="antialias: true;
+                            physicallyCorrectLights: false;
+                   colorManagement: false;
+                   sortObjects: true;
+             "
+         loading-screen="dotsColor: red; backgroundColor: black" inspector="url: https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js" background>
+
+    <a-assets>
+        <img id="sky" src="assets/sprites/art1/sky.jpg">
+        <img  src="assets/sprites/art1/woman/girl_0.png">
+        <img  src="assets/sprites/art1/woman/girl_1.png">
+        <img  src="assets/sprites/art1/woman/girl_2.png">
+        <img  src="assets/sprites/art1/woman/girl_3.png">
+        <img  src="assets/sprites/art1/woman/girl_4.png">
+        <img  src="assets/sprites/art1/woman/girl_5.png">
+        <img  src="assets/sprites/art1/woman/girl_6.png">
+        <img  src="assets/sprites/art1/woman/girl_7.png">
+        <img  src="assets/sprites/art1/woman/girl_8.png">
+        <img  src="assets/sprites/art1/woman/girl_9.png">
+        <img  src="assets/sprites/art1/woman/girl_10.png">
+        <img  src="assets/sprites/art1/woman/girl_11.png">
+        <img  src="assets/sprites/art1/woman/girl_12.png">
+        <img  src="assets/sprites/art1/woman/girl_13.png">
+        <img id="birdLeft" src="assets/sprites/art1/birds/bird_left.png">
+        <img id="birdCenter" src="assets/sprites/art1/birds/bird_center.png">
+        <img id="birdTop" src="assets/sprites/art1/birds/bird_top.png">
+        <img id="birdRight" src="assets/sprites/art1/birds/bird_right.png">
+        <a-asset-item id="art1-museo" src="assets/sprites/art1/scene.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-light id="environmet" type="ambient"></a-light>
+
+    <a-light id="sun" light="angle:  180;  intensity:  0.19;  type:  point;  castShadow:  true;  shadowRadius:  5" position = "0 7 -3"visible=""></a-light>
+    <a-light id="sunArt" light="angle:  90;  type:  spot" rotation="180 0 0" position="-1.079 1.257 1.477"></a-light>
+    <a-light id="lightArt" light="angle:  45;  type:  spot;  decay:  0;  intensity:  0.7;  penumbra:  0.35;  castShadow:  true" rotation="-120 0 0" position="-0.95 3 0.5"></a-light>
+
+    <a-sky material="src: #sky" geometry="radius: 355.34;" rotation="90 0 0"></a-sky>
+    <a-gltf-model  scale="0.045 0.045 0.045"  src="#art1-museo" shadow ></a-gltf-model>
+
+    <a-entity   id="art1-animation" position="-0.95 1.25 0.9" scale="1 1 1" rotation="0 180 0" >
+
+
+        <a-plane birds-animation-out transparent="true" id="birds" position="0 0.3573 -0.3" scale="2 2 1" ></a-plane>
+
+
+        <a-plane woman-animation transparent="true" id="woman" position="0 0.025 0"  ></a-plane>
+
+
+    </a-entity>
+    <a-entity rotation="-3 180 0" >
+        <a-camera id="camera"  position="0.95 1.75 2" >
+
+        </a-camera>
+    </a-entity>
+
+
+</a-scene>
+
+
+</body>
+</html>
