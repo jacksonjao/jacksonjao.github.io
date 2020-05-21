@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html  translate="no">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -14,17 +14,18 @@
     <script src="js/main.js"></script>
 
 </head>
-<body>
+<body id="body" >
+
 <a-scene id="scene"
          light="defaultLightsEnabled: false"
-         stats="false";
+         vr-mode-ui="enterARButton: #myEnterARButton"
          renderer="antialias: true;
                             physicallyCorrectLights: false;
                    colorManagement: true;
                    sortObjects: true;
              "
          loading-screen="dotsColor: red; backgroundColor: black" inspector="url: https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js" background>
-
+    <a id="myEnterARButton" href="#"></a>
     <a-assets>
         <img id="sky" src="assets/sprites/art1/sky.jpg">
         <img  src="assets/sprites/art1/woman/girl_0.png">
@@ -75,7 +76,7 @@
 
     </a-entity>
     <a-entity rotation="-3 180 0" >
-        <a-camera id="camera"  position="0.95 1.75 2" >
+        <a-camera id="camera" wasd-controls="enabled:  false"  position="0.95 1.75 2" >
 
         </a-camera>
     </a-entity>
