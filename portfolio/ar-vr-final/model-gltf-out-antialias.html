@@ -19,7 +19,7 @@
          light="defaultLightsEnabled: false"
          stats="false";
          renderer="antialias: true;
-                            physicallyCorrectLights: true;
+                            physicallyCorrectLights: false;
                    colorManagement: true;
                    sortObjects: true;
              "
@@ -50,7 +50,7 @@
 
 
 
-    <a-light id="environmet" light="type: point; intensity: 7; decay: 0.100" position="-1.34434 3.23075 -2.27531"></a-light>
+    <a-light id="environmet" light="type: point; intensity: 1" position="-1.34434 2.4 -2.27531"></a-light>
     <a-sky material="src: #sky" geometry="radius: 355.34;" rotation="90 0 0"></a-sky>
     <a-gltf-model  scale="0.045 0.045 0.045"  src="#art1-museo"  ></a-gltf-model>
 
@@ -59,7 +59,7 @@
 
 
         <a-entity id="birds" position="">
-            <a-plane birds-animation  shader="flat"  transparent="true" id="birds_group" position="0 0.3573 0.2" scale="2.2 2.2 1" ></a-plane>
+            <a-plane birds-animation  shader="flat"  transparent="true" id="birds_group" position="0 0.3573 0.934" scale="2 2 1" ></a-plane>
 
             <a-plane src="#birdLeft"  shader="flat"  id="bird_left" transparent="true" scale="0.5 0.5 1"  geometry="" position="-0.877 0.962 0.037" animation="property: position; to: 2.5 -2 0.037; dur: 3000; easing: linear; loop: true; delay:1000" ></a-plane>
             <a-plane src="#birdCenter"  shader="flat"  id="bird_center" transparent="true" scale="0.5 0.5 1" material="" geometry="" position="-0.375 1.517 -0.3" animation="property: position; to: 1.009 -1.366 -0.3; dur: 2000; easing: linear; loop: true; delay:1500" ></a-plane>
