@@ -1,0 +1,26 @@
+@import "values";
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width:  100%/12*$i;
+  }
+}
+
+//===============MediaQuery style===============
+@media only screen and (max-width: $mobile-size) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      width:  100%/12*$i;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet-size) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      width:  100%/12*$i;
+    }
+  }
+}
+
+

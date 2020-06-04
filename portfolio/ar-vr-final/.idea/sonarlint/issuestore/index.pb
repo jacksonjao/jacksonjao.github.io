@@ -27,3 +27,5 @@ C
 js/animation_img.js,3/b/3b20637685eb339511cc9e505e5dc877ac628145
 M
 model-gltf-out-antialias.html,4/6/4641bcd2d19c96a2c26ff9c7dc72268f7f46e6a2
+U
+%model-gltf-picture-out-antialias.html,b/e/be3a5f6627f24222a61502b3454d35fc1b805790

@@ -1,0 +1,6 @@
+$text-color: rgb(237, 234, 244);
+$primary-color: rgba(110,107,121,255);
+$secondary-color: #37363D;
+$gradient-color-light: linear-gradient(135deg, #EDEAF4, #D7D4DD);
+$gradient-color-dark: linear-gradient(135deg, $primary-color,  $secondary-color);
+
