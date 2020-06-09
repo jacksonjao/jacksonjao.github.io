@@ -46,7 +46,8 @@
         <img id="birdCenter" src="assets/sprites/art1/birds/bird_center.png">
         <img id="birdTop" src="assets/sprites/art1/birds/bird_top.png">
         <img id="birdRight" src="assets/sprites/art1/birds/bird_right.png">
-        <a-asset-item id="art1-museo" src="assets/sprites/art1/scene.gltf"></a-asset-item>
+        <video id="background" autoplay loop="true" src="assets/sprites/art1/background.mp4"></video>
+        <a-asset-item id="art1-museo" src="assets/sprites/art1/scene-out.gltf"></a-asset-item>
     </a-assets>
 
 
@@ -62,10 +63,8 @@
         <a-entity id="birds" position="">
             <a-plane birds-animation  shader="flat"  transparent="true" id="birds_group" position="0 0.3573 0.934" scale="2 2 1" ></a-plane>
 
-            <a-plane src="#birdLeft" material="shader:  flat;  transparent:  true;  depthWrite:  false;"  id="bird_left"  scale="0.5 0.5 1"  geometry="" position="-0.877 0.962 0.1" animation="property: position; to: 2.5 -2 0.1; dur: 3000; easing: linear; loop: true; delay:1000" ></a-plane>
-            <a-plane src="#birdCenter" material="shader:  flat;  transparent:  true;  depthWrite:  false;"  id="bird_center"  scale="0.5 0.5 1" material="" geometry="" position="-0.375 1.517 0.1" animation="property: position; to: 1.009 -1.366 0.1; dur: 2000; easing: linear; loop: true; delay:1500" ></a-plane>
-            <a-plane src="#birdTop"  material="shader:  flat;  transparent:  true;  depthWrite:  false;" id="bird_top" scale="0.5 0.5 1" material="" geometry="" position="-2 2.187 0.1" animation="property: position; to: 1.472 -1.533 0.1; dur: 4000; easing: linear; loop: true; delay:4000"></a-plane>
-            <a-plane src="#birdRight" material="shader:  flat;  transparent:  true;  depthWrite:  false;"  id="bird_right" scale="0.5 0.5 1" geometry="" position="1.135 1.645 0.1" animation="property: position; to: -1.867 -0.712 0.1; dur: 2500; easing: linear; loop: true"></a-plane>
+            <a-video src="#background" position="0 0.366 0.1" scale="1.214 1.630 1"></a-video>
+
         </a-entity>
         <a-plane  woman-animation  material="shader:  flat;  transparent:  true;" id="woman" position="0 0.360 1" scale="0.8 0.8 1"   ></a-plane>
 
