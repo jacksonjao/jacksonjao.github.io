@@ -11,12 +11,11 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="js/animation_img.js"></script>
     <script src="js/animation.js"></script>
-    <script src="js/main.js"></script>
 
 </head>
 <body id="body" >
 
-<a-scene id="scene"
+<a-scene  id="scene"
          light="defaultLightsEnabled: false"
          vr-mode-ui="enterARButton: #myEnterARButton"
          renderer="antialias: true;
@@ -24,10 +23,9 @@
                    colorManagement: true;
                    sortObjects: true;
              "
-         loading-screen="dotsColor: red; backgroundColor: black" inspector="url: https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js" background>
+         loading-screen="dotsColor: red; backgroundColor: black"  background>
     <a id="myEnterARButton" href="#"></a>
-    <a-assets>
-        <video id="background" autoplay loop="true" src="assets/sprites/art1/background.mp4"></video>
+    <a-assets >
         <img id="sky" src="assets/sprites/art1/sky.jpg">
         <img  src="assets/sprites/art1/woman/girl_0.png">
         <img  src="assets/sprites/art1/woman/girl_1.png">
@@ -43,10 +41,68 @@
         <img  src="assets/sprites/art1/woman/girl_11.png">
         <img  src="assets/sprites/art1/woman/girl_12.png">
         <img  src="assets/sprites/art1/woman/girl_13.png">
-        <img id="birdLeft" src="assets/sprites/art1/birds/bird_left.png">
-        <img id="birdCenter" src="assets/sprites/art1/birds/bird_center.png">
-        <img id="birdTop" src="assets/sprites/art1/birds/bird_top.png">
-        <img id="birdRight" src="assets/sprites/art1/birds/bird_right.png">
+        <img  src="assets/sprites/art1/birds_back/bird_0.png">
+        <img  src="assets/sprites/art1/birds_back/bird_1.png">
+        <img  src="assets/sprites/art1/birds_back/bird_2.png">
+        <img  src="assets/sprites/art1/birds_back/bird_3.png">
+        <img  src="assets/sprites/art1/birds_back/bird_4.png">
+        <img  src="assets/sprites/art1/birds_back/bird_5.png">
+        <img  src="assets/sprites/art1/birds_back/bird_6.png">
+        <img  src="assets/sprites/art1/birds_back/bird_7.png">
+        <img  src="assets/sprites/art1/birds_back/bird_8.png">
+        <img  src="assets/sprites/art1/birds_back/bird_9.png">
+        <img  src="assets/sprites/art1/birds_back/bird_10.png">
+        <img  src="assets/sprites/art1/birds_back/bird_11.png">
+        <img  src="assets/sprites/art1/birds_back/bird_12.png">
+        <img  src="assets/sprites/art1/birds_back/bird_13.png">
+        <img  src="assets/sprites/art1/birds_back/bird_14.png">
+        <img  src="assets/sprites/art1/birds_back/bird_15.png">
+        <img  src="assets/sprites/art1/birds_back/bird_16.png">
+        <img  src="assets/sprites/art1/birds_back/bird_17.png">
+        <img  src="assets/sprites/art1/birds_back/bird_18.png">
+        <img  src="assets/sprites/art1/birds_back/bird_19.png">
+        <img  src="assets/sprites/art1/birds_back/bird_20.png">
+        <img  src="assets/sprites/art1/birds_back/bird_21.png">
+        <img  src="assets/sprites/art1/birds_back/bird_22.png">
+        <img  src="assets/sprites/art1/birds_back/bird_23.png">
+        <img  src="assets/sprites/art1/birds_back/bird_24.png">
+        <img  src="assets/sprites/art1/birds_back/bird_25.png">
+        <img  src="assets/sprites/art1/birds_back/bird_26.png">
+        <img  src="assets/sprites/art1/birds_back/bird_27.png">
+        <img  src="assets/sprites/art1/birds_back/bird_28.png">
+        <img  src="assets/sprites/art1/birds_back/bird_29.png">
+        <img  src="assets/sprites/art1/birds_back/bird_30.png">
+        <img  src="assets/sprites/art1/birds_back/bird_31.png">
+        <img  src="assets/sprites/art1/birds_back/bird_32.png">
+        <img  src="assets/sprites/art1/birds_back/bird_33.png">
+        <img  src="assets/sprites/art1/birds_back/bird_34.png">
+        <img  src="assets/sprites/art1/birds_back/bird_35.png">
+        <img  src="assets/sprites/art1/birds_back/bird_36.png">
+        <img  src="assets/sprites/art1/birds_back/bird_37.png">
+        <img  src="assets/sprites/art1/birds_back/bird_38.png">
+        <img  src="assets/sprites/art1/birds_back/bird_39.png">
+        <img  src="assets/sprites/art1/birds_back/bird_40.png">
+        <img  src="assets/sprites/art1/birds_back/bird_41.png">
+        <img  src="assets/sprites/art1/birds_back/bird_42.png">
+        <img  src="assets/sprites/art1/birds_back/bird_43.png">
+        <img  src="assets/sprites/art1/birds_back/bird_44.png">
+        <img  src="assets/sprites/art1/birds_back/bird_45.png">
+        <img  src="assets/sprites/art1/birds_back/bird_46.png">
+        <img  src="assets/sprites/art1/birds_back/bird_47.png">
+        <img  src="assets/sprites/art1/birds_back/bird_48.png">
+        <img  src="assets/sprites/art1/birds_back/bird_49.png">
+        <img  src="assets/sprites/art1/birds_back/bird_50.png">
+        <img  src="assets/sprites/art1/birds_back/bird_51.png">
+        <img  src="assets/sprites/art1/birds_back/bird_52.png">
+        <img  src="assets/sprites/art1/birds_back/bird_53.png">
+        <img  src="assets/sprites/art1/birds_back/bird_54.png">
+        <img  src="assets/sprites/art1/birds_back/bird_55.png">
+        <img  src="assets/sprites/art1/birds_back/bird_56.png">
+        <img  src="assets/sprites/art1/birds_back/bird_57.png">
+        <img  src="assets/sprites/art1/birds_back/bird_58.png">
+        <img  src="assets/sprites/art1/birds_back/bird_59.png">
+        <img  src="assets/sprites/art1/birds_back/bird_60.png">
+        <img  src="assets/sprites/art1/birds_back/bird_0.png">
         <a-asset-item id="art1-museo" src="assets/sprites/art1/scene-out.gltf"></a-asset-item>
     </a-assets>
 
@@ -60,12 +116,12 @@
 
 
 
-        <a-entity id="birds" position="">
+        <a-entity id="birds">
             <a-plane birds-animation  shader="flat"  transparent="true" id="birds_group" position="0 0.3573 0.934" scale="2 2 1" ></a-plane>
-
-            <a-video src="#background" position="0 0.366 0.1" scale="1.214 1.630 1"></a-video>
-
         </a-entity>
+
+        <a-plane
+                birds-animation-back  material="shader:  flat;  transparent:  true;"  position="0 0.366 0.1" scale="1.508 1.630 1"></a-plane>
         <a-plane  woman-animation  material="shader:  flat;  transparent:  true;" id="woman" position="0 0.360 1" scale="0.8 0.8 1"   ></a-plane>
 
     </a-entity>
@@ -78,6 +134,7 @@
 
 </a-scene>
 
+<script src="js/main.js"></script>
 
 </body>
 </html>

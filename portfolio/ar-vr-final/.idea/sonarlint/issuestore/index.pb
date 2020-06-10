@@ -15,3 +15,5 @@ C
 js/animation_img.js,3/b/3b20637685eb339511cc9e505e5dc877ac628145
 >
 index-out.html,5/4/5450dc60c1407f637a3a331601942e117c8453ad
+?
+index-zoom.html,3/6/36cc7d16b3f5f698b7a23e9c114a1a08a1dc6ec2

@@ -1,5 +1,6 @@
 
 new AnimationPngBySrc('assets/sprites/art1/birds_animation_group/', 'bird','birds-animation' , 40);
+new AnimationPngBySrc('assets/sprites/art1/birds_back/', 'bird','birds-animation-back' , 60);
 new AnimationPngBySrc('assets/sprites/art1/woman/', 'girl','woman-animation' , 13);
 
 function openFullscreen() {
@@ -16,6 +17,40 @@ function openFullscreen() {
         elem.msRequestFullscreen();
     }
 }
+
+
+/*
+AFRAME.registerComponent('video-handler',{
+    init: function() {
+    let el = this.el;
+    let vid = document.querySelector("#myvideo");
+    console.log(vid)
+    vid.pause();
+        console.log(this.data)
+}});
+*/
+
+
+
+/*
+    let checkIfVideoCharged = setInterval(()=> {
+        var video = document.getElementById("videoAsset");
+        try {
+            console.log(video.readyState)
+        if ( video.readyState === 4 ) {
+            document.getElementById("videito").setAttribute('src',video.src.split("ar-vr-final/")[1])
+
+           console.log( document.getElementById("videito"))
+            clearInterval(checkIfVideoCharged)
+        }
+        }
+        catch (e) {
+            console.log("there aren't any videos")
+            clearInterval(checkIfVideoCharged)
+
+        }
+    },8000)
+*/
 
 
 /*
