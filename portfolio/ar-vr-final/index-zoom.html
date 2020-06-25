@@ -42,11 +42,12 @@
         <img  src="assets/sprites/art1/woman/girl_11.png">
         <img  src="assets/sprites/art1/woman/girl_12.png">
         <img  src="assets/sprites/art1/woman/girl_13.png">
+        <img id="background" src="assets/sprites/art1/background.png">
         <img id="birdLeft" src="assets/sprites/art1/birds/bird_left.png">
         <img id="birdCenter" src="assets/sprites/art1/birds/bird_center.png">
         <img id="birdTop" src="assets/sprites/art1/birds/bird_top.png">
         <img id="birdRight" src="assets/sprites/art1/birds/bird_right.png">
-        <a-asset-item id="art1-museo" src="assets/sprites/art1/scene.gltf"></a-asset-item>
+        <a-asset-item id="art1-museo" src="assets/sprites/art1/scene-zoom.gltf"></a-asset-item>
     </a-assets>
 
 
@@ -55,13 +56,12 @@
     <a-sky material="src: #sky"  rotation="80 0 0"></a-sky>
     <a-gltf-model  scale="0.045 0.045 0.045"  src="#art1-museo"  ></a-gltf-model>
 
-    <a-entity   id="art1-animation" position="-0.95 1.1 1.4" scale="1 1 1" rotation="0 180 0" >
+    <a-entity   id="art1-animation" position="-0.95 1.248 1.4" scale="1 1 1" rotation="0 180 0" >
 
 
-
-        <a-entity id="birds" position="">
+        <a-plane src="#background" shader="flat"  transparent="true"  position="0 0.342 -1" scale="1.960 2.160 1" ></a-plane>
+        <a-entity id="birds">
             <a-plane birds-animation  shader="flat"  transparent="true" id="birds_group" position="0 0.3573 0.934" scale="2 2 1" ></a-plane>
-
             <a-plane src="#birdLeft"  shader="flat"  id="bird_left" transparent="true" scale="0.5 0.5 1"  geometry="" position="-0.877 0.962 0.037" animation="property: position; to: 2.5 -2 0.037; dur: 3000; easing: linear; loop: true; delay:1000" ></a-plane>
             <a-plane src="#birdCenter"  shader="flat"  id="bird_center" transparent="true" scale="0.5 0.5 1" material="" geometry="" position="-0.375 1.517 -0.3" animation="property: position; to: 1.009 -1.366 -0.3; dur: 2000; easing: linear; loop: true; delay:1500" ></a-plane>
             <a-plane src="#birdTop"  shader="flat"  id="bird_top" transparent="true" scale="0.5 0.5 1" material="" geometry="" position="-2 2.187 -0.2" animation="property: position; to: 1.472 -1.533 -0.2; dur: 4000; easing: linear; loop: true; delay:4000"></a-plane>
