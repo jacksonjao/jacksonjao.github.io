@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta aframe-injected="" name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <title>Una ínsula</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+
+</head>
+<body id="body">
+
+<a-scene id="scene"
+         light="defaultLightsEnabled: false"
+         vr-mode-ui="enterARButton: #myEnterARButton"
+         renderer="antialias: true;
+         physicallyCorrectLights: false;
+         colorManagement: true;
+         sortObjects: true;"
+         loading-screen="dotsColor: white; backgroundColor: black",
+         inspector="url: https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js"
+         background>
+    <a id="myEnterARButton" href="#"></a>
+    <a-assets timeout="20000">
+        <img id="sky" src="assets/shared/sky.jpg">
+        <img id="animationGif" src="assets/artworks/102/animation.gif">
+        <a-asset-item id="scene3D" src="assets/artworks/102/scene.gltf"></a-asset-item>
+    </a-assets>
+
+
+    <a-light id="environment" light="type: point; intensity: 4" position="-1.34434 2.4 -2.27531"></a-light>
+    <a-sky material="src: #sky" rotation="80 0 0"></a-sky>
+    <a-gltf-model  scale="0.045 0.045 0.045"  src="#scene3D"  ></a-gltf-model>
+
+    <a-image   shader="gif" src="#animationGif" transparent="true"   position="-0.919 1.5 1.32" scale="1.850 1.850 1" rotation="0 180 0"   ></a-image>
+    <a-image  shader="gif" src="#animationGif" blending="multiply" transparent="true"   position="-0.919 1.5 1.32" scale="1.850 1.850 1" rotation="0 180 0"   ></a-image>
+
+
+    <a-entity rotation="-3 180 0">
+        <a-camera id="camera" wasd-controls="enabled:  false" position="0.95 1.75 2">
+
+        </a-camera>
+    </a-entity>
+
+
+</a-scene>
+
+</body>
+
+</html>

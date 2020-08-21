@@ -1,5 +1,5 @@
 // La estructura de los archivos debe de ser la siguiente 'nombre_#.png'
-class AnimationPngBySrc {
+class AnimationPng {
     constructor(sequences, mainNameSequences, id, numberOfFiles) {
         AFRAME.registerComponent(id, {
             init: function() {

@@ -1,5 +1,5 @@
 // La estructura de los archivos debe de ser la siguiente 'nombre_#.png'
-class AnimationPng {
+class Animation {
     constructor(sequences, mainNameSequences, id, numberOfFiles) {
         AFRAME.registerComponent(id, {
             init: function() {
@@ -14,8 +14,6 @@ class AnimationPng {
                 this.el.addEventListener('loaded', e => {
                     let mesh = this.el.getObject3D("mesh");
                     this.material = mesh.material
-                    console.log(this.material)
-                    console.log(this.el.getObject3D("mesh"))
                     var i = 0
                     this.id = setInterval(e => {
                         if (i > this.pngArray.length) i = 0;
@@ -34,6 +32,5 @@ class AnimationPng {
         })
     }
 }
-
 
 
