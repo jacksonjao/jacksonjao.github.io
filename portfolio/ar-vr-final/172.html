@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    <title>Wuthering Heights Happy Ending</title>
+    <meta aframe-injected="" name="mobile-web-app-capable" content="yes">
+    <title>Wuthering Heights - Happy ending</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 
 </head>
-<body id="body">
+<body id="body" >
+<div id="loading">
+    <h1>Wuthering Heights - Happy ending</h1>
+    <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
 
 <a-scene id="scene"
          light="defaultLightsEnabled: false"
@@ -19,331 +23,31 @@
          renderer="antialias: true;
          physicallyCorrectLights: false;
          colorManagement: true;
-         sortObjects: true;"
-         loading-screen="dotsColor: white; backgroundColor: black"
-         background>
-    <a id="myEnterARButton" href="#"></a>
-    <a-assets>
+         sortObjects: false;"
+         loading-screen="dotsColor: white; backgroundColor: black",
+         inspector="url: https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js"
+>
+    <a-assets timeout="10000">
         <img id="sky" src="assets/shared/sky.jpg">
-        <img  src="assets/artworks/172/happy/happy_0.png">
-        <img  src="assets/artworks/172/happy/happy_1.png">
-        <img  src="assets/artworks/172/happy/happy_2.png">
-        <img  src="assets/artworks/172/happy/happy_3.png">
-        <img  src="assets/artworks/172/happy/happy_4.png">
-        <img  src="assets/artworks/172/happy/happy_5.png">
-        <img  src="assets/artworks/172/happy/happy_6.png">
-        <img  src="assets/artworks/172/happy/happy_7.png">
-        <img  src="assets/artworks/172/happy/happy_8.png">
-        <img  src="assets/artworks/172/happy/happy_9.png">
-        <img  src="assets/artworks/172/happy/happy_10.png">
-        <img  src="assets/artworks/172/happy/happy_11.png">
-        <img  src="assets/artworks/172/happy/happy_12.png">
-        <img  src="assets/artworks/172/happy/happy_13.png">
-        <img  src="assets/artworks/172/happy/happy_14.png">
-        <img  src="assets/artworks/172/happy/happy_15.png">
-        <img  src="assets/artworks/172/happy/happy_16.png">
-        <img  src="assets/artworks/172/happy/happy_17.png">
-        <img  src="assets/artworks/172/happy/happy_18.png">
-        <img  src="assets/artworks/172/happy/happy_19.png">
-        <img  src="assets/artworks/172/happy/happy_20.png">
-        <img  src="assets/artworks/172/happy/happy_21.png">
-        <img  src="assets/artworks/172/happy/happy_22.png">
-        <img  src="assets/artworks/172/happy/happy_23.png">
-        <img  src="assets/artworks/172/happy/happy_24.png">
-        <img  src="assets/artworks/172/happy/happy_25.png">
-        <img  src="assets/artworks/172/happy/happy_26.png">
-        <img  src="assets/artworks/172/happy/happy_27.png">
-        <img  src="assets/artworks/172/happy/happy_28.png">
-        <img  src="assets/artworks/172/happy/happy_29.png">
-        <img  src="assets/artworks/172/happy/happy_30.png">
-        <img  src="assets/artworks/172/happy/happy_31.png">
-        <img  src="assets/artworks/172/happy/happy_32.png">
-        <img  src="assets/artworks/172/happy/happy_33.png">
-        <img  src="assets/artworks/172/happy/happy_34.png">
-        <img  src="assets/artworks/172/happy/happy_35.png">
-        <img  src="assets/artworks/172/happy/happy_36.png">
-        <img  src="assets/artworks/172/happy/happy_37.png">
-        <img  src="assets/artworks/172/happy/happy_38.png">
-        <img  src="assets/artworks/172/happy/happy_39.png">
-        <img  src="assets/artworks/172/happy/happy_40.png">
-        <img  src="assets/artworks/172/happy/happy_41.png">
-        <img  src="assets/artworks/172/happy/happy_42.png">
-        <img  src="assets/artworks/172/happy/happy_43.png">
-        <img  src="assets/artworks/172/happy/happy_44.png">
-        <img  src="assets/artworks/172/happy/happy_45.png">
-        <img  src="assets/artworks/172/happy/happy_46.png">
-        <img  src="assets/artworks/172/happy/happy_47.png">
-        <img  src="assets/artworks/172/happy/happy_48.png">
-        <img  src="assets/artworks/172/happy/happy_49.png">
-        <img  src="assets/artworks/172/happy/happy_50.png">
-        <img  src="assets/artworks/172/happy/happy_51.png">
-        <img  src="assets/artworks/172/happy/happy_52.png">
-        <img  src="assets/artworks/172/happy/happy_53.png">
-        <img  src="assets/artworks/172/happy/happy_54.png">
-        <img  src="assets/artworks/172/happy/happy_55.png">
-        <img  src="assets/artworks/172/happy/happy_56.png">
-        <img  src="assets/artworks/172/happy/happy_57.png">
-        <img  src="assets/artworks/172/happy/happy_58.png">
-        <img  src="assets/artworks/172/happy/happy_59.png">
-        <img  src="assets/artworks/172/happy/happy_60.png">
-        <img  src="assets/artworks/172/happy/happy_61.png">
-        <img  src="assets/artworks/172/happy/happy_62.png">
-        <img  src="assets/artworks/172/happy/happy_63.png">
-        <img  src="assets/artworks/172/happy/happy_64.png">
-        <img  src="assets/artworks/172/happy/happy_65.png">
-        <img  src="assets/artworks/172/happy/happy_66.png">
-        <img  src="assets/artworks/172/happy/happy_67.png">
-        <img  src="assets/artworks/172/happy/happy_68.png">
-        <img  src="assets/artworks/172/happy/happy_69.png">
-        <img  src="assets/artworks/172/happy/happy_70.png">
-        <img  src="assets/artworks/172/happy/happy_71.png">
-        <img  src="assets/artworks/172/happy/happy_72.png">
-        <img  src="assets/artworks/172/happy/happy_73.png">
-        <img  src="assets/artworks/172/happy/happy_74.png">
-        <img  src="assets/artworks/172/happy/happy_75.png">
-        <img  src="assets/artworks/172/happy/happy_76.png">
-        <img  src="assets/artworks/172/happy/happy_77.png">
-        <img  src="assets/artworks/172/happy/happy_78.png">
-        <img  src="assets/artworks/172/happy/happy_79.png">
-        <img  src="assets/artworks/172/happy/happy_80.png">
-        <img  src="assets/artworks/172/happy/happy_81.png">
-        <img  src="assets/artworks/172/happy/happy_82.png">
-        <img  src="assets/artworks/172/happy/happy_83.png">
-        <img  src="assets/artworks/172/happy/happy_84.png">
-        <img  src="assets/artworks/172/happy/happy_85.png">
-        <img  src="assets/artworks/172/happy/happy_86.png">
-        <img  src="assets/artworks/172/happy/happy_87.png">
-        <img  src="assets/artworks/172/happy/happy_88.png">
-        <img  src="assets/artworks/172/happy/happy_89.png">
-        <img  src="assets/artworks/172/happy/happy_90.png">
-        <img  src="assets/artworks/172/happy/happy_91.png">
-        <img  src="assets/artworks/172/happy/happy_92.png">
-        <img  src="assets/artworks/172/happy/happy_93.png">
-        <img  src="assets/artworks/172/happy/happy_94.png">
-        <img  src="assets/artworks/172/happy/happy_95.png">
-        <img  src="assets/artworks/172/happy/happy_96.png">
-        <img  src="assets/artworks/172/happy/happy_97.png">
-        <img  src="assets/artworks/172/happy/happy_98.png">
-        <img  src="assets/artworks/172/happy/happy_99.png">
-        <img  src="assets/artworks/172/happy/happy_100.png">
-        <img  src="assets/artworks/172/happy/happy_101.png">
-        <img  src="assets/artworks/172/happy/happy_102.png">
-        <img  src="assets/artworks/172/happy/happy_103.png">
-        <img  src="assets/artworks/172/happy/happy_104.png">
-        <img  src="assets/artworks/172/happy/happy_105.png">
-        <img  src="assets/artworks/172/happy/happy_106.png">
-        <img  src="assets/artworks/172/happy/happy_107.png">
-        <img  src="assets/artworks/172/happy/happy_108.png">
-        <img  src="assets/artworks/172/happy/happy_109.png">
-        <img  src="assets/artworks/172/happy/happy_110.png">
-        <img  src="assets/artworks/172/happy/happy_111.png">
-        <img  src="assets/artworks/172/happy/happy_112.png">
-        <img  src="assets/artworks/172/happy/happy_113.png">
-        <img  src="assets/artworks/172/happy/happy_114.png">
-        <img  src="assets/artworks/172/happy/happy_115.png">
-        <img  src="assets/artworks/172/happy/happy_116.png">
-        <img  src="assets/artworks/172/happy/happy_117.png">
-        <img  src="assets/artworks/172/happy/happy_118.png">
-        <img  src="assets/artworks/172/happy/happy_119.png">
-        <img  src="assets/artworks/172/happy/happy_120.png">
-        <img  src="assets/artworks/172/happy/happy_121.png">
-        <img  src="assets/artworks/172/happy/happy_122.png">
-        <img  src="assets/artworks/172/happy/happy_123.png">
-        <img  src="assets/artworks/172/happy/happy_124.png">
-        <img  src="assets/artworks/172/happy/happy_125.png">
-        <img  src="assets/artworks/172/happy/happy_126.png">
-        <img  src="assets/artworks/172/happy/happy_127.png">
-        <img  src="assets/artworks/172/happy/happy_128.png">
-        <img  src="assets/artworks/172/happy/happy_129.png">
-        <img  src="assets/artworks/172/happy/happy_130.png">
-        <img  src="assets/artworks/172/happy/happy_131.png">
-        <img  src="assets/artworks/172/happy/happy_132.png">
-        <img  src="assets/artworks/172/happy/happy_133.png">
-        <img  src="assets/artworks/172/happy/happy_134.png">
-        <img  src="assets/artworks/172/happy/happy_135.png">
-        <img  src="assets/artworks/172/happy/happy_136.png">
-        <img  src="assets/artworks/172/happy/happy_137.png">
-        <img  src="assets/artworks/172/happy/happy_138.png">
-        <img  src="assets/artworks/172/happy/happy_139.png">
-        <img  src="assets/artworks/172/happy/happy_140.png">
-        <img  src="assets/artworks/172/happy/happy_141.png">
-        <img  src="assets/artworks/172/happy/happy_142.png">
-        <img  src="assets/artworks/172/happy/happy_143.png">
-        <img  src="assets/artworks/172/happy/happy_144.png">
-        <img  src="assets/artworks/172/happy/happy_145.png">
-        <img  src="assets/artworks/172/happy/happy_146.png">
-        <img  src="assets/artworks/172/happy/happy_147.png">
-        <img  src="assets/artworks/172/happy/happy_148.png">
-        <img  src="assets/artworks/172/happy/happy_149.png">
-        <img  src="assets/artworks/172/happy/happy_150.png">
-        <img  src="assets/artworks/172/happy/happy_151.png">
-        <img  src="assets/artworks/172/happy/happy_152.png">
-        <img  src="assets/artworks/172/happy/happy_153.png">
-        <img  src="assets/artworks/172/happy/happy_154.png">
-        <img  src="assets/artworks/172/happy/happy_155.png">
-        <img  src="assets/artworks/172/happy/happy_156.png">
-        <img  src="assets/artworks/172/happy/happy_157.png">
-        <img  src="assets/artworks/172/happy/happy_158.png">
-        <img  src="assets/artworks/172/happy/happy_159.png">
-        <img  src="assets/artworks/172/happy/happy_160.png">
-        <img  src="assets/artworks/172/happy/happy_161.png">
-        <img  src="assets/artworks/172/happy/happy_162.png">
-        <img  src="assets/artworks/172/happy/happy_163.png">
-        <img  src="assets/artworks/172/happy/happy_164.png">
-        <img  src="assets/artworks/172/happy/happy_165.png">
-        <img  src="assets/artworks/172/happy/happy_166.png">
-        <img  src="assets/artworks/172/happy/happy_167.png">
-        <img  src="assets/artworks/172/happy/happy_168.png">
-        <img  src="assets/artworks/172/happy/happy_169.png">
-        <img  src="assets/artworks/172/happy/happy_170.png">
-        <img  src="assets/artworks/172/happy/happy_171.png">
-        <img  src="assets/artworks/172/happy/happy_172.png">
-        <img  src="assets/artworks/172/happy/happy_173.png">
-        <img  src="assets/artworks/172/happy/happy_174.png">
-        <img  src="assets/artworks/172/happy/happy_175.png">
-        <img  src="assets/artworks/172/happy/happy_176.png">
-        <img  src="assets/artworks/172/happy/happy_177.png">
-        <img  src="assets/artworks/172/happy/happy_178.png">
-        <img  src="assets/artworks/172/happy/happy_179.png">
-        <img  src="assets/artworks/172/happy/happy_180.png">
-        <img  src="assets/artworks/172/happy/happy_181.png">
-        <img  src="assets/artworks/172/happy/happy_182.png">
-        <img  src="assets/artworks/172/happy/happy_183.png">
-        <img  src="assets/artworks/172/happy/happy_184.png">
-        <img  src="assets/artworks/172/happy/happy_185.png">
-        <img  src="assets/artworks/172/happy/happy_186.png">
-        <img  src="assets/artworks/172/happy/happy_187.png">
-        <img  src="assets/artworks/172/happy/happy_188.png">
-        <img  src="assets/artworks/172/happy/happy_189.png">
-        <img  src="assets/artworks/172/happy/happy_190.png">
-        <img  src="assets/artworks/172/happy/happy_191.png">
-        <img  src="assets/artworks/172/happy/happy_192.png">
-        <img  src="assets/artworks/172/happy/happy_193.png">
-        <img  src="assets/artworks/172/happy/happy_194.png">
-        <img  src="assets/artworks/172/happy/happy_195.png">
-        <img  src="assets/artworks/172/happy/happy_196.png">
-        <img  src="assets/artworks/172/happy/happy_197.png">
-        <img  src="assets/artworks/172/happy/happy_198.png">
-        <img  src="assets/artworks/172/happy/happy_199.png">
-        <img  src="assets/artworks/172/happy/happy_200.png">
-        <img  src="assets/artworks/172/happy/happy_201.png">
-        <img  src="assets/artworks/172/happy/happy_202.png">
-        <img  src="assets/artworks/172/happy/happy_203.png">
-        <img  src="assets/artworks/172/happy/happy_204.png">
-        <img  src="assets/artworks/172/happy/happy_205.png">
-        <img  src="assets/artworks/172/happy/happy_206.png">
-        <img  src="assets/artworks/172/happy/happy_207.png">
-        <img  src="assets/artworks/172/happy/happy_208.png">
-        <img  src="assets/artworks/172/happy/happy_209.png">
-        <img  src="assets/artworks/172/happy/happy_210.png">
-        <img  src="assets/artworks/172/happy/happy_211.png">
-        <img  src="assets/artworks/172/happy/happy_212.png">
-        <img  src="assets/artworks/172/happy/happy_213.png">
-        <img  src="assets/artworks/172/happy/happy_214.png">
-        <img  src="assets/artworks/172/happy/happy_215.png">
-        <img  src="assets/artworks/172/happy/happy_216.png">
-        <img  src="assets/artworks/172/happy/happy_217.png">
-        <img  src="assets/artworks/172/happy/happy_218.png">
-        <img  src="assets/artworks/172/happy/happy_219.png">
-        <img  src="assets/artworks/172/happy/happy_220.png">
-        <img  src="assets/artworks/172/happy/happy_221.png">
-        <img  src="assets/artworks/172/happy/happy_222.png">
-        <img  src="assets/artworks/172/happy/happy_223.png">
-        <img  src="assets/artworks/172/happy/happy_224.png">
-        <img  src="assets/artworks/172/happy/happy_225.png">
-        <img  src="assets/artworks/172/happy/happy_226.png">
-        <img  src="assets/artworks/172/happy/happy_227.png">
-        <img  src="assets/artworks/172/happy/happy_228.png">
-        <img  src="assets/artworks/172/happy/happy_229.png">
-        <img  src="assets/artworks/172/happy/happy_230.png">
-        <img  src="assets/artworks/172/happy/happy_231.png">
-        <img  src="assets/artworks/172/happy/happy_232.png">
-        <img  src="assets/artworks/172/happy/happy_233.png">
-        <img  src="assets/artworks/172/happy/happy_234.png">
-        <img  src="assets/artworks/172/happy/happy_235.png">
-        <img  src="assets/artworks/172/happy/happy_236.png">
-        <img  src="assets/artworks/172/happy/happy_237.png">
-        <img  src="assets/artworks/172/happy/happy_238.png">
-        <img  src="assets/artworks/172/happy/happy_239.png">
-        <img  src="assets/artworks/172/happy/happy_240.png">
-        <img  src="assets/artworks/172/happy/happy_241.png">
-        <img  src="assets/artworks/172/happy/happy_242.png">
-        <img  src="assets/artworks/172/happy/happy_243.png">
-        <img  src="assets/artworks/172/happy/happy_244.png">
-        <img  src="assets/artworks/172/happy/happy_245.png">
-        <img  src="assets/artworks/172/happy/happy_246.png">
-        <img  src="assets/artworks/172/happy/happy_247.png">
-        <img  src="assets/artworks/172/happy/happy_248.png">
-        <img  src="assets/artworks/172/happy/happy_249.png">
-        <img  src="assets/artworks/172/happy/happy_250.png">
-        <img  src="assets/artworks/172/happy/happy_251.png">
-        <img  src="assets/artworks/172/happy/happy_252.png">
-        <img  src="assets/artworks/172/happy/happy_253.png">
-        <img  src="assets/artworks/172/happy/happy_254.png">
-        <img  src="assets/artworks/172/happy/happy_255.png">
-        <img  src="assets/artworks/172/happy/happy_256.png">
-        <img  src="assets/artworks/172/happy/happy_257.png">
-        <img  src="assets/artworks/172/happy/happy_258.png">
-        <img  src="assets/artworks/172/happy/happy_259.png">
-        <img  src="assets/artworks/172/happy/happy_260.png">
-        <img  src="assets/artworks/172/happy/happy_261.png">
-        <img  src="assets/artworks/172/happy/happy_262.png">
-        <img  src="assets/artworks/172/happy/happy_263.png">
-        <img  src="assets/artworks/172/happy/happy_264.png">
-        <img  src="assets/artworks/172/happy/happy_265.png">
-        <img  src="assets/artworks/172/happy/happy_266.png">
-        <img  src="assets/artworks/172/happy/happy_267.png">
-        <img  src="assets/artworks/172/happy/happy_268.png">
-        <img  src="assets/artworks/172/happy/happy_269.png">
-        <img  src="assets/artworks/172/happy/happy_270.png">
-        <img  src="assets/artworks/172/happy/happy_271.png">
-        <img  src="assets/artworks/172/happy/happy_272.png">
-        <img  src="assets/artworks/172/happy/happy_273.png">
-        <img  src="assets/artworks/172/happy/happy_274.png">
-        <img  src="assets/artworks/172/happy/happy_275.png">
-        <img  src="assets/artworks/172/happy/happy_276.png">
-        <img  src="assets/artworks/172/happy/happy_277.png">
-        <img  src="assets/artworks/172/happy/happy_278.png">
-        <img  src="assets/artworks/172/happy/happy_279.png">
-        <img  src="assets/artworks/172/happy/happy_280.png">
-        <img  src="assets/artworks/172/happy/happy_281.png">
-        <img  src="assets/artworks/172/happy/happy_282.png">
-        <img  src="assets/artworks/172/happy/happy_283.png">
-        <img  src="assets/artworks/172/happy/happy_284.png">
-        <img  src="assets/artworks/172/happy/happy_285.png">
-        <img  src="assets/artworks/172/happy/happy_286.png">
-        <img  src="assets/artworks/172/happy/happy_287.png">
-        <img  src="assets/artworks/172/happy/happy_288.png">
-        <img  src="assets/artworks/172/happy/happy_289.png">
-        <img  src="assets/artworks/172/happy/happy_290.png">
-        <img  src="assets/artworks/172/happy/happy_291.png">
-        <img  src="assets/artworks/172/happy/happy_292.png">
-        <img  src="assets/artworks/172/happy/happy_293.png">
-        <img  src="assets/artworks/172/happy/happy_294.png">
-        <img  src="assets/artworks/172/happy/happy_295.png">
-        <img  src="assets/artworks/172/happy/happy_296.png">
-        <img  src="assets/artworks/172/happy/happy_297.png">
-        <img  src="assets/artworks/172/happy/happy_298.png">
-        <img  src="assets/artworks/172/happy/happy_299.png">
+        <video id="video" muted="muted"   webkit-playsinline="true" playsinline="true" autoplay="true"  loop="true" src="assets/artworks/172/animation.mp4"  ></video>
         <a-asset-item id="scene3D" src="assets/artworks/172/scene.gltf"></a-asset-item>
     </a-assets>
-
-
+    <a id="myEnterARButton" href="#"></a>
     <a-light id="environment" light="type: point; intensity: 4" position="-1.34434 2.4 -2.27531"></a-light>
     <a-sky material="src: #sky" rotation="80 0 0"></a-sky>
-    <a-gltf-model scale="0.045 0.045 0.045" src="#scene3D"></a-gltf-model>
-    <a-plane  happy-animation shader="flat"  transparent="true"  position="-0.919 1.513 1.32" scale="1.820 1.820 1" rotation="0 180 0"   ></a-plane>
+    <a-gltf-model  scale="0.045 0.045 0.045"  src="#scene3D"  ></a-gltf-model>
+
+
+    <a-video shader="flat" src="#video"   position="-0.923 1.5 1.32" scale="1.810 1.830 1" rotation="0 180 0"   ></a-video>
 
     <a-entity rotation="-3 180 0">
         <a-camera id="camera" wasd-controls="enabled:  false" position="0.95 1.75 2">
 
         </a-camera>
-    </a-entity>º
-
+    </a-entity>
 
 </a-scene>
-
-<script src="js/utils/animation_img.js"></script>
-<script src="js/artworks/172.js"></script>
+<script src="js/utils/load_video.js"></script>
 </body>
+
 </html>

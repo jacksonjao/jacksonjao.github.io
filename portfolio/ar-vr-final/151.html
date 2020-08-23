@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+    <meta aframe-injected="" name="mobile-web-app-capable" content="yes">
     <title>Serie América - Cruzados</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 
 </head>
-<body id="body">
+<body id="body" >
+<div id="loading">
+    <h1>Serie América - Cruzados</h1>
+    <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
 
 <a-scene id="scene"
          light="defaultLightsEnabled: false"
@@ -19,122 +23,31 @@
          renderer="antialias: true;
          physicallyCorrectLights: false;
          colorManagement: true;
-         sortObjects: true;"
-         loading-screen="dotsColor: white; backgroundColor: black"
-         background>
-    <a id="myEnterARButton" href="#"></a>
-    <a-assets>
+         sortObjects: false;"
+         loading-screen="dotsColor: white; backgroundColor: black",
+         inspector="url: https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js"
+>
+    <a-assets timeout="10000">
         <img id="sky" src="assets/shared/sky.jpg">
-        <img  src="assets/artworks/151/america/america_0.png">
-        <img  src="assets/artworks/151/america/america_1.png">
-        <img  src="assets/artworks/151/america/america_2.png">
-        <img  src="assets/artworks/151/america/america_3.png">
-        <img  src="assets/artworks/151/america/america_4.png">
-        <img  src="assets/artworks/151/america/america_5.png">
-        <img  src="assets/artworks/151/america/america_6.png">
-        <img  src="assets/artworks/151/america/america_7.png">
-        <img  src="assets/artworks/151/america/america_8.png">
-        <img  src="assets/artworks/151/america/america_9.png">
-        <img  src="assets/artworks/151/america/america_10.png">
-        <img  src="assets/artworks/151/america/america_11.png">
-        <img  src="assets/artworks/151/america/america_12.png">
-        <img  src="assets/artworks/151/america/america_13.png">
-        <img  src="assets/artworks/151/america/america_14.png">
-        <img  src="assets/artworks/151/america/america_15.png">
-        <img  src="assets/artworks/151/america/america_16.png">
-        <img  src="assets/artworks/151/america/america_17.png">
-        <img  src="assets/artworks/151/america/america_18.png">
-        <img  src="assets/artworks/151/america/america_19.png">
-        <img  src="assets/artworks/151/america/america_20.png">
-        <img  src="assets/artworks/151/america/america_21.png">
-        <img  src="assets/artworks/151/america/america_22.png">
-        <img  src="assets/artworks/151/america/america_23.png">
-        <img  src="assets/artworks/151/america/america_24.png">
-        <img  src="assets/artworks/151/america/america_25.png">
-        <img  src="assets/artworks/151/america/america_26.png">
-        <img  src="assets/artworks/151/america/america_27.png">
-        <img  src="assets/artworks/151/america/america_28.png">
-        <img  src="assets/artworks/151/america/america_29.png">
-        <img  src="assets/artworks/151/america/america_30.png">
-        <img  src="assets/artworks/151/america/america_31.png">
-        <img  src="assets/artworks/151/america/america_32.png">
-        <img  src="assets/artworks/151/america/america_33.png">
-        <img  src="assets/artworks/151/america/america_34.png">
-        <img  src="assets/artworks/151/america/america_35.png">
-        <img  src="assets/artworks/151/america/america_36.png">
-        <img  src="assets/artworks/151/america/america_37.png">
-        <img  src="assets/artworks/151/america/america_38.png">
-        <img  src="assets/artworks/151/america/america_39.png">
-        <img  src="assets/artworks/151/america/america_40.png">
-        <img  src="assets/artworks/151/america/america_41.png">
-        <img  src="assets/artworks/151/america/america_42.png">
-        <img  src="assets/artworks/151/america/america_43.png">
-        <img  src="assets/artworks/151/america/america_44.png">
-        <img  src="assets/artworks/151/america/america_45.png">
-        <img  src="assets/artworks/151/america/america_46.png">
-        <img  src="assets/artworks/151/america/america_47.png">
-        <img  src="assets/artworks/151/america/america_48.png">
-        <img  src="assets/artworks/151/america/america_49.png">
-        <img  src="assets/artworks/151/america/america_50.png">
-        <img  src="assets/artworks/151/america/america_51.png">
-        <img  src="assets/artworks/151/america/america_52.png">
-        <img  src="assets/artworks/151/america/america_53.png">
-        <img  src="assets/artworks/151/america/america_54.png">
-        <img  src="assets/artworks/151/america/america_55.png">
-        <img  src="assets/artworks/151/america/america_56.png">
-        <img  src="assets/artworks/151/america/america_57.png">
-        <img  src="assets/artworks/151/america/america_58.png">
-        <img  src="assets/artworks/151/america/america_59.png">
-        <img  src="assets/artworks/151/america/america_60.png">
-        <img  src="assets/artworks/151/america/america_61.png">
-        <img  src="assets/artworks/151/america/america_62.png">
-        <img  src="assets/artworks/151/america/america_63.png">
-        <img  src="assets/artworks/151/america/america_64.png">
-        <img  src="assets/artworks/151/america/america_65.png">
-        <img  src="assets/artworks/151/america/america_66.png">
-        <img  src="assets/artworks/151/america/america_67.png">
-        <img  src="assets/artworks/151/america/america_68.png">
-        <img  src="assets/artworks/151/america/america_69.png">
-        <img  src="assets/artworks/151/america/america_70.png">
-        <img  src="assets/artworks/151/america/america_71.png">
-        <img  src="assets/artworks/151/america/america_72.png">
-        <img  src="assets/artworks/151/america/america_73.png">
-        <img  src="assets/artworks/151/america/america_74.png">
-        <img  src="assets/artworks/151/america/america_75.png">
-        <img  src="assets/artworks/151/america/america_76.png">
-        <img  src="assets/artworks/151/america/america_77.png">
-        <img  src="assets/artworks/151/america/america_78.png">
-        <img  src="assets/artworks/151/america/america_79.png">
-        <img  src="assets/artworks/151/america/america_80.png">
-        <img  src="assets/artworks/151/america/america_81.png">
-        <img  src="assets/artworks/151/america/america_82.png">
-        <img  src="assets/artworks/151/america/america_83.png">
-        <img  src="assets/artworks/151/america/america_84.png">
-        <img  src="assets/artworks/151/america/america_85.png">
-        <img  src="assets/artworks/151/america/america_86.png">
-        <img  src="assets/artworks/151/america/america_87.png">
-        <img  src="assets/artworks/151/america/america_88.png">
-        <img  src="assets/artworks/151/america/america_89.png">
-        <img  src="assets/artworks/151/america/america_90.png">
+        <video id="video" muted="muted"   webkit-playsinline="true" playsinline="true" autoplay="true"  loop="true" src="assets/artworks/151/animation.mp4"  ></video>
         <a-asset-item id="scene3D" src="assets/artworks/151/scene.gltf"></a-asset-item>
     </a-assets>
-
-
+    <a id="myEnterARButton" href="#"></a>
     <a-light id="environment" light="type: point; intensity: 4" position="-1.34434 2.4 -2.27531"></a-light>
     <a-sky material="src: #sky" rotation="80 0 0"></a-sky>
-    <a-gltf-model scale="0.045 0.045 0.045" src="#scene3D"></a-gltf-model>
-    <a-plane  america-animation shader="flat"  transparent="true"  position="-0.919 1.513 1.32" scale="1.820 1.820 1" rotation="0 180 0"   ></a-plane>
+    <a-gltf-model  scale="0.045 0.045 0.045"  src="#scene3D"  ></a-gltf-model>
+
+    <a-video shader="flat" src="#video" position="-0.923 1.509 1.32" scale="1.810 1.830 1" rotation="0 180 0"   ></a-video>
+
 
     <a-entity rotation="-3 180 0">
         <a-camera id="camera" wasd-controls="enabled:  false" position="0.95 1.75 2">
 
         </a-camera>
-    </a-entity>º
-
+    </a-entity>
 
 </a-scene>
-
-<script src="js/utils/animation_img.js"></script>
-<script src="js/artworks/151.js"></script>
+<script src="js/utils/load_video.js"></script>
 </body>
+
 </html>

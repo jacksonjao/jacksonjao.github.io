@@ -5,14 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+    <meta aframe-injected="" name="mobile-web-app-capable" content="yes">
     <title>Constelaciones</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
 
 </head>
-<body id="body">
+<body id="body" >
+<div id="loading">
+    <h1>Constelaciones</h1>
+    <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
 
 <a-scene id="scene"
          light="defaultLightsEnabled: false"
@@ -20,19 +24,18 @@
          renderer="antialias: true;
          physicallyCorrectLights: false;
          colorManagement: true;
-         sortObjects: true;"
-         loading-screen="dotsColor: white; backgroundColor: black"
-         background>
-    <a id="myEnterARButton" href="#"></a>
-    <a-assets>
+         sortObjects: false;"
+         loading-screen="dotsColor: white; backgroundColor: black",
+         inspector="url: https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js"
+>
+    <a-assets timeout="10000">
         <img id="sky" src="assets/shared/sky.jpg">
         <a-asset-item id="scene3D" src="assets/artworks/162/scene.gltf"></a-asset-item>
     </a-assets>
-
-
+    <a id="myEnterARButton" href="#"></a>
     <a-light id="environment" light="type: point; intensity: 4" position="-1.34434 2.4 -2.27531"></a-light>
     <a-sky material="src: #sky" rotation="80 0 0"></a-sky>
-    <a-gltf-model scale="0.045 0.045 0.045" src="#scene3D" animation-mixer></a-gltf-model>
+    <a-gltf-model  scale="0.045 0.045 0.045"  src="#scene3D"  animation-mixer></a-gltf-model>
 
     <a-entity rotation="-3 180 0">
         <a-camera id="camera" wasd-controls="enabled:  false" position="0.95 1.75 2">
@@ -40,9 +43,8 @@
         </a-camera>
     </a-entity>
 
-
 </a-scene>
-
-
+<script src="js/utils/load_video.js"></script>
 </body>
+
 </html>
