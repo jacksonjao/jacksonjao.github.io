@@ -12,10 +12,6 @@
 
 </head>
 <body id="body" >
-<div id="loading">
-    <h1>Corteza de Arco Iris</h1>
-    <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-</div>
 
 <a-scene id="scene"
          light="defaultLightsEnabled: false"
@@ -29,7 +25,7 @@
 >
     <a-assets timeout="10000">
         <img id="sky" src="assets/shared/sky.jpg">
-        <video id="video" muted="muted"   webkit-playsinline="true" playsinline="true" autoplay="true"  loop="true" src="assets/artworks/148/animation.mp4"  ></video>
+        <video id="video"  preload="auto"  webkit-playsinline="true" playsinline="true" autoplay="true"  loop="true" src="assets/artworks/148/animation.mp4"  ></video>
         <a-asset-item id="scene3D" src="assets/artworks/148/scene.gltf"></a-asset-item>
     </a-assets>
     <a id="myEnterARButton" href="#"></a>
@@ -47,7 +43,7 @@
     </a-entity>
 
 </a-scene>
-<script src="js/utils/load_video.js"></script>
+<script src="js/utils/main.js"></script>
 </body>
 
 </html>
