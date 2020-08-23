@@ -67,6 +67,7 @@ background: #cb1414;
 h1{
     font-family: 'Poppins', sans-serif;
     color: white;
+    text-align: center;
 }
 
 .lds-default {
