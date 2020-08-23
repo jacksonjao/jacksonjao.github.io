@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    <title>Una ínsula</title>
+    <meta aframe-injected="" name="mobile-web-app-capable" content="yes">
+    <title>Una Insula</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
 </head>
-<body id="body">
+<body id="body" >
+<div id="loading">
+    <h1>Una Insula</h1>
+    <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
 
 <a-scene id="scene"
          light="defaultLightsEnabled: false"
@@ -18,143 +23,22 @@
          renderer="antialias: true;
          physicallyCorrectLights: false;
          colorManagement: true;
-         sortObjects: true;"
-         loading-screen="dotsColor: white; backgroundColor: black"
-         background>
-    <a id="myEnterARButton" href="#"></a>
-    <a-assets>
+         sortObjects: false;"
+         loading-screen="dotsColor: white; backgroundColor: black",
+         inspector="url: https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js"
+>
+    <a-assets timeout="10000">
         <img id="sky" src="assets/shared/sky.jpg">
-        <img  src="assets/artworks/102/temple/temple_0.png">
-        <img  src="assets/artworks/102/temple/temple_1.png">
-        <img  src="assets/artworks/102/temple/temple_2.png">
-        <img  src="assets/artworks/102/temple/temple_3.png">
-        <img  src="assets/artworks/102/temple/temple_4.png">
-        <img  src="assets/artworks/102/temple/temple_5.png">
-        <img  src="assets/artworks/102/temple/temple_6.png">
-        <img  src="assets/artworks/102/temple/temple_7.png">
-        <img  src="assets/artworks/102/temple/temple_8.png">
-        <img  src="assets/artworks/102/temple/temple_9.png">
-        <img  src="assets/artworks/102/temple/temple_10.png">
-        <img  src="assets/artworks/102/temple/temple_11.png">
-        <img  src="assets/artworks/102/temple/temple_12.png">
-        <img  src="assets/artworks/102/temple/temple_13.png">
-        <img  src="assets/artworks/102/temple/temple_14.png">
-        <img  src="assets/artworks/102/temple/temple_15.png">
-        <img  src="assets/artworks/102/temple/temple_16.png">
-        <img  src="assets/artworks/102/temple/temple_17.png">
-        <img  src="assets/artworks/102/temple/temple_18.png">
-        <img  src="assets/artworks/102/temple/temple_19.png">
-        <img  src="assets/artworks/102/temple/temple_20.png">
-        <img  src="assets/artworks/102/temple/temple_21.png">
-        <img  src="assets/artworks/102/temple/temple_22.png">
-        <img  src="assets/artworks/102/temple/temple_23.png">
-        <img  src="assets/artworks/102/temple/temple_24.png">
-        <img  src="assets/artworks/102/temple/temple_25.png">
-        <img  src="assets/artworks/102/temple/temple_26.png">
-        <img  src="assets/artworks/102/temple/temple_27.png">
-        <img  src="assets/artworks/102/temple/temple_28.png">
-        <img  src="assets/artworks/102/temple/temple_29.png">
-        <img  src="assets/artworks/102/temple/temple_30.png">
-        <img  src="assets/artworks/102/temple/temple_31.png">
-        <img  src="assets/artworks/102/temple/temple_32.png">
-        <img  src="assets/artworks/102/temple/temple_33.png">
-        <img  src="assets/artworks/102/temple/temple_34.png">
-        <img  src="assets/artworks/102/temple/temple_35.png">
-        <img  src="assets/artworks/102/temple/temple_36.png">
-        <img  src="assets/artworks/102/temple/temple_37.png">
-        <img  src="assets/artworks/102/temple/temple_38.png">
-        <img  src="assets/artworks/102/temple/temple_39.png">
-        <img  src="assets/artworks/102/temple/temple_40.png">
-        <img  src="assets/artworks/102/temple/temple_41.png">
-        <img  src="assets/artworks/102/temple/temple_42.png">
-        <img  src="assets/artworks/102/temple/temple_43.png">
-        <img  src="assets/artworks/102/temple/temple_44.png">
-        <img  src="assets/artworks/102/temple/temple_45.png">
-        <img  src="assets/artworks/102/temple/temple_46.png">
-        <img  src="assets/artworks/102/temple/temple_47.png">
-        <img  src="assets/artworks/102/temple/temple_48.png">
-        <img  src="assets/artworks/102/temple/temple_49.png">
-        <img  src="assets/artworks/102/temple/temple_50.png">
-        <img  src="assets/artworks/102/temple/temple_51.png">
-        <img  src="assets/artworks/102/temple/temple_52.png">
-        <img  src="assets/artworks/102/temple/temple_53.png">
-        <img  src="assets/artworks/102/temple/temple_54.png">
-        <img  src="assets/artworks/102/temple/temple_55.png">
-        <img  src="assets/artworks/102/temple/temple_56.png">
-        <img  src="assets/artworks/102/temple/temple_57.png">
-        <img  src="assets/artworks/102/temple/temple_58.png">
-        <img  src="assets/artworks/102/temple/temple_59.png">
-        <img  src="assets/artworks/102/temple/temple_60.png">
-        <img  src="assets/artworks/102/temple/temple_61.png">
-        <img  src="assets/artworks/102/temple/temple_62.png">
-        <img  src="assets/artworks/102/temple/temple_63.png">
-        <img  src="assets/artworks/102/temple/temple_64.png">
-        <img  src="assets/artworks/102/temple/temple_65.png">
-        <img  src="assets/artworks/102/temple/temple_66.png">
-        <img  src="assets/artworks/102/temple/temple_67.png">
-        <img  src="assets/artworks/102/temple/temple_68.png">
-        <img  src="assets/artworks/102/temple/temple_69.png">
-        <img  src="assets/artworks/102/temple/temple_70.png">
-        <img  src="assets/artworks/102/temple/temple_71.png">
-        <img  src="assets/artworks/102/temple/temple_72.png">
-        <img  src="assets/artworks/102/temple/temple_73.png">
-        <img  src="assets/artworks/102/temple/temple_74.png">
-        <img  src="assets/artworks/102/temple/temple_75.png">
-        <img  src="assets/artworks/102/temple/temple_76.png">
-        <img  src="assets/artworks/102/temple/temple_77.png">
-        <img  src="assets/artworks/102/temple/temple_78.png">
-        <img  src="assets/artworks/102/temple/temple_79.png">
-        <img  src="assets/artworks/102/temple/temple_80.png">
-        <img  src="assets/artworks/102/temple/temple_81.png">
-        <img  src="assets/artworks/102/temple/temple_82.png">
-        <img  src="assets/artworks/102/temple/temple_83.png">
-        <img  src="assets/artworks/102/temple/temple_84.png">
-        <img  src="assets/artworks/102/temple/temple_85.png">
-        <img  src="assets/artworks/102/temple/temple_86.png">
-        <img  src="assets/artworks/102/temple/temple_87.png">
-        <img  src="assets/artworks/102/temple/temple_88.png">
-        <img  src="assets/artworks/102/temple/temple_89.png">
-        <img  src="assets/artworks/102/temple/temple_90.png">
-        <img  src="assets/artworks/102/temple/temple_91.png">
-        <img  src="assets/artworks/102/temple/temple_92.png">
-        <img  src="assets/artworks/102/temple/temple_93.png">
-        <img  src="assets/artworks/102/temple/temple_94.png">
-        <img  src="assets/artworks/102/temple/temple_95.png">
-        <img  src="assets/artworks/102/temple/temple_96.png">
-        <img  src="assets/artworks/102/temple/temple_97.png">
-        <img  src="assets/artworks/102/temple/temple_98.png">
-        <img  src="assets/artworks/102/temple/temple_99.png">
-        <img  src="assets/artworks/102/temple/temple_100.png">
-        <img  src="assets/artworks/102/temple/temple_101.png">
-        <img  src="assets/artworks/102/temple/temple_102.png">
-        <img  src="assets/artworks/102/temple/temple_103.png">
-        <img  src="assets/artworks/102/temple/temple_104.png">
-        <img  src="assets/artworks/102/temple/temple_105.png">
-        <img  src="assets/artworks/102/temple/temple_106.png">
-        <img  src="assets/artworks/102/temple/temple_107.png">
-        <img  src="assets/artworks/102/temple/temple_108.png">
-        <img  src="assets/artworks/102/temple/temple_109.png">
-        <img  src="assets/artworks/102/temple/temple_110.png">
-        <img  src="assets/artworks/102/temple/temple_111.png">
-        <img  src="assets/artworks/102/temple/temple_112.png">
-        <img  src="assets/artworks/102/temple/temple_113.png">
-        <img  src="assets/artworks/102/temple/temple_114.png">
-        <img  src="assets/artworks/102/temple/temple_115.png">
-        <img  src="assets/artworks/102/temple/temple_116.png">
-        <img  src="assets/artworks/102/temple/temple_117.png">
-        <img  src="assets/artworks/102/temple/temple_118.png">
-        <img  src="assets/artworks/102/temple/temple_119.png">
-        <img  src="assets/artworks/102/temple/temple_120.png">
+        <video id="video" muted="muted"   webkit-playsinline="true" playsinline="true" autoplay="true"  loop="true" src="assets/artworks/102/video.mp4"  ></video>
         <a-asset-item id="scene3D" src="assets/artworks/102/scene.gltf"></a-asset-item>
     </a-assets>
-
-
+    <a id="myEnterARButton" href="#"></a>
     <a-light id="environment" light="type: point; intensity: 4" position="-1.34434 2.4 -2.27531"></a-light>
     <a-sky material="src: #sky" rotation="80 0 0"></a-sky>
     <a-gltf-model  scale="0.045 0.045 0.045"  src="#scene3D"  ></a-gltf-model>
 
-    <a-plane  temple-animation shader="flat"  transparent="true" position="-0.919 1.5 1.32" scale="1.850 1.850 1" rotation="0 180 0"   ></a-plane>
 
+    <a-video shader="flat" src="#video" transparent="true"   position="-0.919 1.5 1.32" scale="1.850 1.850 1" rotation="0 180 0"   ></a-video>
 
     <a-entity rotation="-3 180 0">
         <a-camera id="camera" wasd-controls="enabled:  false" position="0.95 1.75 2">
@@ -162,11 +46,8 @@
         </a-camera>
     </a-entity>
 
-
 </a-scene>
-
-<script src="js/utils/animation_img.js"></script>
-<script src="js/artworks/102.js"></script>
+<script src="js/utils/load_video.js"></script>
 </body>
 
 </html>
