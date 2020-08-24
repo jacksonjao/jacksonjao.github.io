@@ -22,14 +22,6 @@ function initLoading() {
 }
 
 
-function forcePlayVideo(video) {
-    if (video.paused) {
-        video.play();
-        setTimeout(() => {
-            forcePlayVideo(video);
-        }, 2000)
-    }
-}
 
 function dialog() {
     let loadingElement = `<div id="dialog">
@@ -53,9 +45,22 @@ function dialogContinue() {
     }
 }
 
+function forcePlayVideo(video) {
+    if (video.paused) {
+        video.play();
+        setTimeout(() => {
+            forcePlayVideo(video);
+        }, 2000)
+    }
+}
 
+function arVrDisabled() {
+let scene = document.getElementById('scene');
+scene.setAttribute('vr-mode-ui', 'enabled: false');
+}
 
 function init() {
+    arVrDisabled();
     loadingComponent();
     initLoading();
 }
