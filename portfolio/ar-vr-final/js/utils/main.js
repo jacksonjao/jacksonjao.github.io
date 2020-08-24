@@ -24,19 +24,20 @@ function initLoading() {
 
 
 function dialog() {
-    let loadingElement = `<div id="dialog">
-    <div class="dialog__container">
-        <p class="dialog__text">Te recomendamos usar audífonos para disfrutar mejor  de esta experiencia</p>
-    <button class="dialog__button" onclick="dialogContinue()"> CONTINUAR </button>
-    </div>
-</div>`
+    let loadingElement = `<div id="contPopUp">
+        <div id="popUp">
+            <div id="btnClose" onclick="dialogContinue()"></div>
+            <p>Te recomendamos usar audífonos para disfrutar mejor de esta experiencia</p>
+            <div id="line"></div>
+        </div>
+    </div>`
     document.body.insertAdjacentHTML('afterbegin', loadingElement);
 }
 
 function dialogContinue() {
-    let dialog = document.getElementById('dialog');
+    let dialog = document.getElementById('contPopUp');
     dialog.style.visibility = 'hidden';
-    dialog.style.opacity = 0;
+    dialog.style.opacity = '0';
 
     let videos = document.getElementsByTagName('video');
     for (let i = 0; i < videos.length; i++) {
