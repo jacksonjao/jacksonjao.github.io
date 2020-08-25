@@ -25,6 +25,7 @@
     <a-assets timeout="10000">
         <img id="sky" src="assets/shared/sky.jpg">
         <video id="video" preload="auto"  webkit-playsinline="true" playsinline="true" autoplay="true"  loop="true" src="assets/artworks/54/animation.mp4"  ></video>
+        <audio id="audio" src="assets/artworks/54/audio.mp3" preload="auto"  ></audio>
         <a-asset-item id="scene3D" src="assets/artworks/54/scene.gltf"></a-asset-item>
     </a-assets>
     <a id="myEnterARButton" href="#"></a>
@@ -34,6 +35,7 @@
 
 
     <a-video shader="flat" src="#video"  position="-0.923 1.634 1.32" scale="2 1.48 1" rotation="0 180 0"   ></a-video>
+    <a-entity sound="src: #audio; loop: true"></a-entity>
 
     <a-entity rotation="-3 180 0">
         <a-camera id="camera" wasd-controls="enabled:  false" position="0.95 1.75 2">

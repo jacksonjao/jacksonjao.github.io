@@ -38,7 +38,8 @@ function dialogContinue() {
     let dialog = document.getElementById('contPopUp');
     dialog.style.visibility = 'hidden';
     dialog.style.opacity = '0';
-
+    var entity = document.querySelector('[sound]');
+    entity.components.sound.playSound();
     let videos = document.getElementsByTagName('video');
     for (let i = 0; i < videos.length; i++) {
         const video = videos[i];
