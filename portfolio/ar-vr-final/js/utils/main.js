@@ -1,3 +1,9 @@
+// Existing code unchanged.
+window.onload = function() {
+    var context = new AudioContext();
+    // Setup all nodes
+}
+
 function loadingComponent() {
     let loadingElement = `<div id="loading">
 <h1>${document.title}</h1>

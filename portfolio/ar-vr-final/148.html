@@ -25,8 +25,16 @@
 >
     <a-assets timeout="10000">
         <img id="sky" src="assets/shared/sky.jpg">
-        <video id="video"  preload="auto"  webkit-playsinline="true" playsinline="true" autoplay="true"  loop="true" src="assets/artworks/148/animation.mp4"  ></video>
-        <audio id="audio" src="assets/artworks/148/audio.mp3" preload="auto"  ></audio>
+        <video crossorigin="anonymous"
+               preload="auto"
+               autoplay="false"
+               id="video"
+               loop="true"
+               webkit-playsinline
+               playsinline controls muted
+               src="assets/artworks/148/animation.mp4"
+        >
+        </video>
         <a-asset-item id="scene3D" src="assets/artworks/148/scene.gltf"></a-asset-item>
     </a-assets>
     <a id="myEnterARButton" href="#"></a>
@@ -35,7 +43,7 @@
     <a-gltf-model  scale="0.045 0.045 0.045"  src="#scene3D"  ></a-gltf-model>
 
     <a-video shader="flat" src="#video" transparent="true"   position="-0.928 1.509 1.32" scale="2.832 1.881 1" rotation="0 180 0"   ></a-video>
-    <a-entity sound="src: #audio; loop: true" position="-0.918 1.750 1.315"></a-entity>
+    <a-sound src="assets/artworks/148/audio.mp3" autoplay="false" loop="true" position="-0.918 1.750 1.315"></a-sound>
 
 
     <a-entity rotation="0 180 0">
