@@ -26,17 +26,17 @@
 >
     <a-assets timeout="10000">
         <img id="sky" src="assets/shared/sky.jpg">
-        <audio id="audio" src="assets/artworks/54/audio.mp3" preload="auto"  ></audio>
+        <audio id="audio" src="assets/artworks/29/audio.mp3" preload="auto"  ></audio>
         <a-asset-item id="scene3D" src="assets/artworks/29/scene.gltf"></a-asset-item>
     </a-assets>
     <a id="myEnterARButton" href="#"></a>
     <a-light id="environment" light="type: point; intensity: 4" position="-1.34434 2.4 -2.27531"></a-light>
     <a-sky material="src: #sky" rotation="80 0 0"></a-sky>
     <a-gltf-model  scale="0.045 0.045 0.045"  src="#scene3D"  animation-mixer></a-gltf-model>
+    <a-entity sound="src: #audio; loop: true" position="-0.918 1.750 1.315"></a-entity>
 
-    <a-entity rotation="-3 180 0">
-        <a-camera id="camera" wasd-controls="enabled:  false" position="0.95 1.75 2">
-
+    <a-entity rotation="0 180 0">
+        <a-camera id="camera" zoom="1.3" wasd-controls="enabled:  false" position="0.95 1.75 2">
         </a-camera>
     </a-entity>
 
