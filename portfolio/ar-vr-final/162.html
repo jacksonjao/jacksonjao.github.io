@@ -9,7 +9,6 @@
     <title>Constelaciones</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
 
 </head>
 <body id="body" >
@@ -26,13 +25,26 @@
 >
     <a-assets timeout="10000">
         <img id="sky" src="assets/shared/sky.jpg">
+        <video crossorigin="anonymous"
+               preload="auto"
+               autoplay="false"
+               id="video"
+               loop="true"
+               webkit-playsinline
+               playsinline controls muted
+               src="assets/artworks/162/animation.mp4"
+        >
+        </video>
         <a-asset-item id="scene3D" src="assets/artworks/162/scene.gltf"></a-asset-item>
     </a-assets>
     <a id="myEnterARButton" href="#"></a>
     <a-light id="environment" light="type: point; intensity: 4" position="-1.34434 2.4 -2.27531"></a-light>
     <a-sky material="src: #sky" rotation="80 0 0"></a-sky>
-    <a-gltf-model  scale="0.045 0.045 0.045"  src="#scene3D"  animation-mixer></a-gltf-model>
+    <a-gltf-model  scale="0.045 0.045 0.045"  src="#scene3D"  ></a-gltf-model>
+
+    <a-video shader="flat" src="#video" blending="multiply"   position="-0.678 1.708 1.32" scale="1.800 0.800 1" rotation="0 180 0"   ></a-video>
     <a-sound src="assets/artworks/162/audio.mp3" autoplay="false" loop="true" position="-0.918 1.750 1.315"></a-sound>
+
 
     <a-entity rotation="0 180 0">
         <a-camera id="camera" zoom="1.3" wasd-controls="enabled:  false" position="0.95 1.75 2">
