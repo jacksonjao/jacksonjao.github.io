@@ -12,6 +12,15 @@ function loadingComponent() {
     document.body.insertAdjacentHTML('afterbegin', loadingElement);
 }
 
+function createArrows () {
+    let arrows = `
+<img class="arrow arrow--left" src="assets/images/left-arrow.png" alt="">
+<img class="arrow arrow--right" src="assets/images/right-arrow.png" alt="">
+`
+    document.body.insertAdjacentHTML('afterbegin', arrows);
+}
+
+
 function initLoading() {
     let counter = 0;
     THREE.DefaultLoadingManager.onLoad = function () {
@@ -51,6 +60,7 @@ function dialogContinue() {
         const video = videos[i];
         forcePlayVideo(video)
     }
+    createArrows ();
 }
 
 function forcePlayVideo(video) {
