@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta aframe-injected="" name="mobile-web-app-capable" content="yes">
+    <title>Wuthering Heights - Happy ending</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+</head>
+<body id="body" >
+
+<a-scene id="scene"
+         light="defaultLightsEnabled: false"
+         vr-mode-ui="enterARButton: #myEnterARButton"
+         renderer="antialias: true;
+         physicallyCorrectLights: false;
+         colorManagement: true;
+         sortObjects: false;"
+         loading-screen="dotsColor: white; backgroundColor: black",
+         inspector="url: https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js"
+>
+    <a-assets timeout="10000">
+        <video crossorigin="anonymous"
+               preload="auto"
+               autoplay="false"
+               id="video"
+               loop="true"
+               webkit-playsinline
+               playsinline controls muted
+               src="assets/video/video.mp4"
+        >
+        </video>
+        <a-asset-item id="scene3D" src="assets/model/scene.gltf"></a-asset-item>
+    </a-assets>
+    <a id="myEnterARButton" href="#"></a>
+    <a-light id="environment" light="type: point; intensity: 4" position="-1.34434 2.4 -2.27531"></a-light>
+    <a-gltf-model  scale="0.045 0.045 0.045"  src="#scene3D"  ></a-gltf-model>
+
+    <a-video shader="flat" src="#video" class="clickable"    position="-0.753 1.534 1.32" scale="3.676 2.277 1"  rotation="0 180 0"   ></a-video>
+<!--    <a-sound src="assets/artworks/172/audio.mp3" autoplay="false" loop="true" position="-0.918 1.750 1.315"></a-sound>-->
+
+    <a-entity position="-1.8 0 -4.5">
+        <a-camera id="camera" zoom="1.2" wasd-controls="enabled:  false" position="0.95 1.75 2">
+            <a-entity cursor="fuse: false; fuseTimeout: 500"
+                      position="0 0 -1"
+                      material="color: black; shader: flat">
+            </a-entity>
+        </a-camera>
+    </a-entity>
+
+</a-scene>
+<script src="js/main.js"></script>
+</body>
+
+</html>
