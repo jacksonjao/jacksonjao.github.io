@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
-<project name="Javascript compress project" basedir="/Users/jairoandres/Desktop/panter/coding/biblioteca-viva" default="compile">
+<project name="Javascript compress project" basedir="/Users/jhonosorio/Documents/Panter/biblioteca-viva" default="compile">
 
     <taskdef name="jscomp" classname="com.google.javascript.jscomp.ant.CompileTask"
-             classpath="/Users/jairoandres/Documents/cocos2d-x-3.17.2/tools/cocos2d-console/plugins/plugin_compile/build_web/bin/compiler-1.7.jar"/>
+             classpath="/Volumes/Macintosh HD - Data/Me/libs/cocos2d-x-3.17.2/tools/cocos2d-console/plugins/plugin_compile/build_web/bin/compiler-1.7.jar"/>
 
     <target name="compile">
         <jscomp compilationLevel="simple" 
                 warning="quiet"
                 debug="false" 
-                output="/Users/jairoandres/Desktop/panter/coding/biblioteca-viva/publish/html5/game.min.js"
+                output="/Users/jhonosorio/Documents/Panter/biblioteca-viva/publish/html5/game.min.js"
                 languagein="ECMASCRIPT5"
                 
                 >
-            <sources dir="/Users/jairoandres/Desktop/panter/coding/biblioteca-viva/frameworks/cocos2d-html5">
+            <sources dir="/Users/jhonosorio/Documents/Panter/biblioteca-viva/frameworks/cocos2d-html5">
                 <file name="CCBoot.js"/>
                 <file name="cocos2d/core/event-manager/CCEventHelper.js"/>
                 <file name="CCDebugger.js"/>
@@ -491,6 +491,25 @@
                 <file name="src/games/book13/minigame02/PedestrianGame.js"/>
                 <file name="src/games/book13/minigame03/TheMaskManager.js"/>
                 <file name="src/games/book13/minigame03/TheMaskGame.js"/>
+                <file name="src/games/book14/minigame01/Story15Game01Manager.js"/>
+                <file name="src/games/book14/minigame01/Story15Game01.js"/>
+                <file name="src/games/book14/minigame02/Story15Game02.js"/>
+                <file name="src/games/book14/minigame02/Story15Game02Manager.js"/>
+                <file name="src/games/book14/minigame03/Story15Game03Manager.js"/>
+                <file name="src/games/book14/minigame03/Story15Game03.js"/>
+                <file name="src/games/book15/minigame01/Story16Game01Manager.js"/>
+                <file name="src/games/book15/minigame01/Story16Game01.js"/>
+                <file name="src/games/book15/minigame02/Story16Game02.js"/>
+                <file name="src/games/book15/minigame02/Story16Game02Manager.js"/>
+                <file name="src/games/book15/minigame03/Story16Game03Manager.js"/>
+                <file name="src/games/book15/minigame03/Story16Game03.js"/>
+                <file name="src/games/book16/minigame01/Story17Game01Manager.js"/>
+                <file name="src/games/book16/minigame01/Story17Game01.js"/>
+                <file name="src/games/book16/minigame02/Story17Game02.js"/>
+                <file name="src/games/book16/minigame02/Story17Game02Manager.js"/>
+                <file name="src/games/book16/minigame03/Card17.js"/>
+                <file name="src/games/book16/minigame03/Story17Game03Manager.js"/>
+                <file name="src/games/book16/minigame03/Story17Game03.js"/>
                 <file name="src/app.js"/>
                 <file name="main.js"/>
 
