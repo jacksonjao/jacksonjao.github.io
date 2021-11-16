@@ -1,0 +1,73 @@
+@import "abstracts/index";
+
+@font-face {
+  font-family: Avenir, sans-serif;
+  src: url(../../fonts/avenir/AvenirLTStd-Roman.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Acumin, sans-serif;
+  font-weight: 700;
+  src: url(../../fonts/acumin/Acumin-BdPro.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Acumin, sans-serif;
+  font-weight: 300;
+  src: url(../../fonts/acumin/Acumin-RPro.otf) format("opentype");
+}
+
+html{
+  font-family: Avenir, sans-serif;
+}
+
+.font-acumin{
+  font-family: Acumin, sans-serif;
+}
+
+.text-xl{
+  font-size: 2rem;
+}
+
+.text-xxl{
+  font-size: 3rem;
+}
+
+.text-l{
+  font-size: 1.25rem;
+}
+
+.text-m{
+  font-size: 1rem;
+}
+
+.text-s{
+  font-size: 0.75rem;
+}
+
+.text-xs{
+  font-size: 0.5rem;
+}
+
+.text-regular{
+  font-weight: 300;
+}
+
+
+.text-semi-bold{
+  font-weight: 500;
+}
+
+.text-bold{
+  font-weight: 700;
+}
+
+h1,h2,h3,h4{
+  font-family: Acumin, sans-serif;
+  font-weight: 700;
+}
+
+
+
+
+

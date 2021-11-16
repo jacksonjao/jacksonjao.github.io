@@ -1,0 +1,67 @@
+@import "./abstracts/index";
+body{
+  margin: auto;
+}
+.container{
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 $padding-xl;
+  @include large {
+    padding: 0;
+  }
+}
+
+
+
+hr{
+  height: 1px;
+  width: 100%;
+  background: $violet-dark-color;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+
+input[type="text"], input[type="email"]{
+  background: white;
+  height: 4rem;
+  padding: $padding-md;
+  color: $primary-dark-color;
+  &::placeholder{
+    color: $primary-color;
+  }
+}
+
+input[type="checkbox"]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  display: inline;
+  background-image: url('/assets/images/uncheck.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+input[type="checkbox"].input-sm{
+  width: 12px;
+  height: 12px;
+}
+
+input[type="checkbox"]:checked{
+  background-image: url('/assets/images/checked.svg');
+}
+
+input[type="checkbox"]:focus{
+  outline: none;
+}
+
+input[type="checkbox"]:hover, label:hover{
+  cursor: pointer;
+}
+
+
+button:hover{
+  cursor: pointer;
+}
