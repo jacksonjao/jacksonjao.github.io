@@ -39,7 +39,8 @@ input[type="checkbox"]{
   width: 22px;
   height: 22px;
   display: inline;
-  background-image: url('/assets/images/uncheck.svg');
+  fill: black;
+  background-image: url('~src/assets/images/uncheck.svg');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -50,7 +51,7 @@ input[type="checkbox"].input-sm{
 }
 
 input[type="checkbox"]:checked{
-  background-image: url('/assets/images/checked.svg');
+  background-image: url('~src/assets/images/checked.svg');
 }
 
 input[type="checkbox"]:focus{
