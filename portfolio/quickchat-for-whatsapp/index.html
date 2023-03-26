@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QuickChat for WhatsApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<article class="jao-ws">
+    <header class="jao-ws__header">
+        <img class="jao-ws__title-icon" src="assets/ws-icon.png" alt="">
+        <h1 class="jao-ws__title jao-h1" id="jao-ws__title">Text Without Saving Number</h1>
+        <p class="jao-p">Start a WhatsApp conversation without the need to save the contact's phone number in your device.</p>
+    </header>
+    <input class="jao-ws__input"  id="jao-ws__input" type="text" placeholder="Whatsapp Number">
+    
+<div class="jao-ws__send-button-wrapper">
+    <button onclick="openWhatsapp()" class="jao-ws__send-button">
+    <img src="assets/send-icon.png" alt="">
+    </button>
+</div>
+</article>
+
+<script src="script.js"></script>
+</body>
+</html>

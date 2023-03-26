@@ -1,0 +1,163 @@
+:root {
+    --primary-color: #e0e0e0;
+    --text-color: #3d3d3d;
+    --shadow-color: #bebebe;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+button{
+    border: none;
+    background: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+img{
+    width: 100%;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+.jao-h1{
+    font-size: 20px;
+}
+
+.jao-p{
+    font-size: 14px;
+}
+
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-color);
+    padding: 2rem;
+}
+
+.jao-ws{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    border-radius: 20px;
+    background: var(--primary-color);
+    box-shadow:  49px 49px 98px var(--shadow-color),
+    -49px -49px 98px #ffffff;
+    padding: 36px;
+    max-width: 350px;
+    position: relative;
+
+}
+
+
+
+.jao-ws__header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.jao-ws__title{
+    text-align: center;
+}
+
+.jao-ws__title-icon{
+    width: 100px;
+}
+
+.jao-ws__input{
+    width: 100%;
+    background: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: inset 4px 4px 8px var(--shadow-color),
+    inset -4px -4px 8px #ffffff;
+    border: none;
+    padding: 10px;
+    height: 40px;
+    outline: none;
+    color: #646464;
+}
+
+.jao-ws__send-button-wrapper{
+    border-radius: 50px;
+    background: var(--primary-color);
+    box-shadow: inset 7px 7px 14px var(--shadow-color),
+    inset -7px -7px 14px #ffffff;
+    padding: 0.5rem;
+}
+
+.jao-ws__send-button{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: var(--primary-color);
+    box-shadow:  5px 5px 10px var(--shadow-color),
+    -5px -5px 10px #ffffff;
+    padding: 0.9rem;
+    position: relative;
+}
+
+.jao-ws__send-button:before{
+    content: '';
+    position: absolute;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(79,209,93);
+    left: 0;
+    top: 0;
+    transform: scale(0.8);
+    box-sizing: border-box;
+}
+
+
+
+
+
+.jao-ws__send-button:active{
+    background: var(--primary-color);
+    box-shadow: inset 5px 5px 10px var(--shadow-color),
+    inset -5px -5px 10px #ffffff;
+    z-index: 1;
+}
+
+
