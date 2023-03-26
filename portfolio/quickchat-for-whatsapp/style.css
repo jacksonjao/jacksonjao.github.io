@@ -50,19 +50,16 @@ p{
 }
 
 .jao-h1{
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .jao-p{
-    font-size: 14px;
+    font-size: 0.875rem;
 }
-
-
 
 body{
     width: 100vw;
     height: 100vh;
-    max-width: 1200px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -76,18 +73,16 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 28px;
-    border-radius: 20px;
+    gap: 1.75rem;
+    border-radius: 1.25rem;
     background: var(--primary-color);
-    box-shadow:  49px 49px 98px var(--shadow-color),
-    -49px -49px 98px #ffffff;
-    padding: 36px;
-    max-width: 350px;
+    box-shadow:  3rem 3rem  6rem var(--shadow-color),
+    -3rem  -3rem  6rem #ffffff;
+    padding: 2.25rem;
+    max-width: 21.85rem;
     position: relative;
 
 }
-
-
 
 .jao-ws__header{
     display: flex;
@@ -101,7 +96,7 @@ body{
 }
 
 .jao-ws__title-icon{
-    width: 100px;
+    width: 6.25rem;
 }
 
 .jao-ws__input{
@@ -126,9 +121,9 @@ body{
 }
 
 .jao-ws__send-button{
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 1.5rem;
     background: var(--primary-color);
     box-shadow:  5px 5px 10px var(--shadow-color),
     -5px -5px 10px #ffffff;
@@ -139,7 +134,7 @@ body{
 .jao-ws__send-button:before{
     content: '';
     position: absolute;
-    border-radius: 25px;
+    border-radius: 1.5rem;
     width: 100%;
     height: 100%;
     border: 1px solid rgb(79,209,93);
@@ -150,14 +145,15 @@ body{
 }
 
 
-
-
-
 .jao-ws__send-button:active{
     background: var(--primary-color);
     box-shadow: inset 5px 5px 10px var(--shadow-color),
     inset -5px -5px 10px #ffffff;
     z-index: 1;
+}
+
+.jao-ws__label-input{
+    display: none;
 }
 
 

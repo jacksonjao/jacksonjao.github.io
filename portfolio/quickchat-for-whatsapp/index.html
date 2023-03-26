@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>QuickChat for WhatsApp</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QuickChat for WhatsApp - A simple and efficient app to open multiple WhatsApp numbers without saving them.">
+    <meta name="keywords" content="QuickChat, WhatsApp, multiple numbers, chat, messaging">
+    <meta name="author" content="Jhon Osorio">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
@@ -16,8 +22,9 @@
         <h1 class="jao-ws__title jao-h1" id="jao-ws__title">Text Without Saving Number</h1>
         <p class="jao-p">Start a WhatsApp conversation without the need to save the contact's phone number in your device.</p>
     </header>
-    <input class="jao-ws__input"  id="jao-ws__input" type="text" placeholder="Whatsapp Number">
-    
+    <label class="jao-ws__label-input" for="jao-ws__input"></label>
+    <input class="jao-ws__input" id="jao-ws__input" type="text" placeholder="Whatsapp Number">
+
 <div class="jao-ws__send-button-wrapper">
     <button onclick="openWhatsapp()" class="jao-ws__send-button">
     <img src="assets/send-icon.png" alt="">
