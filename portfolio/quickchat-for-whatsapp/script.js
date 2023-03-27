@@ -12,9 +12,7 @@ function openWhatsapp(input) {
 }
 
 function inputValidator($event, sendButton, errorMessageElementRef){
-    console.log('hola')
     const number = removeNoNumbers($event.value);
-    console.log(!!number)
     !!number?  sendButton.removeAttribute('disabled'): sendButton.setAttribute('disabled', '');
     !!number? errorMessageElementRef.classList.remove('jao-ws__error-message--show') : errorMessageElementRef.classList.add('jao-ws__error-message--show')
 }
@@ -27,7 +25,9 @@ function removeNoNumbers(text) {
 function paste(inputElementRef){
     navigator.clipboard.readText().then((clipText) => {
         inputElementRef.value = clipText
+        this.inputValidator(inputElementRef, sendButtonElementRef, errorMessageElementRef)
     });
+
 }
 
 const appHeight = () => {
