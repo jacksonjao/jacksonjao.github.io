@@ -5,7 +5,7 @@
     <title>QuickChat for WhatsApp</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="QuickChat for WhatsApp - A simple and efficient app to open multiple WhatsApp numbers without saving them.">
     <meta name="keywords" content="QuickChat, WhatsApp, multiple numbers, chat, messaging">
     <meta name="author" content="Jhon Osorio">
@@ -22,14 +22,17 @@
         <h1 class="jao-ws__title jao-h1" id="jao-ws__title">Text Without Saving Number</h1>
         <p class="jao-p">Start a WhatsApp conversation without the need to save the contact's phone number in your device.</p>
     </header>
-    <label class="jao-ws__label-input" for="jao-ws__input"></label>
-    <input class="jao-ws__input" id="jao-ws__input" type="text" placeholder="Whatsapp Number">
+    <label class="jao-ws__label-input">
+    <input class="jao-ws__input" id="jao-ws__input" type="text" placeholder="Whatsapp Number" oninput="inputValidator(inputElementRef, sendButtonElementRef, errorMessageElementRef)">
+    </label>
 
-<div class="jao-ws__send-button-wrapper">
-    <button onclick="openWhatsapp()" class="jao-ws__send-button">
+<div class="jao-ws__send-button-wrapper" ontouchstart="inputValidator(inputElementRef, sendButtonElementRef, errorMessageElementRef)" onmouseenter="inputValidator(inputElementRef, sendButtonElementRef, errorMessageElementRef)" >
+    <button disabled="true" onclick="openWhatsapp(inputElementRef)" class="jao-ws__send-button" id="jao-ws__send-button">
     <img src="assets/send-icon.png" alt="">
     </button>
 </div>
+
+    <p class="jao-ws__error-message" id="jao-ws__error-message">A Whatsapp number is required</p>
 </article>
 
 <script src="script.js"></script>
