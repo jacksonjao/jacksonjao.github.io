@@ -24,6 +24,11 @@ function removeNoNumbers(text) {
     return text.replace(/\D/g, '');
 }
 
+function paste(inputElementRef){
+    navigator.clipboard.readText().then((clipText) => {
+        inputElementRef.value = clipText
+    });
+}
 
 const appHeight = () => {
     const doc = document.documentElement
