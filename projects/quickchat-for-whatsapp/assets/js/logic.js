@@ -23,7 +23,7 @@ export function paste(inputElementRef, sendButtonElementRef, errorMessageElement
     });
 }
 
-export function main(sendButtonElementRef, inputElementRef, errorMessageElementRef ) {
+export function main( ) {
     heightScreenFixer()
 }
 

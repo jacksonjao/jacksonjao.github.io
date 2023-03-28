@@ -1,7 +1,7 @@
-import { openWhatsapp, inputValidator, removeNoNumbers, paste, main } from '/assets/js/logic.js';
+import { openWhatsapp, inputValidator, paste, main } from '/assets/js/logic.js';
 
 
-
+main();
 const inputElementRef =  document.getElementById('jao-ws__input')
 const sendButtonElementRef =  document.getElementById('jao-ws__send-button')
 const sendButtonWrapperElementRef =  document.getElementById('jao-ws__send-button-wrapper')
