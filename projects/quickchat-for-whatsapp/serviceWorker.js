@@ -1,11 +1,11 @@
 const staticQuickChatWs = "dev-quickchat-for-whatsapp"
 const assets = [
-    "./",
-    "./index.html",
-    "./assets/css/style.css",
-    "./assets/js/main.js",
-    "./assets/images/send-icon.svg",
-    "./assets/images/ws-icon.svg",
+    "/",
+    "/index.html",
+    "/assets/css/style.css",
+    "/assets/js/main.js",
+    "/assets/images/send-icon.svg",
+    "/assets/images/ws-icon.svg",
 ]
 
 self.addEventListener("install", installEvent => {
