@@ -10,7 +10,7 @@
 .titulo-loading {
     position: absolute;
     top: 58%;
-        transform:translateY(-50%,-42%);
+        transform:translate(-50%,-42%);
 right: 0;
    text-align: center; 
     left: 0;
@@ -229,7 +229,7 @@ header>ul {
 }
 
 header>ul>li {
-    margin-left: 20;
+    margin-left: 20px;
     display: inline;
 }
 
@@ -384,12 +384,7 @@ header>ul>li>a>figure {
     min-height: 500px;
 }
 
-.foto {
-    height: 100%;
-    background-image: url(img/foto.jpg);
-    background-size: cover;
-    margin: 0;
-}
+
 
 .section-aboutme {
     margin: 0 !important;
@@ -405,7 +400,7 @@ header>ul>li>a>figure {
     top: 50%;
     transform: translateY(-50%);
     position: absolute;
-    max-width: 1280;
+    max-width: 1280px;
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -416,7 +411,6 @@ header>ul>li>a>figure {
     margin-top: 0;
     font-family: Bebas;
     font-size: 8em;
-    text-align: center;
 }
 
 .contenido-aboutme>article>p {
@@ -712,7 +706,7 @@ body::-webkit-scrollbar {
     color: #97c03d;
     font-size: 14pt;
     font-weight: 400;
-    text-align:
+    text-align: center;
 }
 
 .section-links {}
@@ -751,7 +745,7 @@ body::-webkit-scrollbar {
     position: relative;
     height: 100%;
     display: table;
-    margin: 0 !imoprtant;
+    margin: 0 !important;
     padding: 0 !important;
 }
 
@@ -760,7 +754,7 @@ body::-webkit-scrollbar {
     vertical-align: middle;
     padding-bottom: 100px;
     width: 100vw;
-    margin: 0 !imoprtant;
+    margin: 0 !important;
     padding: 0 !important;
 }
 
@@ -881,6 +875,10 @@ body::-webkit-scrollbar {
     height: 0;
 }
 
+.titulo-contactme{
+text-align: center;
+}
+
 @media (min-width: 1199px) {}
 
 @media (max-width: 1199px) {}
@@ -949,9 +947,9 @@ body::-webkit-scrollbar {
         margin-top: 0;
         font-family: Bebas;
         font-size: 5em;
-        text-align: center;
         margin: 0;
     }
+
     .contenido-aboutme>article>p {
         color: #000;
         font-size: 0.9em;
